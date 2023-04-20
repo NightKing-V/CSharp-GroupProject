@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <DockPanel LastChildFill="False" Background="#FF823A3A">
+        <DockPanel LastChildFill="False" Background="#FFA7C2C3" Width="199">
+            <Button Content="Button" DockPanel.Dock="Top" Height="50" BorderBrush="{x:Null}"/>
+        </DockPanel>
+    </DockPanel>
 </Window>

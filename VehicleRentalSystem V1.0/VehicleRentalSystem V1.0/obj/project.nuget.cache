@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ROhIGYZW/O5+Ga7jRi4G2ZX0Wnqj00Rv6NdzYoFRcMZG4ck4pPwaUniCMdJG/7cX2uMrdukrNVb6kxJs6SfGdw==",
+  "dgSpecHash": "XNwy5+uNUWSU1YqZNKm79szl3aSWorglkpZVK2ABjXqwH6k6lAMIuNfoU24gmCQRXKxpXB+WSQcQZx5u9TEKsQ==",
   "success": true,
   "projectFilePath": "G:\\DEVELOPMENT\\GIT\\CSharp-GroupProject\\VehicleRentalSystem V1.0\\VehicleRentalSystem V1.0\\VehicleRentalSystem V1.0.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\valal\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
   "logs": []
 }

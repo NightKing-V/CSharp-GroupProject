@@ -1,0 +1,23 @@
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\bin\Debug\net6.0-windows\VehicleRentalSystem V1.0.exe
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\bin\Debug\net6.0-windows\VehicleRentalSystem V1.0.deps.json
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\bin\Debug\net6.0-windows\VehicleRentalSystem V1.0.runtimeconfig.json
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\bin\Debug\net6.0-windows\VehicleRentalSystem V1.0.dll
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\bin\Debug\net6.0-windows\VehicleRentalSystem V1.0.pdb
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0.csproj.AssemblyReference.cache
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\MainWindow.g.cs
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\App.g.cs
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0_MarkupCompile.cache
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0_MarkupCompile.lref
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\MainWindow.baml
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0.g.resources
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0.GeneratedMSBuildEditorConfig.editorconfig
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0.AssemblyInfoInputs.cache
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0.AssemblyInfo.cs
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0.csproj.CoreCompileInputs.cache
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0.csproj.CopyComplete
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0.dll
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\refint\VehicleRentalSystem V1.0.dll
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0.pdb
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\VehicleRentalSystem V1.0.genruntimeconfig.cache
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\net6.0-windows\ref\VehicleRentalSystem V1.0.dll
