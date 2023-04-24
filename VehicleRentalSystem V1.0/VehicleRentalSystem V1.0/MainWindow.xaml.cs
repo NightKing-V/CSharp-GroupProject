@@ -30,6 +30,7 @@ namespace VehicleRentalSystem_V1._0
 
         }
 
+<<<<<<< HEAD
         private void Bookings_Button_Click(object sender, RoutedEventArgs e)
         {
             BookingUC.Visibility = Visibility.Visible;
@@ -97,6 +98,11 @@ namespace VehicleRentalSystem_V1._0
         private void BookingsUC_Loaded(object sender, RoutedEventArgs e)
         {
 
+=======
+        private void Button_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+>>>>>>> parent of c9cf69a (Linked BookingUC)
         }
     }
 }
