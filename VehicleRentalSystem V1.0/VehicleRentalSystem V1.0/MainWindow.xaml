@@ -5,31 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="Vehicle Rental System V1.0" Height="450" Width="800" Icon="/Icon.png" WindowStartupLocation="CenterScreen">
+        Title="Vehicle Rental System V1.0" Height="580" Width="1000" Icon="/Icon.png" WindowStartupLocation="CenterScreen" Activated="MainWindow_Activated">
 
     <Window.Resources>
-        <Style x:Key="CategoryButton" TargetType="Button">
-            <!-- Set background property here -->
-            <Setter Property="Background" Value="#FF7AB3EF" />
-
+        <Style TargetType="ToggleButton">
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center"
-                                      VerticalAlignment="Center"/>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border Name="border" Background="{TemplateBinding Background}" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF368CE7" />
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter TargetName="border" Property="Background" Value="#FF368CE7"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#FF368CE7"/>
-                </Trigger>
-            </Style.Triggers>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid Margin="0,0,0,-6">
         <Grid.Background>
             <ImageBrush ImageSource="/Background.png" Stretch="Uniform"/>
         </Grid.Background>
@@ -42,11 +41,16 @@
             <ColumnDefinition Width="309*"/>
         </Grid.ColumnDefinitions>
         <DockPanel x:Name="CategoryPanel" LastChildFill="False" Width="180" Background="#FFDEECFB" Grid.RowSpan="2" HorizontalAlignment="Left">
-            <Button x:Name="BookingsBtn" Content="&#x9;BOOKINGS&#x9;&gt;" Style="{StaticResource CategoryButton}"  DockPanel.Dock="Top" Height="50" Click="Bookings_Button_Click" Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Margin="0,2,0,2" FontWeight="ExtraBold" MouseRightButtonDown="Button_Mouse_Right" GotFocus="Button_GotFocus" />
-            <Button x:Name="DetailsBtn" Content="&#x9;DETAILS&#x9;&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Details_Button_Click"  Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" Margin="0,0,0,2" FontWeight="ExtraBold" MouseRightButtonDown="Button_Mouse_Right"/>
-            <Button x:Name="VehicleBtn" Content="&#x9;VEHICLES&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Vehicles_Button_Click" Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" Margin="0,0,0,2" FontWeight="ExtraBold" MouseRightButtonDown="Button_Mouse_Right"/>
-            <Button x:Name="DriverBtn" Content="&#x9;DRIVERS&#x9;&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Drivers_Button_Click"  Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" Margin="0,0,0,2" FontWeight="ExtraBold" MouseRightButtonDown="Button_Mouse_Right"/>
-            <Button x:Name="AdminBtn" Content="&#x9;ADMIN&#x9;&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Admin_Button_Click" Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" FontWeight="ExtraBold" MouseRightButtonDown="Button_Mouse_Right"/>
+            <Rectangle DockPanel.Dock="Top" Height="130">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/Asset 1.png" Stretch="UniformToFill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <RadioButton x:Name="BookingsBtn" Content="BOOKINGS&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="BookingsBtn_Checked" Click="Button_Click" Height="50" Margin="3,2,2,4"/>
+            <RadioButton x:Name="DetailsBtn" Content="DETAILS&#x9;&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="DetailsBtn_Checked" Click="Button_Click" Height="50" Margin="3,0,2,4"/>
+            <RadioButton x:Name="VehiclesBtn" Content="VEHICLES&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="VehiclesBtn_Checked" Click="Button_Click" Height="50" Margin="3,0,2,4"/>
+            <RadioButton x:Name="DriversBtn" Content="DRIVERS&#x9;&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="DriversBtn_Checked" Click="Button_Click" Height="50" Margin="3,0,2,4"/>
+            <RadioButton x:Name="AdminBtn" Content="ADMIN&#x9;&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="AdminBtn_Checked" Click="Button_Click" Height="50" Margin="3,0,2,4"/>
         </DockPanel>
         <local:BookingsUC x:Name="BookingUC" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="180,0,0,0" Visibility="Hidden"/>
         <local:VehicleUC x:Name="VehicleUC" RenderTransformOrigin="0.5,0.5" Margin="180,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="Hidden">

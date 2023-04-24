@@ -30,7 +30,13 @@ namespace VehicleRentalSystem_V1._0
 
         }
 
-        private void Bookings_Button_Click(object sender, RoutedEventArgs e)
+        private void MainWindow_Activated(object sender, EventArgs e)
+        {
+           
+        }
+
+
+        private void BookingsBtn_Checked(object sender, RoutedEventArgs e)
         {
             BookingUC.Visibility = Visibility.Visible;
             DetailsUC___Search.Visibility = Visibility.Hidden;
@@ -39,7 +45,7 @@ namespace VehicleRentalSystem_V1._0
             AdminUC.Visibility = Visibility.Hidden;
         }
 
-        private void Details_Button_Click(object sender, RoutedEventArgs e)
+        private void DetailsBtn_Checked(object sender, RoutedEventArgs e)
         {
             DetailsUC___Search.Visibility = Visibility.Visible;
             BookingUC.Visibility = Visibility.Hidden;
@@ -48,7 +54,7 @@ namespace VehicleRentalSystem_V1._0
             AdminUC.Visibility = Visibility.Hidden;
         }
 
-        private void Vehicles_Button_Click(object sender, RoutedEventArgs e)
+        private void VehiclesBtn_Checked(object sender, RoutedEventArgs e)
         {
             VehicleUC.Visibility = Visibility.Visible;
             DetailsUC___Search.Visibility = Visibility.Hidden;
@@ -57,7 +63,7 @@ namespace VehicleRentalSystem_V1._0
             AdminUC.Visibility = Visibility.Hidden;
         }
 
-        private void Drivers_Button_Click(object sender, RoutedEventArgs e)
+        private void DriversBtn_Checked(object sender, RoutedEventArgs e)
         {
             DriversUC.Visibility = Visibility.Visible;
             DetailsUC___Search.Visibility = Visibility.Hidden;
@@ -66,23 +72,13 @@ namespace VehicleRentalSystem_V1._0
             AdminUC.Visibility = Visibility.Hidden;
         }
 
-        private void Admin_Button_Click(object sender, RoutedEventArgs e)
+        private void AdminBtn_Checked(object sender, RoutedEventArgs e)
         {
             AdminUC.Visibility = Visibility.Visible;
             DetailsUC___Search.Visibility = Visibility.Hidden;
             DriversUC.Visibility = Visibility.Hidden;
             VehicleUC.Visibility = Visibility.Hidden;
             BookingUC.Visibility = Visibility.Hidden;
-        }
-        private void Button_Mouse_Right(object sender, MouseButtonEventArgs e)
-        {
-
-
-        }
-
-        private void Button_GotFocus(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
