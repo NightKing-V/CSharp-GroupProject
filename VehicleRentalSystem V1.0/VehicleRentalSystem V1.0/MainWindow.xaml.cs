@@ -28,11 +28,7 @@ namespace VehicleRentalSystem_V1._0
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void Button_GotFocus(object sender, RoutedEventArgs e)
-        {
-
+            BookingUC.Visibility = Visibility.Visible;
         }
     }
 }
