@@ -34,5 +34,10 @@ namespace VehicleRentalSystem_V1._0
         {
 
         }
+
+        private void BookingsUC_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
