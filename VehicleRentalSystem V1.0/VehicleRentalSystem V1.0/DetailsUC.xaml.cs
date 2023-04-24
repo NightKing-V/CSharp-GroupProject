@@ -16,22 +16,16 @@ using System.Windows.Shapes;
 namespace VehicleRentalSystem_V1._0
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DetailsUC.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DetailsUC : UserControl
     {
-        public MainWindow()
+        public DetailsUC()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-            BookingUC.Visibility = Visibility.Visible;
-        }
-
-        private void BookingsUC_Loaded(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

@@ -50,6 +50,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -70,7 +74,52 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminUC.xaml.cs">
+      <DependentUpon>AdminUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsDataCus.xaml.cs">
+      <DependentUpon>DetailsDataCus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsDataR.xaml.cs">
+      <DependentUpon>DetailsDataR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsDataV.xaml.cs">
+      <DependentUpon>DetailsDataV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsUC.xaml.cs">
+      <DependentUpon>DetailsUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DriversUC.xaml.cs">
+      <DependentUpon>DriversUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleUC.xaml.cs">
+      <DependentUpon>VehicleUC.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AdminUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BookingsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailsDataCus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailsDataR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailsDataV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DriversUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -89,6 +138,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="VehicleUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -108,6 +161,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -132,6 +186,7 @@
     <Resource Include="Resources\Background.png" />
     <Resource Include="Background.png" />
     <Resource Include="Icon.png" />
+    <Resource Include="search icon new.png" />
     <Content Include="VehicleRentalDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

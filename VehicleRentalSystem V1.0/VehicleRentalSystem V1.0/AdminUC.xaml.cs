@@ -16,22 +16,21 @@ using System.Windows.Shapes;
 namespace VehicleRentalSystem_V1._0
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AdminUC.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AdminUC : UserControl
     {
-        public MainWindow()
+        public AdminUC()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void VehicleInUseBtn_Click(object sender, RoutedEventArgs e)
         {
 
-            BookingUC.Visibility = Visibility.Visible;
         }
 
-        private void BookingsUC_Loaded(object sender, RoutedEventArgs e)
+        private void VehicleAvBtn_Click(object sender, RoutedEventArgs e)
         {
 
         }
