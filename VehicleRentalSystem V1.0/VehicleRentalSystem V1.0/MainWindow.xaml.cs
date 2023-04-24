@@ -30,5 +30,10 @@ namespace VehicleRentalSystem_V1._0
 
             BookingUC.Visibility = Visibility.Visible;
         }
+
+        private void Bookings_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
