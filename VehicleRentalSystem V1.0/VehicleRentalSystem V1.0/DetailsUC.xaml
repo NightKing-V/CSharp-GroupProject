@@ -8,6 +8,22 @@
              d:DesignHeight="450" d:DesignWidth="800"
     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <UserControl.Resources>
+        <Style  TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="bg" Background="{TemplateBinding Background}" BorderThickness="3" BorderBrush="#FF368CE7">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF7AB3EF" TargetName="bg" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -38,8 +54,8 @@
             <GradientStop Color="#FFF0F0F0" Offset="0.0"/>
             <GradientStop Color="#FFE5E5E5" Offset="1.0"/>
         </LinearGradientBrush>
-        <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#FFACACAC"/>
-        <SolidColorBrush x:Key="ComboBox.Static.Glyph" Color="#FF606060"/>
+        <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#FF368CE7"/>
+        <SolidColorBrush x:Key="ComboBox.Static.Glyph" Color="#FF368CE7"/>
         <SolidColorBrush x:Key="ComboBox.Static.Editable.Background" Color="#FFFFFFFF"/>
         <SolidColorBrush x:Key="ComboBox.Static.Editable.Border" Color="#FFABADB3"/>
         <SolidColorBrush x:Key="ComboBox.Static.Editable.Button.Background" Color="Transparent"/>
@@ -304,7 +320,7 @@
             <ComboBoxItem Content="Rider NIC"/>
             <ComboBoxItem Content="Vehicle NO"/>
         </ComboBox>
-        <Button Content="SEARCH" BorderThickness="0,3,3,3" BorderBrush="#FF368CE7" Padding="0,1,1,1" Background="{x:Null}" Margin="486,50,0,354" HorizontalAlignment="Left" Width="91">
+        <Button Content="SEARCH" BorderThickness="0,3,3,3" BorderBrush="#FF368CE7" Padding="0,1,1,1" Background="#FF1572A1" Margin="486,50,0,354" HorizontalAlignment="Left" Width="91" Foreground="White" FontFamily="Century Gothic">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="0,5,5,0"/>

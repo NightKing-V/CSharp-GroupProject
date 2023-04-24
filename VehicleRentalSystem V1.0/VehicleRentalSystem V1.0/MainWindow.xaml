@@ -12,7 +12,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
-                        <Border Name="border" Background="{TemplateBinding Background}" CornerRadius="10">
+                        <Border Name="border" Background="{TemplateBinding Background}" CornerRadius="15">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                         <ControlTemplate.Triggers>
@@ -40,17 +40,17 @@
             <ColumnDefinition Width="91*"/>
             <ColumnDefinition Width="309*"/>
         </Grid.ColumnDefinitions>
-        <DockPanel x:Name="CategoryPanel" LastChildFill="False" Width="180" Background="#FFDEECFB" Grid.RowSpan="2" HorizontalAlignment="Left">
+        <DockPanel x:Name="CategoryPanel" LastChildFill="False" Width="200" Background="#FFDEECFB" Grid.RowSpan="2" HorizontalAlignment="Left">
             <Rectangle DockPanel.Dock="Top" Height="130">
                 <Rectangle.Fill>
                     <ImageBrush ImageSource="/Asset 1.png" Stretch="UniformToFill"/>
                 </Rectangle.Fill>
             </Rectangle>
-            <RadioButton x:Name="BookingsBtn" Content="BOOKINGS&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="BookingsBtn_Checked" Click="Button_Click" Height="50" Margin="3,2,2,4"/>
-            <RadioButton x:Name="DetailsBtn" Content="DETAILS&#x9;&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="DetailsBtn_Checked" Click="Button_Click" Height="50" Margin="3,0,2,4"/>
-            <RadioButton x:Name="VehiclesBtn" Content="VEHICLES&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="VehiclesBtn_Checked" Click="Button_Click" Height="50" Margin="3,0,2,4"/>
-            <RadioButton x:Name="DriversBtn" Content="DRIVERS&#x9;&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="DriversBtn_Checked" Click="Button_Click" Height="50" Margin="3,0,2,4"/>
-            <RadioButton x:Name="AdminBtn" Content="ADMIN&#x9;&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="AdminBtn_Checked" Click="Button_Click" Height="50" Margin="3,0,2,4"/>
+            <RadioButton x:Name="BookingsBtn" Content="BOOKINGS&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="BookingsBtn_Checked" Click="Button_Click" Height="50" Margin="5,5,5,5"/>
+            <RadioButton x:Name="DetailsBtn" Content="DETAILS&#x9;&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="DetailsBtn_Checked" Click="Button_Click" Height="50" Margin="5,0,5,5"/>
+            <RadioButton x:Name="VehiclesBtn" Content="VEHICLES&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="VehiclesBtn_Checked" Click="Button_Click" Height="50" Margin="5,0,5,5"/>
+            <RadioButton x:Name="DriversBtn" Content="DRIVERS&#x9;&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="DriversBtn_Checked" Click="Button_Click" Height="50" Margin="5,0,5,5"/>
+            <RadioButton x:Name="AdminBtn" Content="ADMIN&#x9;&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF7AB3EF" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontWeight="DemiBold" Checked="AdminBtn_Checked" Click="Button_Click" Height="50" Margin="5,0,5,4"/>
         </DockPanel>
         <local:BookingsUC x:Name="BookingUC" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="180,0,0,0" Visibility="Hidden"/>
         <local:VehicleUC x:Name="VehicleUC" RenderTransformOrigin="0.5,0.5" Margin="180,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="Hidden">
@@ -65,7 +65,7 @@
         </local:VehicleUC>
         <local:DriversUC x:Name="DriversUC" Grid.RowSpan="2" Margin="180,0,0,0" Grid.ColumnSpan="2" Visibility="Hidden"/>
         <local:AdminUC x:Name="AdminUC" Grid.RowSpan="2" Margin="180,0,0,0" Grid.ColumnSpan="2" Visibility="Hidden"/>
-        <local:DetailsUC x:Name="DetailsUC___Search" VerticalAlignment="Top" Grid.RowSpan="2" Height="434" RenderTransformOrigin="0.504,0.495" Margin="172,-34,10,0" Grid.ColumnSpan="2" HorizontalAlignment="Right" Visibility="Hidden"/>
+        <local:DetailsUC x:Name="DetailsUC___Search" VerticalAlignment="Top" Grid.RowSpan="2" Height="434" RenderTransformOrigin="0.504,0.495" Margin="172,-34,10,0" Grid.ColumnSpan="2" HorizontalAlignment="Right"/>
         <local:DetailsDataCus x:Name="DetailsDataCus" Width="4000" Grid.RowSpan="2" HorizontalAlignment="Left" Margin="180,70,0,0" VerticalAlignment="Top" Height="4000" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Visibility="Hidden"/>
         <local:DetailsDataR x:Name="DetailsDataR" HorizontalAlignment="Left" Height="4000" Margin="180,70,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="4000" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" Visibility="Hidden"/>
         <local:DetailsDataV x:Name="DetailsDataV" HorizontalAlignment="Left" Margin="180,70,0,0" VerticalAlignment="Top" Height="4000" Grid.RowSpan="2" Width="4000" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" Visibility="Hidden"/>
