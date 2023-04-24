@@ -92,6 +92,7 @@
     <Compile Include="DriversUC.xaml.cs">
       <DependentUpon>DriversUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UCUIcontrol.cs" />
     <Compile Include="VehicleUC.xaml.cs">
       <DependentUpon>VehicleUC.xaml</DependentUpon>
     </Compile>

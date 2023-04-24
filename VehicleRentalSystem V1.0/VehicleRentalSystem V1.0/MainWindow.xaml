@@ -26,9 +26,6 @@
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#FF368CE7"/>
                 </Trigger>
-                <Trigger Property="IsFocused" Value="True">
-                    <Setter Property="Background" Value="#FF368CE7"/>
-                </Trigger>
             </Style.Triggers>
         </Style>
     </Window.Resources>
@@ -45,11 +42,11 @@
             <ColumnDefinition Width="309*"/>
         </Grid.ColumnDefinitions>
         <DockPanel x:Name="CategoryPanel" LastChildFill="False" Width="180" Background="#FFDEECFB" Grid.RowSpan="2" HorizontalAlignment="Left">
-            <Button x:Name="BookingsBtn" Content="&#x9;BOOKINGS&#x9;&gt;" Style="{StaticResource CategoryButton}"  DockPanel.Dock="Top" Height="50" Click="Button_Click" Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Margin="0,2,0,2" FontWeight="ExtraBold" />
-            <Button x:Name="DetailsBtn" Content="&#x9;DETAILS&#x9;&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Button_Click"  Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" Margin="0,0,0,2" FontWeight="ExtraBold"/>
-            <Button x:Name="VehicleBtn" Content="&#x9;VEHICLES&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Button_Click" Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" Margin="0,0,0,2" FontWeight="ExtraBold"/>
-            <Button x:Name="DriverBtn" Content="&#x9;DRIVERS&#x9;&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Button_Click"  Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" Margin="0,0,0,2" FontWeight="ExtraBold"/>
-            <Button x:Name="AdminBtn" Content="&#x9;ADMIN&#x9;&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Button_Click" Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" FontWeight="ExtraBold"/>
+            <Button x:Name="BookingsBtn" Content="&#x9;BOOKINGS&#x9;&gt;" Style="{StaticResource CategoryButton}"  DockPanel.Dock="Top" Height="50" Click="Bookings_Button_Click" Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Margin="0,2,0,2" FontWeight="ExtraBold" MouseRightButtonDown="Button_Mouse_Right" GotFocus="Button_GotFocus" />
+            <Button x:Name="DetailsBtn" Content="&#x9;DETAILS&#x9;&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Details_Button_Click"  Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" Margin="0,0,0,2" FontWeight="ExtraBold" MouseRightButtonDown="Button_Mouse_Right"/>
+            <Button x:Name="VehicleBtn" Content="&#x9;VEHICLES&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Vehicles_Button_Click" Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" Margin="0,0,0,2" FontWeight="ExtraBold" MouseRightButtonDown="Button_Mouse_Right"/>
+            <Button x:Name="DriverBtn" Content="&#x9;DRIVERS&#x9;&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Drivers_Button_Click"  Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" Margin="0,0,0,2" FontWeight="ExtraBold" MouseRightButtonDown="Button_Mouse_Right"/>
+            <Button x:Name="AdminBtn" Content="&#x9;ADMIN&#x9;&#x9;&gt;"  Style="{StaticResource CategoryButton}" DockPanel.Dock="Top" Click="Admin_Button_Click" Padding="1,1,1,1" FontFamily="Century Gothic" BorderThickness="0,0,0,0" Height="50" FontWeight="ExtraBold" MouseRightButtonDown="Button_Mouse_Right"/>
         </DockPanel>
         <local:BookingsUC x:Name="BookingUC" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="181,0,0,0" Visibility="Hidden"/>
         <local:VehicleUC x:Name="VehicleUC" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Margin="1,0,0,0" Grid.RowSpan="2" Visibility="Hidden">
