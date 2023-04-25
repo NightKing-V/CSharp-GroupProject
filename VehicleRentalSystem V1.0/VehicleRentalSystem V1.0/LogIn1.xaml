@@ -4,10 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
-        
-        
         mc:Ignorable="d"
         Title="LogIn1" Height="450" Width="800">
+
 
     <Border  CornerRadius="15"  BorderBrush="#71A4E1" BorderThickness="3" HorizontalAlignment="Center" Height="343" Grid.Row="1" VerticalAlignment="Top" Width="316" Margin="0,57,0,0">
         <StackPanel Width="250"
@@ -163,7 +162,5 @@
 
 
     </Border>
-
-
 
 </Window>

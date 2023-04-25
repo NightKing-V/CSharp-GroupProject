@@ -22,17 +22,6 @@ namespace VehicleRentalSystem_V1._0
         public LogIn1()
         {
             InitializeComponent();
-            
-        }
-
-        private void txtUser_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
