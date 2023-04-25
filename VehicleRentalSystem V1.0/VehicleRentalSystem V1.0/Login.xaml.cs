@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace VehicleRentalSystem_V1._0
 {
     /// <summary>
-    /// Interaction logic for LogIn1.xaml
+    /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class LogIn1 : Window
+    public partial class Login : Window
     {
-        public LogIn1()
+        public Login()
         {
             InitializeComponent();
         }

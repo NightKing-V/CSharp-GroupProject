@@ -41,7 +41,7 @@ namespace VehicleRentalSystem_V1._0 {
     public partial class Login : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 41 "..\..\Login.xaml"
+        #line 34 "..\..\Login.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtUser;
         
@@ -49,9 +49,17 @@ namespace VehicleRentalSystem_V1._0 {
         #line hidden
         
         
-        #line 73 "..\..\Login.xaml"
+        #line 78 "..\..\Login.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button btnRequest;
+        internal System.Windows.Controls.PasswordBox txtPass;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 109 "..\..\Login.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btnLogin;
         
         #line default
         #line hidden
@@ -89,17 +97,20 @@ namespace VehicleRentalSystem_V1._0 {
             case 1:
             this.txtUser = ((System.Windows.Controls.TextBox)(target));
             
-            #line 51 "..\..\Login.xaml"
+            #line 44 "..\..\Login.xaml"
             this.txtUser.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.txtUser_TextChanged);
             
             #line default
             #line hidden
             return;
             case 2:
-            this.btnRequest = ((System.Windows.Controls.Button)(target));
+            this.txtPass = ((System.Windows.Controls.PasswordBox)(target));
+            return;
+            case 3:
+            this.btnLogin = ((System.Windows.Controls.Button)(target));
             
-            #line 83 "..\..\Login.xaml"
-            this.btnRequest.Click += new System.Windows.RoutedEventHandler(this.btnLogin_Click);
+            #line 119 "..\..\Login.xaml"
+            this.btnLogin.Click += new System.Windows.RoutedEventHandler(this.btnLogin_Click);
             
             #line default
             #line hidden
