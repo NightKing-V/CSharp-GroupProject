@@ -68,5 +68,6 @@
         <local:DetailsDataCus x:Name="DetailsDataCus" Width="4000" Grid.RowSpan="2" HorizontalAlignment="Left" Margin="180,70,0,0" VerticalAlignment="Top" Height="4000" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Visibility="Hidden"/>
         <local:DetailsDataR x:Name="DetailsDataR" HorizontalAlignment="Left" Height="4000" Margin="180,70,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="4000" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" Visibility="Hidden"/>
         <local:DetailsDataV x:Name="DetailsDataV" HorizontalAlignment="Left" Margin="180,70,0,0" VerticalAlignment="Top" Height="4000" Grid.RowSpan="2" Width="4000" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" Visibility="Hidden"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1"/>
     </Grid>
 </Window>
