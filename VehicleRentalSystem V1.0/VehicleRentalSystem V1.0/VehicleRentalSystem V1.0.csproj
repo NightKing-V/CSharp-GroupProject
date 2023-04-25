@@ -92,6 +92,12 @@
     <Compile Include="DriversUC.xaml.cs">
       <DependentUpon>DriversUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ForgotPassword.xaml.cs">
+      <DependentUpon>ForgotPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VehicleUC.xaml.cs">
       <DependentUpon>VehicleUC.xaml</DependentUpon>
     </Compile>
@@ -120,6 +126,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DriversUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ForgotPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,6 +202,9 @@
     <Resource Include="Icon.png" />
     <Resource Include="search icon new.png" />
     <Resource Include="Asset 1.png" />
+    <Resource Include="Icons\forgot-password.png" />
+    <Resource Include="Icons\password.png" />
+    <Resource Include="Icons\user.png" />
     <Content Include="VehicleRentalDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

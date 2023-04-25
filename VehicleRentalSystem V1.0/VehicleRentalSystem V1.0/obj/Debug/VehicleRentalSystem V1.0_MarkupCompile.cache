@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\
+C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\
 VehicleRentalSystem_V1._0
 none
 false
 DEBUG;TRACE
-G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\App.xaml
-9-152619966
+C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\App.xaml
+111050121211
 2-239665352
-13-276621232
-15-362217043
-AdminUC.xaml;BookingsUC.xaml;DetailsDataCus.xaml;DetailsDataR.xaml;DetailsDataV.xaml;DetailsUC.xaml;DriversUC.xaml;MainWindow.xaml;VehicleUC.xaml;
+15-501597657
+15-2010508766
+AdminUC.xaml;BookingsUC.xaml;DetailsDataCus.xaml;DetailsDataR.xaml;DetailsDataV.xaml;DetailsUC.xaml;DriversUC.xaml;ForgotPassword.xaml;Login.xaml;MainWindow.xaml;VehicleUC.xaml;
 
-False
+True
 
