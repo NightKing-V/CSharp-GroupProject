@@ -25,7 +25,7 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Button x:Name="RentBtn" Content="RENT" HorizontalAlignment="Center" Height="50" Margin="0,60,0,0" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" FontSize="14">
+        <Button x:Name="RentBtn" Content="RENT" HorizontalAlignment="Center" Height="50" Margin="0,60,0,0" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" FontSize="14" Click="RentBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>

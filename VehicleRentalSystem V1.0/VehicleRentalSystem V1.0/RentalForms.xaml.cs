@@ -10,23 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace VehicleRentalSystem_V1._0
 {
     /// <summary>
-    /// Interaction logic for BookingsUC.xaml
+    /// Interaction logic for RentalForms.xaml
     /// </summary>
-    public partial class BookingsUC : UserControl
+    public partial class RentalForms : Window
     {
-        public BookingsUC()
+        public RentalForms()
         {
             InitializeComponent();
         }
 
-        private void RentBtn_Click(object sender, RoutedEventArgs e)
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

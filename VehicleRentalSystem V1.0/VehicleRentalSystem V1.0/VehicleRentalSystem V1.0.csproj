@@ -98,6 +98,9 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RentalForms.xaml.cs">
+      <DependentUpon>RentalForms.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VehicleUC.xaml.cs">
       <DependentUpon>VehicleUC.xaml</DependentUpon>
     </Compile>
@@ -152,6 +155,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RentalForms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VehicleUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
