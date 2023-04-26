@@ -23,5 +23,10 @@ namespace VehicleRentalSystem_V1._0
         {
             InitializeComponent();
         }
+
+        private void btnRequest_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
