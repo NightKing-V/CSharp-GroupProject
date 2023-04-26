@@ -101,6 +101,9 @@
     <Compile Include="RentalForms.xaml.cs">
       <DependentUpon>RentalForms.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VehicleHireForm.xaml.cs">
+      <DependentUpon>VehicleHireForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VehicleUC.xaml.cs">
       <DependentUpon>VehicleUC.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="RentalForms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleHireForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
