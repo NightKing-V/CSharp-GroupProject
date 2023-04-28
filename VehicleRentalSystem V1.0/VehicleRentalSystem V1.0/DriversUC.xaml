@@ -39,7 +39,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="DriverMBtn" Content="MANAGE DRIVERS" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" Margin="0,219,0,0" FontSize="14">
+        <Button x:Name="DriverMBtn" Content="MANAGE DRIVERS" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" Margin="0,219,0,0" FontSize="14" Click="DriverMBtn_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>

@@ -29,10 +29,6 @@ namespace VehicleRentalSystem_V1._0
         {
             RentalForms rentalForms= new RentalForms();
             rentalForms.Show();
-            
-            
-            
-            
         }
 
         private void HireBtn_Click(object sender, RoutedEventArgs e)

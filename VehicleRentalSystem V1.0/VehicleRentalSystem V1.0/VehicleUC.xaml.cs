@@ -24,5 +24,11 @@ namespace VehicleRentalSystem_V1._0
         {
             InitializeComponent();
         }
+
+        private void VehicleMBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ManageVehicleFor managevehicleform = new ManageVehicleFor();
+            managevehicleform.Show();
+        }
     }
 }

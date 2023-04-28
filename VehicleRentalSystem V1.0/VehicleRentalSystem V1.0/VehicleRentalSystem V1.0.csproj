@@ -102,6 +102,12 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ManageDriverForm.xaml.cs">
+      <DependentUpon>ManageDriverForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageVehicleFor.xaml.cs">
+      <DependentUpon>ManageVehicleFor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RentalForms.xaml.cs">
       <DependentUpon>RentalForms.xaml</DependentUpon>
     </Compile>
@@ -162,6 +168,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ManageDriverForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageVehicleFor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RentalForms.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
