@@ -81,6 +81,7 @@
     <Compile Include="AdminUC.xaml.cs">
       <DependentUpon>AdminUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataBaseFunctions.cs" />
     <Compile Include="DetailsDataCus.xaml.cs">
       <DependentUpon>DetailsDataCus.xaml</DependentUpon>
     </Compile>
