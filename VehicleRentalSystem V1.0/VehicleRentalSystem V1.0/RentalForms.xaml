@@ -1,4 +1,4 @@
-﻿<Window x:Class="VehicleRentalSystem_V1._0.RentalForms"
+﻿<Window x:Name="RentalForm" x:Class="VehicleRentalSystem_V1._0.RentalForms"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -176,7 +176,7 @@
                     Width="350"
                     Margin="0,10,0,0"
                     >
-                    <TextBox x:Name="C_Address"
+                    <TextBox x:Name="C_address"
                              FontSize="15"
                              TextAlignment="Center"
                              FontWeight="Medium"
@@ -280,7 +280,7 @@
                     Width="250"
                     Margin="0,10,0,0"
                     >
-                    <DatePicker x:Name="StartDate" HorizontalAlignment="Left" 
+                    <DatePicker x:Name="Startdate" HorizontalAlignment="Left" 
                                 Height="25"
                                 Margin="8,8,8,8"
                                 VerticalAlignment="Top" 
@@ -306,7 +306,7 @@
                     Width="250"
                     Margin="0,10,0,0"
                     >
-                    <DatePicker x:Name="EndDate" HorizontalAlignment="Left" 
+                    <DatePicker x:Name="Enddate" HorizontalAlignment="Left" 
                                 Height="25"
                                 Margin="8,8,8,8"
                                 VerticalAlignment="Top" 
@@ -332,7 +332,7 @@
                     Width="250"
                     Margin="0,10,0,0"
                     >
-                    <DatePicker x:Name="ReturnDate" HorizontalAlignment="Left" 
+                    <DatePicker x:Name="Returndate" HorizontalAlignment="Left" 
                                 Height="25"
                                 Margin="8,8,8,8"
                                 VerticalAlignment="Top" 
@@ -347,7 +347,7 @@
                 <Button x:Name="btnSubmit"
                              
                             BorderThickness="0"
-                            Content="Request"
+                            Content="Submit"
                             Foreground="Black"
                             FontSize="12"
                             FontFamily="MonteSerrat"
@@ -360,7 +360,7 @@
                             <Setter Property="Background" Value="#71A4E1"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#71A4E1"/>
+                                    <Setter Property="Background" Value="#FF0351AF"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
