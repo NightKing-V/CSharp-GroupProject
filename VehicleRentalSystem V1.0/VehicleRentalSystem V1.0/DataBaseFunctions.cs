@@ -27,15 +27,15 @@ namespace VehicleRentalSystem_V1._0
 
         public int setdata(string Query)
         {
-            int cnt = 0;
+            int count = 0;
             if (sqlcon.State == ConnectionState.Closed)
             {
                 sqlcon.Open();
             }
             sqlcmd.CommandText = Query;
-            cnt = sqlcmd.ExecuteNonQuery();
+            count = sqlcmd.ExecuteNonQuery();
             sqlcon.Close();
-            return cnt;
+            return count;
         }
         public DataTable getdata(string Query)
         {
