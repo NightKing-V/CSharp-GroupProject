@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Sql;
+using System.Data;
 
 namespace VehicleRentalSystem_V1._0
 {
@@ -20,6 +22,9 @@ namespace VehicleRentalSystem_V1._0
     /// </summary>
     public partial class DetailsUC : UserControl
     {
+        private string searchtxt;
+        private string Query;
+        DataTable dt;
         public DetailsUC()
         {
             InitializeComponent();
@@ -28,6 +33,68 @@ namespace VehicleRentalSystem_V1._0
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+
+        private void SearchType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void SearchBtnClick(object sender, RoutedEventArgs e)
+        {
+            searchtxt = SearchBar.Text;
+            DataBaseFunctions SB = new DataBaseFunctions();
+            DetailsDataCus DG = new DetailsDataCus();
+            if (SearchType.Text == "Customer NIC")
+            {
+                if(RecordType.Text == "Hire")
+                {
+
+                    Query = "SELECT * from VehicleHire WHERE C_NIC LIKE '"+searchtxt+"';";
+                    dt = SB.getdata(Query);
+                    
+                }
+                else if(RecordType.Text == "Rent")
+                {
+                    Query = "SELECT * from VehicleRent WHERE C_NIC LIKE '" + searchtxt + "';";
+                    dt = SB.getdata(Query);
+                }
+            }
+            else if (SearchType.Text == "Rider NIC")
+            {
+                if (RecordType.Text == "Hire")
+                {
+
+                    Query = "SELECT * from VehicleHire WHERE R_NIC LIKE '" + searchtxt + "';";
+                    dt = SB.getdata(Query);
+
+                }
+                else if (RecordType.Text == "Rent")
+                {
+                    Query = "SELECT * from VehicleRent WHERE R_NIC LIKE '" + searchtxt + "';";
+                    dt = SB.getdata(Query);
+                }
+            }
+            else if (SearchType.Text == "Vehicle NO")
+            {
+                if (RecordType.Text == "Hire")
+                {
+
+                    Query = "SELECT * from VehicleHire WHERE V_NO LIKE '" + searchtxt + "';";
+                    dt = SB.getdata(Query);
+
+                }
+                else if (RecordType.Text == "Rent")
+                {
+                    Query = "SELECT * from VehicleRent WHERE V_NO LIKE '" + searchtxt + "';";
+                    dt = SB.getdata(Query);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter Search Type");
+            }
         }
     }
 }

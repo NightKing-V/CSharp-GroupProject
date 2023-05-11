@@ -101,14 +101,8 @@
       <DependentUpon>AdminUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataBaseFunctions.cs" />
-    <Compile Include="DetailsDataCus.xaml.cs">
-      <DependentUpon>DetailsDataCus.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DetailsDataR.xaml.cs">
-      <DependentUpon>DetailsDataR.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DetailsDataV.xaml.cs">
-      <DependentUpon>DetailsDataV.xaml</DependentUpon>
+    <Compile Include="DetailsDataGrid.xaml.cs">
+      <DependentUpon>DetailsDataGrid.xaml</DependentUpon>
     </Compile>
     <Compile Include="DetailsUC.xaml.cs">
       <DependentUpon>DetailsUC.xaml</DependentUpon>
@@ -146,15 +140,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DetailsDataCus.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DetailsDataR.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DetailsDataV.xaml">
+    <Page Include="DetailsDataGrid.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

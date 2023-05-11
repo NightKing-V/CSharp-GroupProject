@@ -40,6 +40,7 @@ namespace VehicleRentalSystem_V1._0
         {
             BookingUC.Visibility = Visibility.Visible;
             DetailsUC___Search.Visibility = Visibility.Hidden;
+            DetailsDataGrid.Visibility= Visibility.Hidden;
             DriversUC.Visibility = Visibility.Hidden;
             VehicleUC.Visibility = Visibility.Hidden;
             AdminUC.Visibility = Visibility.Hidden;
@@ -48,16 +49,18 @@ namespace VehicleRentalSystem_V1._0
         private void DetailsBtn_Checked(object sender, RoutedEventArgs e)
         {
             DetailsUC___Search.Visibility = Visibility.Visible;
+            DetailsDataGrid.Visibility = Visibility.Visible;
             BookingUC.Visibility = Visibility.Hidden;
             DriversUC.Visibility = Visibility.Hidden;
             VehicleUC.Visibility = Visibility.Hidden;
             AdminUC.Visibility = Visibility.Hidden;
-        }
+          }
 
         private void VehiclesBtn_Checked(object sender, RoutedEventArgs e)
         {
             VehicleUC.Visibility = Visibility.Visible;
             DetailsUC___Search.Visibility = Visibility.Hidden;
+            DetailsDataGrid.Visibility = Visibility.Hidden;
             DriversUC.Visibility = Visibility.Hidden;
             BookingUC.Visibility = Visibility.Hidden;
             AdminUC.Visibility = Visibility.Hidden;
@@ -67,6 +70,7 @@ namespace VehicleRentalSystem_V1._0
         {
             DriversUC.Visibility = Visibility.Visible;
             DetailsUC___Search.Visibility = Visibility.Hidden;
+            DetailsDataGrid.Visibility = Visibility.Hidden;
             BookingUC.Visibility = Visibility.Hidden;
             VehicleUC.Visibility = Visibility.Hidden;
             AdminUC.Visibility = Visibility.Hidden;
@@ -76,6 +80,7 @@ namespace VehicleRentalSystem_V1._0
         {
             AdminUC.Visibility = Visibility.Visible;
             DetailsUC___Search.Visibility = Visibility.Hidden;
+            DetailsDataGrid.Visibility = Visibility.Hidden;
             DriversUC.Visibility = Visibility.Hidden;
             VehicleUC.Visibility = Visibility.Hidden;
             BookingUC.Visibility = Visibility.Hidden;

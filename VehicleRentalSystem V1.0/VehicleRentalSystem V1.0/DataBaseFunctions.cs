@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace VehicleRentalSystem_V1._0
 {
@@ -18,10 +19,8 @@ namespace VehicleRentalSystem_V1._0
 
         public DataBaseFunctions()
         {
-            ConStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleRentalDB.mdf"";Integrated Security=True";
+            ConStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleRentalDB.mdf"";Integrated Security=True";
             sqlcon = new SqlConnection(ConStr);
-            sqlcmd = new SqlCommand();
-            sqlcmd.Connection = sqlcon;
 
         }
 
@@ -32,16 +31,20 @@ namespace VehicleRentalSystem_V1._0
             {
                 sqlcon.Open();
             }
-            sqlcmd.CommandText = Query;
+            sqlcmd = new SqlCommand(Query, sqlcon);
             count = sqlcmd.ExecuteNonQuery();
             sqlcon.Close();
             return count;
         }
         public DataTable getdata(string Query)
         {
+            if (sqlcon.State == ConnectionState.Closed)
+            {
+                sqlcon.Open();
+            }
             dt = new DataTable();
-            dataadapter = new SqlDataAdapter(Query, ConStr);
-            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataadapter);
+            sqlcmd = new SqlCommand(Query, sqlcon);
+            dataadapter = new SqlDataAdapter(sqlcmd);
             dataadapter.Fill(dt);
             return dt;
         }

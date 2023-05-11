@@ -309,23 +309,33 @@
         <Border BorderThickness="3,3,3,3" BorderBrush="#FF368CE7" CornerRadius="5,0,0,5" Margin="70,50,0,354" HorizontalAlignment="Left" Width="283" >
             <TextBox x:Name="SearchBar" TextWrapping="Wrap" TextChanged="TextBox_TextChanged" BorderBrush="#FF368CE7" BorderThickness="0,0,0,0" Margin="7,1,-3,1" Height="38" Background="{x:Null}" FontSize="16"/>
         </Border>
-        <ComboBox Style="{DynamicResource ComboBoxStyle1}" x:Name="SearchType" BorderBrush="#FF368CE7" BorderThickness="0,3,3,3" IsReadOnly="True" Margin="353,50,0,354" HorizontalAlignment="Left" Width="134" VerticalContentAlignment="Center">
+        <ComboBox SelectedValuePath="Content" Style="{DynamicResource ComboBoxStyle1}" x:Name="SearchType" BorderBrush="#FF368CE7" BorderThickness="0,3,3,3" IsReadOnly="True" Margin="353,50,0,354" HorizontalAlignment="Left" Width="134" VerticalContentAlignment="Center" SelectionChanged="SearchType_SelectionChanged">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FF368CE7"/>
                     <GradientStop Color="#FF368CE7" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
-            <ComboBoxItem Content="Customer NIC"/>
-            <ComboBoxItem Content="Rider NIC"/>
-            <ComboBoxItem Content="Vehicle NO"/>
+            <ComboBoxItem x:Name="CNIC" Content="Customer NIC" IsSelected="True"/>
+            <ComboBoxItem x:Name="RNIC" Content="Rider NIC"/>
+            <ComboBoxItem x:Name="VNO" Content="Vehicle NO"/>
         </ComboBox>
-        <Button Content="SEARCH" BorderThickness="0,3,3,3" BorderBrush="#FF368CE7" Padding="0,1,1,1" Background="#FF1572A1" Margin="486,50,0,354" HorizontalAlignment="Left" Width="91" Foreground="White" FontFamily="Century Gothic">
+        <Button x:Name="SearchBtn" Content="SEARCH" BorderThickness="0,3,3,3" BorderBrush="#FF368CE7" Padding="0,1,1,1" Background="#FF1572A1" Margin="620,50,0,354" HorizontalAlignment="Left" Width="91" Foreground="White" FontFamily="Century Gothic" Click="SearchBtnClick">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="0,5,5,0"/>
                 </Style>
             </Button.Resources>
         </Button>
+        <ComboBox SelectedValuePath="Content" Style="{DynamicResource ComboBoxStyle1}" x:Name="RecordType" BorderBrush="#FF368CE7" BorderThickness="0,3,0,3" IsReadOnly="True" Margin="487,50,0,354" HorizontalAlignment="Left" Width="134" VerticalContentAlignment="Center" SelectionChanged="SearchType_SelectionChanged">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FF368CE7"/>
+                    <GradientStop Color="#FF368CE7" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem x:Name="Hire" Content="Hire" IsSelected="True"/>
+            <ComboBoxItem x:Name="Rent" Content="Rent"/>
+        </ComboBox>
     </Grid>
 </UserControl>
