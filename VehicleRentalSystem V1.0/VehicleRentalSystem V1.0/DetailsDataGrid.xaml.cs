@@ -27,9 +27,13 @@ namespace VehicleRentalSystem_V1._0
         }
         public void datafiller(DataTable dt)
         {
+
             DataGridView.DataContext= dt;
         }
 
-       
+        private void DataGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -44,57 +44,64 @@ namespace VehicleRentalSystem_V1._0
         private void SearchBtnClick(object sender, RoutedEventArgs e)
         {
             searchtxt = SearchBar.Text;
-            DataBaseFunctions SB = new DataBaseFunctions();
-            DetailsDataCus DG = new DetailsDataCus();
-            if (SearchType.Text == "Customer NIC")
+            if(searchtxt == "") 
             {
-                if(RecordType.Text == "Hire")
-                {
-
-                    Query = "SELECT * from VehicleHire WHERE C_NIC LIKE '"+searchtxt+"';";
-                    dt = SB.getdata(Query);
-                    
-                }
-                else if(RecordType.Text == "Rent")
-                {
-                    Query = "SELECT * from VehicleRent WHERE C_NIC LIKE '" + searchtxt + "';";
-                    dt = SB.getdata(Query);
-                }
-            }
-            else if (SearchType.Text == "Rider NIC")
-            {
-                if (RecordType.Text == "Hire")
-                {
-
-                    Query = "SELECT * from VehicleHire WHERE R_NIC LIKE '" + searchtxt + "';";
-                    dt = SB.getdata(Query);
-
-                }
-                else if (RecordType.Text == "Rent")
-                {
-                    Query = "SELECT * from VehicleRent WHERE R_NIC LIKE '" + searchtxt + "';";
-                    dt = SB.getdata(Query);
-                }
-            }
-            else if (SearchType.Text == "Vehicle NO")
-            {
-                if (RecordType.Text == "Hire")
-                {
-
-                    Query = "SELECT * from VehicleHire WHERE V_NO LIKE '" + searchtxt + "';";
-                    dt = SB.getdata(Query);
-
-                }
-                else if (RecordType.Text == "Rent")
-                {
-                    Query = "SELECT * from VehicleRent WHERE V_NO LIKE '" + searchtxt + "';";
-                    dt = SB.getdata(Query);
-                }
+                MessageBox.Show("Enter Search Text");
             }
             else
             {
-                MessageBox.Show("Enter Search Type");
+                DataBaseFunctions SB = new DataBaseFunctions();
+                DetailsDataCus DG = new DetailsDataCus();
+                if (SearchType.Text == "Customer NIC")
+                {
+                    if (RecordType.Text == "Hire")
+                    {
+
+                        Query = "SELECT * from VehicleHire WHERE C_NIC LIKE '" + searchtxt + "';";
+                        dt = SB.getdata(Query);
+
+                    }
+                    else if (RecordType.Text == "Rent")
+                    {
+                        Query = "SELECT * from VehicleRent WHERE C_NIC LIKE '" + searchtxt + "';";
+                        dt = SB.getdata(Query);
+                    }
+                    DG.datafiller(dt);
+                }
+                else if (SearchType.Text == "Rider NIC")
+                {
+                    if (RecordType.Text == "Hire")
+                    {
+
+                        Query = "SELECT * from VehicleHire WHERE R_NIC LIKE '" + searchtxt + "';";
+                        dt = SB.getdata(Query);
+
+                    }
+                    else if (RecordType.Text == "Rent")
+                    {
+                        Query = "SELECT * from VehicleRent WHERE R_NIC LIKE '" + searchtxt + "';";
+                        dt = SB.getdata(Query);
+                    }
+                    DG.datafiller(dt);
+                }
+                else if (SearchType.Text == "Vehicle NO")
+                {
+                    if (RecordType.Text == "Hire")
+                    {
+
+                        Query = "SELECT * from VehicleHire WHERE V_NO LIKE '" + searchtxt + "';";
+                        dt = SB.getdata(Query);
+
+                    }
+                    else if (RecordType.Text == "Rent")
+                    {
+                        Query = "SELECT * from VehicleRent WHERE V_NO LIKE '" + searchtxt + "';";
+                        dt = SB.getdata(Query);
+                    }
+                    DG.datafiller(dt);
+                }
             }
+           
         }
     }
 }
