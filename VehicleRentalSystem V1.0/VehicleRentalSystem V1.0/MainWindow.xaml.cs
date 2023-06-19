@@ -85,5 +85,10 @@ namespace VehicleRentalSystem_V1._0
             VehicleUC.Visibility = Visibility.Hidden;
             BookingUC.Visibility = Visibility.Hidden;
         }
+
+        private void DetailsDataGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

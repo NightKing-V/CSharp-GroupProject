@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="VehicleHireForm" Height="550" Width="900"  WindowStartupLocation="CenterScreen">
+        Title="VehicleHireForm" Height="607" Width="900"  WindowStartupLocation="CenterScreen">
     <ScrollViewer>
         <Border  CornerRadius="15"  BorderBrush="#71A4E1" BorderThickness="3" Height="1450" Grid.Row="1" Width="700" Margin="0,57,0,0">
             <StackPanel Width="500"
@@ -49,7 +49,7 @@
                              BorderBrush="White"
                              
                              BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                             Margin="8,8,8,8" TextChanged="txtUser_TextChanged"
                             />
 
 
@@ -230,38 +230,6 @@
                 </Border>
 
                 <!--Next-->
-
-                <TextBlock Text="Vehicle Number"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
-
-                <Border CornerRadius="15"  
-                    BorderBrush="Black" 
-                    BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
-                    Width="250"
-                    Margin="0,10,0,0"
-                    >
-                    <TextBox x:Name="VehicleNumber"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             TextAlignment="Center"
-                             Foreground="Black"
-                              CaretBrush="Gray"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
-                             />
-
-
-
-
-                </Border>
 
                 <!--Next-->
                 <TextBlock Text="Start Date"

@@ -122,7 +122,6 @@
     <Compile Include="ManageVehicleFor.xaml.cs">
       <DependentUpon>ManageVehicleFor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PdfControl.cs" />
     <Compile Include="RentalForms.xaml.cs">
       <DependentUpon>RentalForms.xaml</DependentUpon>
     </Compile>

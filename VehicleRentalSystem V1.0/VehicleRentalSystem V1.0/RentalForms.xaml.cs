@@ -32,7 +32,7 @@ namespace VehicleRentalSystem_V1._0
         {
             try
             {
-                if(txtUser.Text=="" || txtUser.Text == "" || txtC_Telephone.Text == ""||txtC_Email.Text== "" ||C_address.Text == ""||V_Chassis.Text == ""||VehicleNumber.Text == ""|| Startdate.Text == ""||Startdate == null||  Enddate.Text == ""|| Enddate == null||Returndate.Text == ""||Returndate ==null)
+                if(txtUser.Text=="" || txtUser.Text == "" || txtC_Telephone.Text == ""||txtC_Email.Text== "" ||C_address.Text == ""||V_Chassis.Text == ""|| Startdate.Text == ""||Startdate == null||  Enddate.Text == ""|| Enddate == null||Returndate.Text == ""||Returndate ==null)
                 {
                     MessageBox.Show("Data Missing");
                 }
@@ -45,7 +45,6 @@ namespace VehicleRentalSystem_V1._0
                     string C_Address = C_address.Text;
                     string C_Email = txtC_Email.Text;
                     string V_chassis = V_Chassis.Text;
-                    string package = VehicleNumber.Text;
                     DateTime StartDate = Startdate.SelectedDate.Value;
                     DateTime EndDate = Enddate.SelectedDate.Value;
                     DateTime ReturnDate = Returndate.SelectedDate.Value;
@@ -62,7 +61,7 @@ namespace VehicleRentalSystem_V1._0
 
                     //INSEERTING TO VEHICLE RENT TABLE
                     string Query3 = "INSERT INTO VehicleRent (C_NIC,V_CN, VehicleNumber,StartDate,EndDate,ReturnDate) VALUES ('{0}', '{1}','{2}','{3}', '{4}','{5}')";
-                    Query3 = string.Format(Query3,C_NIC,V_chassis,package,StartDate,EndDate,ReturnDate);
+                    Query3 = string.Format(Query3,C_NIC,V_chassis,StartDate,EndDate,ReturnDate);
                     con.setdata(Query3);
 
 
@@ -86,7 +85,6 @@ namespace VehicleRentalSystem_V1._0
             txtC_Email.Text = "";
             C_address.Text="";
             V_Chassis.Text = "";
-            VehicleNumber.Text = "";
             Startdate.Text = "";
             Startdate = null;
             Enddate.Text = "";

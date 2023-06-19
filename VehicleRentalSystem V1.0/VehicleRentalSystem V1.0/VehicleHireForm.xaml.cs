@@ -33,7 +33,6 @@ namespace VehicleRentalSystem_V1._0
             txtC_Email.Text = "";
             C_Address.Text = "";
             V_Chassis.Text = "";
-            VehicleNumber.Text = "";
             StartDate.Text = "";
             StartDate = null;
             EndDate.Text = "";
@@ -45,6 +44,11 @@ namespace VehicleRentalSystem_V1._0
         }
 
         private void btnSubmitVH_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void txtUser_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
