@@ -110,6 +110,12 @@
     <Compile Include="DriversUC.xaml.cs">
       <DependentUpon>DriversUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EndHireDetail.xaml.cs">
+      <DependentUpon>EndHireDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EndRentDetail.xaml.cs">
+      <DependentUpon>EndRentDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPassword.xaml.cs">
       <DependentUpon>ForgotPassword.xaml</DependentUpon>
     </Compile>
@@ -148,6 +154,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DriversUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EndHireDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EndRentDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

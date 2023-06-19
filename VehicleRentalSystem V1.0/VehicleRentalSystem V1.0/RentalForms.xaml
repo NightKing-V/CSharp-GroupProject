@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="RentalForms" Height="552" Width="900"  WindowStartupLocation="CenterScreen">
+        Title="RentalForms" Height="582" Width="900"  WindowStartupLocation="CenterScreen">
 
     <ScrollViewer>
         <Border  CornerRadius="15"  BorderBrush="#71A4E1" BorderThickness="3" Height="1250" Grid.Row="1" Width="700" Margin="0,57,0,0">
