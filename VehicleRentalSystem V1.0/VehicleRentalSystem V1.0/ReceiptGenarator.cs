@@ -21,7 +21,7 @@ namespace VehicleRentalSystem_V1._0
         }
         public void HireReceipt()
         {
-            string html = 
+            string html = "";
         }
     }
 }
