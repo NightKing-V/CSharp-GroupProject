@@ -25,13 +25,25 @@ namespace VehicleRentalSystem_V1._0
             InitializeComponent();
         }
 
-        private void RentBtn_Click(object sender, RoutedEventArgs e)
+        private void NewRentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RentalForms RF = new RentalForms();
+            RF.Show();
+        }
+
+        private void NewHireBtn_Click(object sender, RoutedEventArgs e)
+        {
+            VehicleHireForm HF = new VehicleHireForm();
+            HF.Show();
+        }
+
+        private void CloseRentBtn_Click(object sender, RoutedEventArgs e)
         {
             EndRentDetail ERD= new EndRentDetail();
             ERD.Show();
         }
 
-        private void HireBtn_Click(object sender, RoutedEventArgs e)
+        private void CloseHireBtn_Click(object sender, RoutedEventArgs e)
         {
             EndHireDetail EHD= new EndHireDetail();
             EHD.Show();
