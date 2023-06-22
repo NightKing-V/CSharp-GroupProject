@@ -32,13 +32,13 @@ namespace VehicleRentalSystem_V1._0
         {
             try
             {
-                if(txtUser.Text=="" || txtUser.Text == "" || txtC_Telephone.Text == ""||txtC_Email.Text== "" ||C_address.Text == ""||V_Chassis.Text == ""|| Startdate.Text == ""||Startdate == null||  Enddate.Text == ""|| Enddate == null||Returndate.Text == ""||Returndate ==null)
+                if (txtUser.Text == "" || txtUser.Text == "" || txtC_Telephone.Text == "" || txtC_Email.Text == "" || C_address.Text == "" || V_Chassis.Text == "" || Startdate.Text == "" || Startdate == null || Enddate.Text == "" || Enddate == null)
                 {
                     MessageBox.Show("Data Missing");
                 }
                 else
                 {
-                    
+
                     string C_Name = txtUser.Text;
                     string C_NIC = txtC_NIC.Text;
                     string C_Tel = txtC_Telephone.Text;
@@ -47,7 +47,7 @@ namespace VehicleRentalSystem_V1._0
                     string V_chassis = V_Chassis.Text;
                     DateTime StartDate = Startdate.SelectedDate.Value;
                     DateTime EndDate = Enddate.SelectedDate.Value;
-                    DateTime ReturnDate = Returndate.SelectedDate.Value;
+                    
 
                     //INSERTING TO CUSTOMER TABLE
                     string Query1 = "INSERT INTO Customer (C_NAME, C_NIC,C_Tel,C_Address,C_Email) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')";
@@ -61,7 +61,7 @@ namespace VehicleRentalSystem_V1._0
 
                     //INSEERTING TO VEHICLE RENT TABLE
                     string Query3 = "INSERT INTO VehicleRent (C_NIC,V_CN, VehicleNumber,StartDate,EndDate,ReturnDate) VALUES ('{0}', '{1}','{2}','{3}', '{4}','{5}')";
-                    Query3 = string.Format(Query3,C_NIC,V_chassis,StartDate,EndDate,ReturnDate);
+                    Query3 = string.Format(Query3, C_NIC, V_chassis, StartDate, EndDate);
                     con.setdata(Query3);
 
 
@@ -75,7 +75,7 @@ namespace VehicleRentalSystem_V1._0
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
@@ -83,14 +83,13 @@ namespace VehicleRentalSystem_V1._0
             txtC_NIC.Text = "";
             txtC_Telephone.Text = "";
             txtC_Email.Text = "";
-            C_address.Text="";
+            C_address.Text = "";
             V_Chassis.Text = "";
             Startdate.Text = "";
             Startdate = null;
             Enddate.Text = "";
-            Enddate =null;
-            Returndate.Text = "";
-            Returndate =null;
+            Enddate = null;
+
         }
     }
 }

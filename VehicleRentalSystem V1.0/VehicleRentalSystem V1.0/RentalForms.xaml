@@ -5,52 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="RentalForms" Height="582" Width="900"  WindowStartupLocation="CenterScreen">
+        Title="RentalForms" Height="700" Width="950"  WindowStartupLocation="CenterScreen">
 
-    <ScrollViewer>
-        <Border  CornerRadius="15"  BorderBrush="#71A4E1" BorderThickness="3" Height="1250" Grid.Row="1" Width="700" Margin="0,57,0,0">
-            <StackPanel Width="500"
-                    Grid.Row="2"
-                    Orientation="Vertical"
-                    Margin="30,17,30,18">
+    <ScrollViewer Margin="0,0,0,-6">
+        <Border Height="627" Width="808" Background="#FFEEF6FF" BorderBrush="#FF1C6DD0" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15">
+            <Grid Height="587" VerticalAlignment="Top" Margin="0,26,0,0">
 
-                <Image Source="C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\Icon.png"
-                   Width="90" Height="74"/>
 
                 <TextBlock Text="Vehicle Rent Form"
-                       TextAlignment="Center"
-                       FontSize="15"
-                       Foreground="#71A4E1"
-                       FontWeight="ExtraBold"
-                       FontFamily="Century Gothic"
-                       Margin="0,30,0,0" Width="246"/>
+                    TextAlignment="Center"
+                    FontSize="20"
+                    Foreground="Black"
+                    FontWeight="ExtraBold"
+                    FontFamily="Montserrat"
+                    Margin="316,14,298,0" Height="23" VerticalAlignment="Top"/>
 
                 <TextBlock Text="Customer Name"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="51,91,0,0" Height="20" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="100"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="350"
-                    Margin="0,10,0,0"
+                    Margin="41,103,0,0" Height="44" VerticalAlignment="Top" Grid.Column="1" Background="White"
                     >
                     <TextBox x:Name="txtUser"
-                             FontSize="15"
-                             TextAlignment="Center"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             Foreground="Black"
-                             CaretBrush="Gray"
-                             BorderBrush="White"
+                        FontSize="15"
+                        TextAlignment="Left"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
                              
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                             />
 
 
@@ -62,30 +55,28 @@
                 <!--Next-->
 
                 <TextBlock Text="Customer NIC"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="530,90,0,0" HorizontalAlignment="Left" Width="93" Height="21" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="0,10,0,0"
+                    Margin="515,103,0,0" Height="44" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="txtC_NIC"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             TextAlignment="Center"
-                             Foreground="Black"
-                              CaretBrush="Gray"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
@@ -96,30 +87,28 @@
                 <!--Next-->
 
                 <TextBlock Text="Customer Telephone"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="51,168,0,0" HorizontalAlignment="Left" Width="129" Height="16" VerticalAlignment="Top" Grid.Column="1"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="0,10,0,0"
+                    Margin="41,183,0,0" Height="44" VerticalAlignment="Top" Grid.Column="1" Background="White"
                     >
                     <TextBox x:Name="txtC_Telephone"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             TextAlignment="Center"
-                             Foreground="Black"
-                              CaretBrush="Gray"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
@@ -130,30 +119,28 @@
                 <!--Next-->
 
                 <TextBlock Text="Customer Email"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="530,170,0,0" HorizontalAlignment="Left" Width="93" RenderTransformOrigin="0.724,0.402" Height="18" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="0,10,0,0"
+                    Margin="515,183,0,0" Height="44" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="txtC_Email"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             TextAlignment="Center"
-                             Foreground="Black"
-                              CaretBrush="Gray"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
@@ -162,31 +149,29 @@
                 </Border>
 
                 <TextBlock Text="Customer Address"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="51,257,0,0" HorizontalAlignment="Left" Width="115" Height="26" VerticalAlignment="Top" Grid.Column="1"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="350"
-                    Margin="0,10,0,0"
+                    Margin="41,270,0,0" Height="44" VerticalAlignment="Top" Grid.Column="1" Background="White"
                     >
                     <TextBox x:Name="C_address"
-                             FontSize="15"
-                             TextAlignment="Center"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             Foreground="Black"
-                             CaretBrush="Gray"
-                             BorderBrush="White"
+                        FontSize="15"
+                        TextAlignment="Left"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
                              
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                             />
 
 
@@ -199,30 +184,28 @@
                 <!--Next-->
 
                 <TextBlock Text="Vehicle Chassis Number"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="530,257,0,0" HorizontalAlignment="Left" Width="151" Height="19" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="0,10,0,0"
+                    Margin="515,270,0,0" Height="44" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="V_Chassis"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             TextAlignment="Center"
-                             Foreground="Black"
-                              CaretBrush="Gray"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
@@ -231,28 +214,54 @@
                 </Border>
 
                 <!--Next-->
+                <TextBlock Text="Package"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="51,420,0,0" HorizontalAlignment="Left" Width="84" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.222"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="41,436,0,0" Height="48" VerticalAlignment="Top" Background="White"
+                    >
+                    <ComboBox 
+                    
+                        Margin="0,8,0,8" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="230" VerticalContentAlignment="Center">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="#FF7AB3EF"/>
+                                <GradientStop Color="#FF7AB3EF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                        <ComboBoxItem x:Name="P1" Content="Budget" IsSelected="True"/>
+                        <ComboBoxItem x:Name="P2" Content="Family"/>
+                        <ComboBoxItem x:Name="P3" Content="Custom"/>
+
+                    </ComboBox>
+                </Border>
+
 
                 <!--Next-->
                 <TextBlock Text="Start Date"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="51,341,0,0" HorizontalAlignment="Left" Width="58" Height="17" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="45" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="0,10,0,0"
+                    Margin="41,355,0,0" Height="48" VerticalAlignment="Top" Background="White"
                     >
                     <DatePicker x:Name="Startdate" HorizontalAlignment="Left" 
-                                Height="25"
-                                Margin="8,8,8,8"
-                                VerticalAlignment="Top" 
-                                Width="230"/>
+                        Height="25"
+                        Margin="8,8,8,8"
+                        VerticalAlignment="Top" 
+                        Width="230" BorderBrush="#FF7AB3EF"/>
 
 
 
@@ -260,104 +269,77 @@
                 </Border>
                 <!--Next-->
                 <TextBlock Text="End Date"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="530,342,0,0" HorizontalAlignment="Left" Width="64" Height="18" VerticalAlignment="Top" RenderTransformOrigin="0.804,0.608"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="45" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="0,10,0,0"
+                    Margin="515,355,0,0" Height="48" VerticalAlignment="Top" Background="White"
                     >
                     <DatePicker x:Name="Enddate" HorizontalAlignment="Left" 
-                                Height="25"
-                                Margin="8,8,8,8"
-                                VerticalAlignment="Top" 
-                                Width="230"/>
+                        Height="25"
+                        Margin="8,8,8,8"
+                        VerticalAlignment="Top" 
+                        Width="230" BorderBrush="#FF7AB3EF"/>
 
 
 
 
                 </Border>
                 <!--Next-->
-                <TextBlock Text="Return Date"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
-
-                <Border CornerRadius="15"  
-                    BorderBrush="Black" 
-                    BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="45" Grid.Row="1" 
-                    Width="250"
-                    Margin="0,10,0,0"
-                    >
-                    <DatePicker x:Name="Returndate" HorizontalAlignment="Left" 
-                                Height="25"
-                                Margin="8,8,8,8"
-                                VerticalAlignment="Top" 
-                                Width="230"/>
-
-
-
-
-                </Border>
 
 
                 <Button x:Name="btnSubmit"
                              
-                            BorderThickness="0"
-                            Content="Submit"
-                            Foreground="Black"
-                            FontSize="12"
-                            FontFamily="MonteSerrat"
-                            Cursor="Hand"
-                            Grid.Column="1"
-                            Margin="0,20,0,0"
-                            Click="btnSubmit_Click" Height="44" Width="249">
+                    BorderThickness="0"
+                    Content="Submit"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="MonteSerrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Margin="190,524,447,0"
+                    Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
                     <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="Background" Value="#71A4E1"/>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#FF7AB3EF"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#FF0351AF"/>
+                                    <Setter Property="Background" Value="#FF1C6DD0"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
                     </Button.Style>
 
                     <Button.Template>
-                        <ControlTemplate TargetType="Button">
+                        <ControlTemplate TargetType="{x:Type Button}">
                             <Border Width="150" Height="40"
-                                        CornerRadius="20"
-                                        Background="{TemplateBinding Background}">
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
+                                    HorizontalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
                 <Button x:Name="btnClear"
                              
-                            BorderThickness="0"
-                            Content="Clear"
-                            Foreground="White"
-                            FontSize="12"
-                            FontFamily="MonteSerrat"
-                            Cursor="Hand"
-                            Grid.Column="2"
-                            Margin="0,20,0,0"
-                            Click="btnClear_Click" Height="44" Width="249">
+                    BorderThickness="0"
+                    Content="Clear"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="MonteSerrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Margin="416,522,190,0"
+                    Click="btnClear_Click" Height="50" VerticalAlignment="Top">
                     <Button.Style>
-                        <Style TargetType="Button">
+                        <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="Red"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
@@ -368,21 +350,20 @@
                     </Button.Style>
 
                     <Button.Template>
-                        <ControlTemplate TargetType="Button">
+                        <ControlTemplate TargetType="{x:Type Button}">
                             <Border Width="150" Height="40"
-                                        CornerRadius="20"
-                                        Background="{TemplateBinding Background}">
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
+                                    HorizontalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
 
 
-            </StackPanel>
 
-
+            </Grid>
 
         </Border>
 

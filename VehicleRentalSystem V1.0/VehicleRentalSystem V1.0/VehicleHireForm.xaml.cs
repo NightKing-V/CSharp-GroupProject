@@ -37,8 +37,6 @@ namespace VehicleRentalSystem_V1._0
             StartDate = null;
             EndDate.Text = "";
             EndDate = null;
-            ReturnDate.Text = "";
-            ReturnDate = null;
             txtR_Name.Text = "";
             txtR_NIC.Text = "";
         }
