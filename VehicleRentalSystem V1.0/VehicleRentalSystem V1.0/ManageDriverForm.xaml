@@ -5,51 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="ManageDriverForm" Height="550" Width="900" WindowStartupLocation="CenterScreen">
+        Title="ManageDriverForm" Width="900" WindowStartupLocation="CenterScreen" Height="810" VerticalAlignment="Center" HorizontalAlignment="Center">
     <ScrollViewer>
-        <Border  CornerRadius="15"  BorderBrush="#71A4E1" BorderThickness="3" Height="990" Grid.Row="1" Width="700" Margin="0,57,0,0">
-            <StackPanel Width="500"
-                    Grid.Row="2"
-                    Orientation="Vertical"
-                    Margin="97,17,97,0" Height="1011" VerticalAlignment="Top">
-
-                <Image Source="C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\Icon.png"
-                   Width="90" Height="74"/>
+        <Border Height="698"
+            Width="658" BorderThickness="3,3,3,3" BorderBrush="#FF1C6DD0" CornerRadius="15,15,15,15" Background="#FFEEF6FF" >
+            <Grid HorizontalAlignment="Left" Width="580" Margin="54,-12,0,-12"
+                    >
 
                 <TextBlock Text="Manage Driver Form"
-                       TextAlignment="Center"
-                       FontSize="15"
-                       Foreground="#71A4E1"
-                       FontWeight="ExtraBold"
-                       FontFamily="Century Gothic"
-                       Margin="0,30,0,0" Width="246"/>
+                    TextAlignment="Center"
+                    FontSize="20"
+                    Foreground="Black"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="127,48,127,0" Height="23" VerticalAlignment="Top"/>
 
                 <TextBlock Text="Driver's Name"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    Foreground="#FF1C6DD0"
+                    FontSize="12"
+                    FontWeight="ExtraBold"
+                    FontFamily="Montserrat"
+                    Margin="4,101,250,0" Height="12" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
-                    Width="350"
-                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left" 
+                    Width="475"
+                    Margin="-8,116,0,0" Background="White" Height="42" VerticalAlignment="Top"
                     >
                     <TextBox x:Name="txtD_Name"
-                             FontSize="15"
-                             TextAlignment="Center"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             Foreground="Black"
-                             CaretBrush="Gray"
-                             BorderBrush="White"
+                        FontSize="15"
+                        TextAlignment="Left"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
                              
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8" Background="White"
                             />
 
 
@@ -58,31 +53,30 @@
 
                 <!--Next-->
 
-                <TextBlock Text="Driver's NIC"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                <TextBlock Text="Driver's NIC NO."
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="ExtraBold"
+                    FontFamily="Montserrat"
+                    Margin="4,176,476,0" Width="100" Height="12" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
-                    Width="250"
-                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left" 
+                    Width="273"
+                    Margin="-8,191,0,0" Height="42" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="txtD_NIC"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             TextAlignment="Center"
-                             Foreground="Black"
-                              CaretBrush="Gray"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
@@ -92,31 +86,30 @@
 
                 <!--Next-->
 
-                <TextBlock Text="Driver License"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                <TextBlock Text="Driver License NO."
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="ExtraBold"
+                    FontFamily="Montserrat"
+                    Margin="298,177,63,0" Height="12" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
-                    Width="250"
-                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left" 
+                    Width="273"
+                    Margin="286,192,0,0" Height="40" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="txtD_lisence"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             TextAlignment="Center"
-                             Foreground="Black"
-                              CaretBrush="Gray"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
@@ -126,34 +119,61 @@
 
                 <!--Next-->
 
-                <TextBlock Text="Driver's Email"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                <TextBlock Text="Driver's E-mail"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="ExtraBold"
+                    FontFamily="Montserrat"
+                    Margin="5,255,249,0" Height="16" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
-                    Width="250"
-                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left" 
+                    Width="420"
+                    Margin="-8,270,0,0" Height="42" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="txtD_Email"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             TextAlignment="Center"
-                             Foreground="Black"
-                              CaretBrush="Gray"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
+
+
+                </Border>
+                <TextBlock Text="Driver's Address"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="ExtraBold"
+                    FontFamily="Montserrat"
+                    Margin="3,333,251,0" Height="12" VerticalAlignment="Top"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="475"
+                    Margin="-10,348,0,0" Background="White" Height="42" VerticalAlignment="Top"
+                    >
+                    <TextBox x:Name="txtD_Name1"
+                        FontSize="15"
+                        TextAlignment="Left"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                             
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8" Background="White"
+                            />
 
 
                 </Border>
@@ -161,33 +181,32 @@
                 <!--Next-->
 
                 <TextBlock Text="Contact Number"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="ExtraBold"
+                    FontFamily="Montserrat"
+                    Margin="1,409,362,0" Height="12" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="0,10,0,0"
+                    Margin="-10,424,0,0" Height="40" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="DriversPhone"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             TextAlignment="Center"
-                             Foreground="Black"
-                              CaretBrush="Gray"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
-                    
-                    
+
+
 
 
 
@@ -197,30 +216,29 @@
                 <!--Next-->
 
                 <TextBlock Text="Driver's State"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="ExtraBold"
+                    FontFamily="Montserrat"
+                    Margin="302,409,63,0" Height="12" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="41" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="0,10,0,0"
+                    Margin="290,424,0,0" Height="40" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="DriverState"
-                             FontSize="15"
-                             FontWeight="Medium"
-                             FontFamily="Montserrat"
-                             TextAlignment="Center"
-                             Foreground="Black"
-                              CaretBrush="Gray"
-                             BorderBrush="White"
-                             BorderThickness="0,0,0,1"
-                             Margin="8,8,8,8"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
@@ -229,19 +247,18 @@
                 </Border>
 
                 <TextBlock Text="Vehicle Type"
-                               FontSize="10"
-                               Foreground="Black"
-                               FontWeight="ExtraBold"
-                               FontFamily="Century Gothic"
-                               Margin="0,30,0,0" Width="246"/>
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="ExtraBold"
+                    FontFamily="Montserrat"
+                    Margin="0,484,428,0" Height="18" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
-                    HorizontalAlignment="Center" 
-                    Height="104" Grid.Row="1" 
+                    HorizontalAlignment="Left" 
                     Width="136"
-                    Margin="0,10,0,0"
+                    Margin="62,510,0,0" Height="104" VerticalAlignment="Top"
                     >
                     <Grid HorizontalAlignment="Center">
                         <Grid.RowDefinitions>
@@ -273,7 +290,7 @@
                 </Border>
 
 
-                <Grid Width="496" Height="116">
+                <Grid Margin="6,628,-2,0" Height="70" VerticalAlignment="Top">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="102.667"/>
@@ -285,52 +302,22 @@
 
                     <Button x:Name="btnD_Update"
                              
-                            BorderThickness="0"
-                                Content="Update"
-                            Foreground="Black"
-                            FontSize="12"
-                            FontFamily="MonteSerrat"
-                            Cursor="Hand"
-                            Grid.Column="1"
-                            Margin="170,11,-26,0"
-                            Click="btnD_Update_Click" Height="47" Width="156" VerticalAlignment="Top" Grid.ColumnSpan="3">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#71A4E1"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#FF023879"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="150" Height="40"
-                                        CornerRadius="20"
-                                        Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Button x:Name="btnD_Insert_"
-                             
-                                BorderThickness="0"
-                                Content="Insert"
-                                Foreground="Black"
-                                FontSize="12"
-                                FontFamily="MonteSerrat"
-                                Cursor="Hand"
-                                Click="btnD_Insert__Click" Height="47" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,11,97,0">
+                        BorderThickness="0"
+                        Content="Update"
+                        Foreground="Black"
+                        FontSize="12"
+                        FontFamily="Montserrat"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Grid.Column="1"
+                        Margin="202,0,-56,0"
+                        Click="btnD_Update_Click" Height="47" Width="156" VerticalAlignment="Center" Grid.ColumnSpan="3" Background="Turquoise">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
-                                <Setter Property="Background" Value="#71A4E1"/>
+                                <Setter Property="Background" Value="#FF40E0D0"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#FF023879"/>
+                                        <Setter Property="Background" Value="#FF71A4E1"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -339,23 +326,56 @@
                         <Button.Template>
                             <ControlTemplate TargetType="{x:Type Button}">
                                 <Border Width="150" Height="40"
-                                            CornerRadius="20"
-                                            Background="{TemplateBinding Background}">
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
                                     <ContentPresenter VerticalAlignment="Center"
-                                                HorizontalAlignment="Center"/>
+                                        HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="btnD_Insert_"
+                             
+                        BorderThickness="0"
+                        Content="Insert"
+                        Foreground="Black"
+                        FontSize="12"
+                        FontFamily="Montserrat"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Click="btnD_Insert__Click" Height="47" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="14,0,74,0" Background="#FF7AB3EF">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="#FF71A4E1"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF1C6DD0"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Width="150" Height="40"
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
                     <Button x:Name="btnD_Delete"
                              
-                                BorderThickness="0"
-                                Content="Delete"
-                                Foreground="Black"
-                                FontSize="12"
-                                FontFamily="MonteSerrat"
-                                Cursor="Hand"
-                                Click="btnD_Delete_Click" Height="47" VerticalAlignment="Top" Grid.Column="3" Margin="40,11,-190,0">
+                        BorderThickness="0"
+                        Content="Delete"
+                        Foreground="White"
+                        FontSize="12"
+                        FontFamily="Montserrat"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Click="btnD_Delete_Click" Height="47" VerticalAlignment="Center" Grid.Column="3" Margin="94,0,-244,0">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="Red"/>
@@ -370,10 +390,10 @@
                         <Button.Template>
                             <ControlTemplate TargetType="{x:Type Button}">
                                 <Border Width="150" Height="40"
-                                            CornerRadius="20"
-                                            Background="{TemplateBinding Background}">
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
                                     <ContentPresenter VerticalAlignment="Center"
-                                                HorizontalAlignment="Center"/>
+                                        HorizontalAlignment="Center"/>
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
@@ -385,9 +405,7 @@
                 </Grid>
 
 
-            </StackPanel>
-
-
+            </Grid>
 
         </Border>
 

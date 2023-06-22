@@ -155,5 +155,10 @@ namespace VehicleRentalSystem_V1._0
         {
 
         }
+
+        private void txtV_Brand_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
