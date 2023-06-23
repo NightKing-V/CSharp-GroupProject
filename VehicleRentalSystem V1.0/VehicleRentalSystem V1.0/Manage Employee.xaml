@@ -31,8 +31,7 @@
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="350"
-                    Margin="41,103,0,0" Height="44" VerticalAlignment="Top" Grid.Column="1" Background="White"
-                    >
+                    Margin="41,103,0,0" Height="44" VerticalAlignment="Top" Grid.Column="1" Background="White">
                     <TextBox x:Name="txtE_Name"
                         FontSize="15"
                         TextAlignment="Left"

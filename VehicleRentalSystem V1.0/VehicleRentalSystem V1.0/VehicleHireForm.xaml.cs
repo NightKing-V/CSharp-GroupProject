@@ -93,7 +93,7 @@ namespace VehicleRentalSystem_V1._0
                             message += "Couldn't Add New Customer!\n";
                         }
                     }
-                    String queryVH = "INSERT INTO VehicleHire(C_NIC, V_CN, StartDate, StartMileage, EtaMileage, EndDate, R_NIC, Active, P_ID, PricePerLiter, [Rentalfee], [Penaltyfee], [Oilfee], [Damagefee], [Totalfee], [Advancefee]) VALUES();";
+                    String queryVH = "INSERT INTO VehicleHire(C_NIC, V_CN, StartDate, StartMileage, EtaMileage, EndDate, R_NIC, Active, PricePerLiter, Advancefee) VALUES("+C_Name+","+V_C+","+StartD+","+EndD+","+ETAM+","+SMil+","+R_NIC+",1,"+PPLiter+","+ADPay+");";
                     SqlCommand VHcmd = new SqlCommand(queryVH, DBF.GetSqlCon());
                     int newvhresult = VHcmd.ExecuteNonQuery();
                   
