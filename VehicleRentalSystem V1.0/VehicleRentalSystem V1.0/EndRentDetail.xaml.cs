@@ -31,7 +31,8 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            RentDtxt.Clear();   
+            RentDtxt.Clear(); 
+            DFeeTxt.Clear();
         }
     }
 }
