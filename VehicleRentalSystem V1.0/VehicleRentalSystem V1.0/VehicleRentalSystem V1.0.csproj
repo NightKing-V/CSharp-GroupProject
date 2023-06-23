@@ -129,6 +129,9 @@
       <DependentUpon>ManageVehicleFor.xaml</DependentUpon>
     </Compile>
     <Compile Include="ReceiptGenarator.cs" />
+    <Compile Include="RentPackagesFrom.xaml.cs">
+      <DependentUpon>RentPackagesFrom.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RentalForms.xaml.cs">
       <DependentUpon>RentalForms.xaml</DependentUpon>
     </Compile>
@@ -194,6 +197,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ManageVehicleFor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RentPackagesFrom.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
