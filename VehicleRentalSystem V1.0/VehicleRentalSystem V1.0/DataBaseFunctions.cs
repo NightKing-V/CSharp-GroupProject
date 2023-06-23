@@ -48,5 +48,10 @@ namespace VehicleRentalSystem_V1._0
             dataadapter.Fill(dt);
             return dt;
         }
+        public SqlConnection GetSqlCon()
+        { 
+                return sqlcon; 
+         
+        }
     }
 }
