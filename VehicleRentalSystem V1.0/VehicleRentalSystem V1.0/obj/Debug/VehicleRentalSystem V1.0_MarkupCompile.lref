@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\GeneratedInternalTypeHelper.g.cs
 
 FG:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\AdminUC.xaml;;
@@ -16,4 +17,28 @@ FG:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSy
 FG:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\RentalForms.xaml;;
 FG:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleHireForm.xaml;;
 FG:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleUC.xaml;;
+=======
+﻿
+
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\AdminUC.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\BookingsUC.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\DetailsDataGrid.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\DetailsUC.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\DriversUC.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\EndHireDetail.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\EndRentDetail.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\ForgotPassword.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\Login.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\MainWindow.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\ManageDriverForm.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\ManageVehicleFor.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\RentPackagesFrom.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\RentalForms.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleHireForm.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleUC.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\DriversAvailableTable.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\DriversInServiceTable.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleAvailableTable.xaml;;
+FD:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleInUseTable.xaml;;
+>>>>>>> 3d1a8bf8c7b270a75dc8c4fa360bd3895c94ec8f
 

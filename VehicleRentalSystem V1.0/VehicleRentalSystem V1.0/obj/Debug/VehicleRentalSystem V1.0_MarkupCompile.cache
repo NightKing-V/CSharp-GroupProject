@@ -4,17 +4,30 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\
+=======
+D:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\
+>>>>>>> 3d1a8bf8c7b270a75dc8c4fa360bd3895c94ec8f
 VehicleRentalSystem_V1._0
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\App.xaml
 16-1936446943
 2-239665352
 23-879287492
 23-254334783
 AdminUC.xaml;BookingsUC.xaml;DetailsDataGrid.xaml;DetailsUC.xaml;DriversUC.xaml;EndHireDetail.xaml;EndRentDetail.xaml;ForgotPassword.xaml;Login.xaml;MainWindow.xaml;ManageDriverForm.xaml;ManageVehicleFor.xaml;RentPackagesFrom.xaml;RentalForms.xaml;VehicleHireForm.xaml;VehicleUC.xaml;
+=======
+D:\My Projects 1\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\App.xaml
+20222866309
+2-239665352
+261750378138
+231871208432
+AdminUC.xaml;BookingsUC.xaml;DetailsDataGrid.xaml;DetailsUC.xaml;DriversAvailableTable.xaml;DriversInServiceTable.xaml;DriversUC.xaml;EndHireDetail.xaml;EndRentDetail.xaml;ForgotPassword.xaml;Login.xaml;MainWindow.xaml;ManageDriverForm.xaml;ManageVehicleFor.xaml;RentPackagesFrom.xaml;RentalForms.xaml;VehicleAvailableTable.xaml;VehicleHireForm.xaml;VehicleInUseTable.xaml;VehicleUC.xaml;
+>>>>>>> 3d1a8bf8c7b270a75dc8c4fa360bd3895c94ec8f
 
 False
 

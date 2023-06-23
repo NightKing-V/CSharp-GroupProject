@@ -108,6 +108,12 @@
     <Compile Include="DetailsUC.xaml.cs">
       <DependentUpon>DetailsUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DriversAvailableTable.xaml.cs">
+      <DependentUpon>DriversAvailableTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DriversInServiceTable.xaml.cs">
+      <DependentUpon>DriversInServiceTable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DriversUC.xaml.cs">
       <DependentUpon>DriversUC.xaml</DependentUpon>
     </Compile>
@@ -137,8 +143,14 @@
     <Compile Include="RentalForms.xaml.cs">
       <DependentUpon>RentalForms.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VehicleAvailableTable.xaml.cs">
+      <DependentUpon>VehicleAvailableTable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VehicleHireForm.xaml.cs">
       <DependentUpon>VehicleHireForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleInUseTable.xaml.cs">
+      <DependentUpon>VehicleInUseTable.xaml</DependentUpon>
     </Compile>
     <Compile Include="VehicleUC.xaml.cs">
       <DependentUpon>VehicleUC.xaml</DependentUpon>
@@ -156,6 +168,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DetailsUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DriversAvailableTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DriversInServiceTable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -210,7 +230,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="VehicleAvailableTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VehicleHireForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VehicleInUseTable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

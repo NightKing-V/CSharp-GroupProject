@@ -32,14 +32,14 @@ namespace VehicleRentalSystem_V1._0
         {
             try
             {
-                if (txtUser.Text == "" || txtUser.Text == "" || txtC_Telephone.Text == "" || txtC_Email.Text == "" || C_address.Text == "" || V_Chassis.Text == "" || Startdate.Text == "" || Startdate == null || Enddate.Text == "" || Enddate == null)
+                if (txtC_Name.Text == "" || txtC_Name.Text == "" || txtC_Telephone.Text == "" || txtC_Email.Text == "" || C_address.Text == "" || V_Chassis.Text == "" || Startdate.Text == "" || Startdate == null || Enddate.Text == "" || Enddate == null)
                 {
                     MessageBox.Show("Data Missing");
                 }
                 else
                 {
 
-                    string C_Name = txtUser.Text;
+                    string C_Name = txtC_Name.Text;
                     string C_NIC = txtC_NIC.Text;
                     string C_Tel = txtC_Telephone.Text;
                     string C_Address = C_address.Text;
@@ -79,7 +79,7 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            txtUser.Text = "";
+            txtC_Name.Text = "";
             txtC_NIC.Text = "";
             txtC_Telephone.Text = "";
             txtC_Email.Text = "";
