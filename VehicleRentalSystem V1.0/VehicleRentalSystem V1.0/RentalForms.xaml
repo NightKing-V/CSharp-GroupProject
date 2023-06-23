@@ -18,13 +18,13 @@
                     Foreground="Black"
                     FontWeight="ExtraBold"
                     FontFamily="Montserrat"
-                    Margin="316,14,298,0" Height="23" VerticalAlignment="Top"/>
+                    Margin="295,14,294,0" Height="23" VerticalAlignment="Top"/>
 
                 <TextBlock Text="Customer Name"
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,89,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+                    Margin="51,86,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="113"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -90,7 +90,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,166,0,0" HorizontalAlignment="Left" Width="129" Height="16" VerticalAlignment="Top"/>
+                    Margin="51,166,0,0" HorizontalAlignment="Left" Width="140" Height="16" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -122,7 +122,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="529,168,0,0" HorizontalAlignment="Left" Width="93" RenderTransformOrigin="0.724,0.402" Height="18" VerticalAlignment="Top"/>
+                    Margin="529,167,0,0" HorizontalAlignment="Left" Width="114" RenderTransformOrigin="0.724,0.402" Height="18" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -152,7 +152,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,255,0,0" HorizontalAlignment="Left" Width="115" Height="26" VerticalAlignment="Top"/>
+                    Margin="51,253,0,0" HorizontalAlignment="Left" Width="125" Height="26" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -187,7 +187,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="55,427,0,0" HorizontalAlignment="Left" Width="151" Height="19" VerticalAlignment="Top"/>
+                    Margin="53,426,0,0" HorizontalAlignment="Left" Width="162" Height="19" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -251,7 +251,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,339,0,0" HorizontalAlignment="Left" Width="58" Height="17" VerticalAlignment="Top"/>
+                    Margin="51,339,0,0" HorizontalAlignment="Left" Width="74" Height="17" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -306,7 +306,7 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="190,524,447,0"
+                    Margin="196,523,441,0"
                     Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -340,7 +340,7 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="416,522,190,0"
+                    Margin="410,522,196,0"
                     Click="btnClear_Click" Height="50" VerticalAlignment="Top">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">

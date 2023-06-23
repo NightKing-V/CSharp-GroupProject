@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="Rent_packages" Height="700" Width="900">
-    <Border Margin="92,60,91,38" BorderBrush="#FF1C6DD0" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" Background="#FFEEF6FF">
-        <Grid Height="558" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="654" Margin="27,0,0,0">
+        Title="Rent_packages" Height="724" Width="900">
+    <Border Margin="92,60,91,0" BorderBrush="#FF1C6DD0" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" Background="#FFEEF6FF" Height="586" VerticalAlignment="Top">
+        <Grid Height="536" VerticalAlignment="Center" HorizontalAlignment="Left" Width="654" Margin="27,0,0,0">
             <TextBlock Text="Manage Rent Pacakges Form"
                 TextAlignment="Center"
                 FontSize="20"
                 Foreground="Black"
                 FontWeight="Bold"
                 FontFamily="Montserrat"
-                Margin="152,0,0,527" Height="27" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="326"/>
+                Margin="152,4,0,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="326"/>
 
             <TextBlock Text="Package Name"
                 Foreground="#FF1C6DD0"
@@ -208,7 +208,7 @@
                 FontFamily="MonteSerrat"
                 FontWeight="SemiBold"
                 Cursor="Hand"
-                Margin="162,481,328,0"
+                Margin="160,481,330,0"
                 Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" Background="Turquoise" >
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
@@ -241,7 +241,7 @@
                 FontFamily="MonteSerrat"
                 FontWeight="SemiBold"
                 Cursor="Hand"
-                Margin="308,480,150,0"
+                Margin="304,480,154,0"
                 Click="btnClear_Click" Height="50" VerticalAlignment="Top">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
