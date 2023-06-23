@@ -24,7 +24,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,88,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
+                    Margin="51,88,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="106"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -89,7 +89,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,166,0,0" HorizontalAlignment="Left" Width="129" Height="16" VerticalAlignment="Top"/>
+                    Margin="51,166,0,0" HorizontalAlignment="Left" Width="140" Height="16" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -121,7 +121,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="529,166,0,0" HorizontalAlignment="Left" Width="93" RenderTransformOrigin="0.724,0.402" Height="18" VerticalAlignment="Top"/>
+                    Margin="529,166,0,0" HorizontalAlignment="Left" Width="111" RenderTransformOrigin="0.724,0.402" Height="18" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -151,7 +151,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,252,0,0" HorizontalAlignment="Left" Width="115" Height="26" VerticalAlignment="Top"/>
+                    Margin="51,252,0,0" HorizontalAlignment="Left" Width="123" Height="26" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -204,7 +204,7 @@
                 </Border>
 
                 <!--Next-->
-                <DataGrid Margin="102,356,102,108" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                <DataGrid Margin="102,356,102,108" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF7AB3EF"/>
 
                 <!--Next-->
                 <Button x:Name="btnUpdate"
