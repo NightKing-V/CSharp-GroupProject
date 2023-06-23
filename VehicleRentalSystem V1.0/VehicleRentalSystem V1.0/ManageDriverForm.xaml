@@ -23,7 +23,7 @@
                 <TextBlock Text="Driver's Name"
                     Foreground="#FF1C6DD0"
                     FontSize="12"
-                    FontWeight="ExtraBold"
+                    FontWeight="Bold"
                     FontFamily="Montserrat"
                     Margin="4,101,250,0" Height="12" VerticalAlignment="Top"/>
 
@@ -38,7 +38,7 @@
                         FontSize="15"
                         TextAlignment="Left"
                         FontWeight="Medium"
-                        FontFamily="Montserrat"
+                        FontFamily="Century Gothic"
                         Foreground="Black"
                         CaretBrush="Gray"
                         BorderBrush="White"
@@ -56,7 +56,7 @@
                 <TextBlock Text="Driver's NIC NO."
                     FontSize="12"
                     Foreground="#FF1C6DD0"
-                    FontWeight="ExtraBold"
+                    FontWeight="Bold"
                     FontFamily="Montserrat"
                     Margin="4,176,476,0" Width="100" Height="12" VerticalAlignment="Top"/>
 
@@ -70,7 +70,7 @@
                     <TextBox x:Name="txtD_NIC"
                         FontSize="15"
                         FontWeight="Medium"
-                        FontFamily="Montserrat"
+                        FontFamily="Century Gothic"
                         TextAlignment="Left"
                         Foreground="Black"
                         CaretBrush="Gray"
@@ -89,7 +89,7 @@
                 <TextBlock Text="Driver License NO."
                     FontSize="12"
                     Foreground="#FF1C6DD0"
-                    FontWeight="ExtraBold"
+                    FontWeight="Bold"
                     FontFamily="Montserrat"
                     Margin="298,177,63,0" Height="12" VerticalAlignment="Top"/>
 
@@ -103,7 +103,7 @@
                     <TextBox x:Name="txtD_lisence"
                         FontSize="15"
                         FontWeight="Medium"
-                        FontFamily="Montserrat"
+                        FontFamily="Century Gothic"
                         TextAlignment="Left"
                         Foreground="Black"
                         CaretBrush="Gray"
@@ -122,7 +122,7 @@
                 <TextBlock Text="Driver's E-mail"
                     FontSize="12"
                     Foreground="#FF1C6DD0"
-                    FontWeight="ExtraBold"
+                    FontWeight="Bold"
                     FontFamily="Montserrat"
                     Margin="5,255,249,0" Height="16" VerticalAlignment="Top"/>
 
@@ -136,7 +136,7 @@
                     <TextBox x:Name="txtD_Email"
                         FontSize="15"
                         FontWeight="Medium"
-                        FontFamily="Montserrat"
+                        FontFamily="Century Gothic"
                         TextAlignment="Left"
                         Foreground="Black"
                         CaretBrush="Gray"
@@ -152,7 +152,7 @@
                 <TextBlock Text="Driver's Address"
                     FontSize="12"
                     Foreground="#FF1C6DD0"
-                    FontWeight="ExtraBold"
+                    FontWeight="Bold"
                     FontFamily="Montserrat"
                     Margin="3,333,251,0" Height="12" VerticalAlignment="Top"/>
                 <Border CornerRadius="15"  
@@ -166,7 +166,7 @@
                         FontSize="15"
                         TextAlignment="Left"
                         FontWeight="Medium"
-                        FontFamily="Montserrat"
+                        FontFamily="Century Gothic"
                         Foreground="Black"
                         CaretBrush="Gray"
                         BorderBrush="White"
@@ -183,7 +183,7 @@
                 <TextBlock Text="Contact Number"
                     FontSize="12"
                     Foreground="#FF1C6DD0"
-                    FontWeight="ExtraBold"
+                    FontWeight="Bold"
                     FontFamily="Montserrat"
                     Margin="1,409,362,0" Height="12" VerticalAlignment="Top"/>
 
@@ -197,7 +197,7 @@
                     <TextBox x:Name="DriversPhone"
                         FontSize="15"
                         FontWeight="Medium"
-                        FontFamily="Montserrat"
+                        FontFamily="Century Gothic"
                         TextAlignment="Left"
                         Foreground="Black"
                         CaretBrush="Gray"
@@ -218,7 +218,7 @@
                 <TextBlock Text="Driver's State"
                     FontSize="12"
                     Foreground="#FF1C6DD0"
-                    FontWeight="ExtraBold"
+                    FontWeight="Bold"
                     FontFamily="Montserrat"
                     Margin="302,409,63,0" Height="12" VerticalAlignment="Top"/>
 
@@ -232,7 +232,7 @@
                     <TextBox x:Name="DriverState"
                         FontSize="15"
                         FontWeight="Medium"
-                        FontFamily="Montserrat"
+                        FontFamily="Century Gothic"
                         TextAlignment="Left"
                         Foreground="Black"
                         CaretBrush="Gray"
@@ -249,7 +249,7 @@
                 <TextBlock Text="Vehicle Type"
                     FontSize="12"
                     Foreground="#FF1C6DD0"
-                    FontWeight="ExtraBold"
+                    FontWeight="Bold"
                     FontFamily="Montserrat"
                     Margin="0,484,428,0" Height="18" VerticalAlignment="Top"/>
 
@@ -346,7 +346,7 @@
                         Click="btnD_Insert__Click" Height="47" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="14,0,74,0" Background="#FF7AB3EF">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
-                                <Setter Property="Background" Value="#FF71A4E1"/>
+                                <Setter Property="Background" Value="#FF7AB3EF"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="#FF1C6DD0"/>
