@@ -226,21 +226,21 @@
                     Width="250"
                     Margin="515,265,0,0" Height="48" VerticalAlignment="Top" Background="White"
                     >
-                    <ComboBox 
+                    <ComboBox x:Name="CMBP" 
                     
                         Margin="0,8,0,8" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="230" VerticalContentAlignment="Center" Background="#FFEEF6FF">
-                        <ComboBoxItem x:Name="DailyCar" Content="Car - 1 Day" IsSelected="True" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="WeeklyCar" Content="Car - 1 Week" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="MonthlyCar" Content="Car - 1 Month" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="AnnualyCar" Content="Car - 1 Year" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="DailyVan" Content="Van - 1 Day" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="WeeklyVan" Content="Van - 1 Week" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="MonthlyVan" Content="Van - 1 Month" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="AnnualyVan" Content="Van - 1 Year" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="DailySUV" Content="SUV - 1 Day" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="WeeklySUV" Content="SUV - 1 Week" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="MonthlySUV" Content="SUV - 1 Month" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                        <ComboBoxItem x:Name="AnnualySUV" Content="SUV - 1 Year" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="DailyCar" Content="Car - 1 Day" IsSelected="True" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Cursor="" Tag="DailyCar"/>
+                        <ComboBoxItem x:Name="WeeklyCar" Content="Car - 1 Week" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="WeeklyCar"/>
+                        <ComboBoxItem x:Name="MonthlyCar" Content="Car - 1 Month" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="MonthlyCar"/>
+                        <ComboBoxItem x:Name="AnnualyCar" Content="Car - 1 Year" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="AnnualyCar"/>
+                        <ComboBoxItem x:Name="DailyVan" Content="Van - 1 Day" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="DailyVan"/>
+                        <ComboBoxItem x:Name="WeeklyVan" Content="Van - 1 Week" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="WeeklyVan"/>
+                        <ComboBoxItem x:Name="MonthlyVan" Content="Van - 1 Month" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="MonthlyVan"/>
+                        <ComboBoxItem x:Name="AnnualyVan" Content="Van - 1 Year" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="AnnualyVan"/>
+                        <ComboBoxItem x:Name="DailySUV" Content="SUV - 1 Day" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="DailySUV"/>
+                        <ComboBoxItem x:Name="WeeklySUV" Content="SUV - 1 Week" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="WeeklySUV"/>
+                        <ComboBoxItem x:Name="MonthlySUV" Content="SUV - 1 Month" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="MonthlySUV"/>
+                        <ComboBoxItem x:Name="AnnualySUV" Content="SUV - 1 Year" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="AnnualySUV"/>
 
                     </ComboBox>
                 </Border>
@@ -318,7 +318,7 @@
                             </Style.Triggers>
                         </Style>
                     </Button.Style>
-                    
+
 
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">

@@ -1,8 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
+using System.IO.Packaging;
 using System.Linq;
+using System.Net;
+using System.Runtime.InteropServices.ComTypes;
 using System.Security.Policy;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,61 +28,7 @@ namespace VehicleRentalSystem_V1._0
     /// </summary>
     public partial class RentalForms : Window
     {
-        DataBaseFunctions con;
-        public RentalForms()
-        {
-            InitializeComponent();
-            con = new DataBaseFunctions();
-        }
-
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (txtC_Name.Text == "" || txtC_Name.Text == "" || txtC_Telephone.Text == "" || txtC_Email.Text == "" || C_address.Text == "" || V_Chassis.Text == "" || Startdate.Text == "" || Startdate == null || Enddate.Text == "" || Enddate == null)
-                {
-                    MessageBox.Show("Data Missing");
-                }
-                else
-                {
-
-                    string C_Name = txtC_Name.Text;
-                    string C_NIC = txtC_NIC.Text;
-                    string C_Tel = txtC_Telephone.Text;
-                    string C_Address = C_address.Text;
-                    string C_Email = txtC_Email.Text;
-                    string V_chassis = V_Chassis.Text;
-                    DateTime StartDate = Startdate.SelectedDate.Value;
-                    DateTime EndDate = Enddate.SelectedDate.Value;
-                    
-
-                    //INSERTING TO CUSTOMER TABLE
-                    string Query1 = "INSERT INTO Customer (C_NAME, C_NIC,C_Tel,C_Address,C_Email) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}')";
-                    Query1 = string.Format(Query1, C_Name, C_NIC, C_Tel, C_Address, C_Email);
-                    con.setdata(Query1);
-
-                    //INSERTING TO VEHICLE TABLE
-                    //string Query2 = "INSERT INTO Vehicle (V_CN, V_PN) VALUES ('{0}', '{1}')";
-                    //Query2 = string.Format(Query2, V_chassis,package );
-                    //con.setdata(Query2);
-
-                    //INSEERTING TO VEHICLE RENT TABLE
-                    string Query3 = "INSERT INTO VehicleRent (C_NIC,V_CN, VehicleNumber,StartDate,EndDate,ReturnDate) VALUES ('{0}', '{1}','{2}','{3}', '{4}','{5}')";
-                    Query3 = string.Format(Query3, C_NIC, V_chassis, StartDate, EndDate);
-                    con.setdata(Query3);
-
-
-                    MessageBox.Show("Successfully Added");
-
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
+        private string Rent_ID, C_Name, C_NIC, C_Add, C_Tel, C_Emails, V_C, StartD, EndD, P_ID, P_Name;
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
@@ -86,10 +39,142 @@ namespace VehicleRentalSystem_V1._0
             C_address.Text = "";
             V_Chassis.Text = "";
             Startdate.Text = "";
-            Startdate = null;
             Enddate.Text = "";
-            Enddate = null;
-
         }
+
+        public RentalForms()
+        {
+            InitializeComponent();
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+
+            C_Name = txtC_Name.Text;
+            C_NIC = txtC_NIC.Text;
+            C_Emails = txtC_Email.Text;
+            C_Add = C_address.Text;
+            C_Tel = txtC_Telephone.Text;
+            V_C = V_Chassis.Text;
+            StartD = Startdate.Text;
+            EndD = Enddate.Text;
+            //P_Name = ((ComboBoxItem)CMBP.SelectedItem).Tag.ToString();
+
+            string message = "";
+            //try
+            //{
+                //if (txtC_Name.Text == "" || txtC_Name.Text == "" || txtC_Telephone.Text == "" || txtC_Email.Text == "" || C_address.Text == "" || V_Chassis.Text == "" || Startdate.Text == "" || Startdate == null || Enddate.Text == "" || Enddate == null || !Regex.IsMatch(C_Emails, @"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250)))
+                //{
+                //    System.Windows.MessageBox.Show("Fill all the fields correctly", "Error");
+                //}
+                //else
+                //{
+
+                    //Checing Customer
+                    DataBaseFunctions DBF = new DataBaseFunctions();
+                    int Cresult;
+                    DBF.conopen();
+
+                    List<string> NICresults = new List<string>();
+
+                    using (SqlCommand CheckCcmd = new SqlCommand("select * from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
+                    {
+                        CheckCcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
+                        using (SqlDataReader reader = CheckCcmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                               NICresults.Add(reader[0].ToString());
+                            }
+                        }
+                    }
+                    Cresult = NICresults.Count;
+
+                    if (Cresult == 0)
+                    {
+                        //Adding new Customer
+                        int newcresult;
+                        using (SqlCommand newcuscmd = new SqlCommand("INSERT INTO Customer(C_NIC,C_NAME,C_Tel,C_Email,C_Address) VALUES(@C_NIC,@C_Name,@C_Tel,@C_Email,@C_Add)", DBF.GetSqlCon()))
+                        {
+                            newcuscmd.Parameters.AddWithValue("@C_NIC", C_NIC);
+                            newcuscmd.Parameters.AddWithValue("@C_Name", C_Name);
+                            newcuscmd.Parameters.AddWithValue("@C_Tel", C_Tel);
+                            newcuscmd.Parameters.AddWithValue("@C_Email", C_Emails);
+                            newcuscmd.Parameters.AddWithValue("@C_Add", C_Add);
+                            newcresult = newcuscmd.ExecuteNonQuery();
+                        }
+                    MessageBox.Show("" + newcresult);
+
+                    if (newcresult != 0)
+                        {
+                            message += "New Customer Added!\n";
+                        }
+                        else
+                        {
+                            message += "Couldn't Add New Customer!\n";
+                        }
+                     }
+
+                    //getting package ID
+                    
+                    List<string> PID = new List<string>();
+
+                    using (SqlCommand getpidcmd = new SqlCommand("SELECT P_ID FROM RentPackages WHERE P_Name= @P_Name", DBF.GetSqlCon()))
+                    {
+                        getpidcmd.Parameters.AddWithValue("@P_Name", P_Name);
+
+                        using (SqlDataReader reader = getpidcmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                PID.Add(reader[0].ToString());
+                            }
+                        }
+                    }
+                    P_ID = PID[0];
+
+                    //Adding new Rent
+                    String queryVH = "INSERT INTO VehicleRent(C_NIC, V_CN, StartDate, EndDate, P_ID, Active) VALUES(" + C_Name + "," + V_C + "," + StartD + "," + EndD + "," + P_ID + ",1);";
+                    SqlCommand VHcmd = new SqlCommand(queryVH, DBF.GetSqlCon());
+
+                    int newvhresult = VHcmd.ExecuteNonQuery();
+
+            //    if (newvhresult != 0)
+            //    {
+            //        message += "New Hire Added!\n";
+
+            //        //Retrieving ID
+            //        string querygetid = "SELECT Hire_ID FROM VehicleRent WHERE C_NIC=" + C_NIC + " && V_CN=" + V_C + "&& StartDate=" + StartD + ";";
+            //        SqlCommand getidcmd = new SqlCommand(querygetid, DBF.GetSqlCon());
+
+            //        List<string> ID = new List<string>();
+            //        using (SqlDataReader reader = getidcmd.ExecuteReader())
+            //        {
+            //            while (reader.Read())
+            //            {
+            //                ID.Add(reader[0].ToString());
+            //            }
+            //        }
+            //        Rent_ID = ID[0];
+            //    }
+            //    else
+            //    {
+            //        message += "Couldn't Add New Hire!\n";
+            //    }
+            //    MessageBoxResult next = MessageBox.Show(message, "Result", MessageBoxButton.OK);
+            //    if (next == MessageBoxResult.OK)
+            //    {
+            //        FormResultGenerator FRG = new FormResultGenerator();
+            //        FRG.generateformresult(Rent_ID);
+            //    }
+            //    DBF.conclose();
+            //}
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+        }
+        
     }
 }

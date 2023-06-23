@@ -75,12 +75,15 @@ namespace VehicleRentalSystem_V1._0
                     SMil = double.Parse(S_Mileage.Text);
                     ADPay = double.Parse(A_Payment.Text);
 
+                    //Customer Checking 
                     DataBaseFunctions DBF = new DataBaseFunctions();
+                    DBF.conopen();
                     string queryCheckC = "SELECT C_NIC FROM Customer WHERE C_NIC = " + C_NIC + ";";
                     SqlCommand CheckCcmd = new SqlCommand(queryCheckC, DBF.GetSqlCon());
                     int Cresult = CheckCcmd.ExecuteNonQuery();
                     if(Cresult == 0)
                     {
+                        //adding new Customer
                         string newCus = "INSERT INTO Customer(C_NIC,C_NAME,C_Tel,C_Email,C_Address) VALUES("+C_NIC+","+C_Name+","+C_Emails+","+C_Add+");";
                         SqlCommand newcuscmd = new SqlCommand(newCus, DBF.GetSqlCon());
                         int newcresult = newcuscmd.ExecuteNonQuery();
@@ -93,6 +96,8 @@ namespace VehicleRentalSystem_V1._0
                             message += "Couldn't Add New Customer!\n";
                         }
                     }
+
+                    //Adding new hire
                     String queryVH = "INSERT INTO VehicleHire(C_NIC, V_CN, StartDate, StartMileage, EtaMileage, EndDate, R_NIC, Active, PricePerLiter, Advancefee) VALUES("+C_Name+","+V_C+","+StartD+","+EndD+","+ETAM+","+SMil+","+R_NIC+",1,"+PPLiter+","+ADPay+");";
                     SqlCommand VHcmd = new SqlCommand(queryVH, DBF.GetSqlCon());
                     int newvhresult = VHcmd.ExecuteNonQuery();
@@ -100,6 +105,8 @@ namespace VehicleRentalSystem_V1._0
                     if(newvhresult != 0)
                     {
                         message += "New Hire Added!\n";
+
+                        //retreiving ID
                         string querygetid = "SELECT Hire_ID FROM VehicleHire WHERE C_NIC="+C_NIC+" && V_CN="+V_C+"&& StartDate="+StartD+";";
                         SqlCommand getidcmd = new SqlCommand(querygetid, DBF.GetSqlCon());
 
@@ -123,11 +130,12 @@ namespace VehicleRentalSystem_V1._0
                         FormResultGenerator FRG = new FormResultGenerator();
                         FRG.generateformresult(Hire_ID);
                     }
+                    DBF.conclose();
                 }
             }
-            catch 
-            { 
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
         }
