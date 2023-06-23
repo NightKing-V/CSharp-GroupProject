@@ -1,12 +1,303 @@
-﻿<Window x:Class="VehicleRentalSystem_V1._0.Rent_packages"
+﻿<Window x:Name="RentPackagesFrom" x:Class="VehicleRentalSystem_V1._0.Rent_packages"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="Rent_packages" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Rent_packages" Height="700" Width="900">
+    <Border Margin="120,60,105,38" BorderBrush="#FF1C6DD0" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" Background="#FFEEF6FF">
+        <Grid Height="558" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="654">
+            <TextBlock Text="Manage Rent Pacakges Form"
+                TextAlignment="Center"
+                FontSize="20"
+                Foreground="Black"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="152,0,0,527" Height="27" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="326"/>
+
+            <TextBlock Text="Package Name"
+                Foreground="#FF1C6DD0"
+                FontSize="12"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="35,62,0,0" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Width="326"/>
+
+            <Border CornerRadius="15"  
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                HorizontalAlignment="Left" 
+                Width="475"
+                Margin="23,80,0,0" Background="White" Height="42" VerticalAlignment="Top"
+                    >
+                <TextBox x:Name="txtD_PackageName"
+                    FontSize="15"
+                    TextAlignment="Left"
+                    FontWeight="Medium"
+                    FontFamily="Century Gothic"
+                    Foreground="Black"
+                    CaretBrush="Gray"
+                    BorderBrush="White"
+                             
+                    BorderThickness="0,0,0,1"
+                    Margin="8,8,8,8" Background="White"
+                            />
+
+
+            </Border>
+            <!--Next-->
+            <TextBlock Text="Package ID"
+                FontSize="12"
+                Foreground="#FF1C6DD0"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="35,146,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Border CornerRadius="15"  
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                HorizontalAlignment="Left" 
+                Width="273"
+                Margin="23,163,0,0" Height="42" VerticalAlignment="Top" Background="White"
+                    >
+                <TextBox x:Name="txtD_PackageID"
+                    FontSize="15"
+                    FontWeight="Medium"
+                    FontFamily="Century Gothic"
+                    TextAlignment="Left"
+                    Foreground="Black"
+                    CaretBrush="Gray"
+                    BorderBrush="White"
+                    BorderThickness="0,0,0,1"
+                    Margin="8,8,8,8"
+                             />
+
+
+
+
+            </Border>
+            <!--Next-->
+            <TextBlock Text="Duration"
+                FontSize="12"
+                Foreground="#FF1C6DD0"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="347,145,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Border CornerRadius="15"  
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                HorizontalAlignment="Left" 
+                Width="273"
+                Margin="335,162,0,0" Height="42" VerticalAlignment="Top" Background="White"
+                    >
+                <TextBox x:Name="txtD_Duration"
+                    FontSize="15"
+                    FontWeight="Medium"
+                    FontFamily="Century Gothic"
+                    TextAlignment="Left"
+                    Foreground="Black"
+                    CaretBrush="Gray"
+                    BorderBrush="White"
+                    BorderThickness="0,0,0,1"
+                    Margin="8,8,8,8"
+                             />
+
+
+
+
+            </Border>
+            <!--Next-->
+            <TextBlock Text="Rental"
+                FontSize="12"
+                Foreground="#FF1C6DD0"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="35,226,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Border CornerRadius="15"  
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                HorizontalAlignment="Left" 
+                Width="273"
+                Margin="23,244,0,0" Background="White" Height="42" VerticalAlignment="Top"
+                    >
+                <TextBox x:Name="txtD_Rental"
+                    FontSize="15"
+                    FontWeight="Medium"
+                    FontFamily="Century Gothic"
+                    TextAlignment="Left"
+                    Foreground="Black"
+                    CaretBrush="Gray"
+                    BorderBrush="White"
+                    BorderThickness="0,0,0,1"
+                    Margin="8,8,8,8"
+                             />
+
+
+
+
+            </Border>
+            <!--Next-->
+            <TextBlock Text="Penalty Rate"
+                FontSize="12"
+                Foreground="#FF1C6DD0"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="347,227,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Border CornerRadius="15"  
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                HorizontalAlignment="Left" 
+                Width="273"
+                Margin="335,245,0,0" Height="42" VerticalAlignment="Top" Background="White"
+                    >
+                <TextBox x:Name="txtD_PenaltyRate"
+                    FontSize="15"
+                    FontWeight="Medium"
+                    FontFamily="Century Gothic"
+                    TextAlignment="Left"
+                    Foreground="Black"
+                    CaretBrush="Gray"
+                    BorderBrush="White"
+                    BorderThickness="0,0,0,1"
+                    Margin="8,8,8,8"
+                             />
+
+
+
+
+            </Border>
+            <DataGrid x:Name="RentPackagesTable" Margin="35,316,0,0" d:ItemsSource="{d:SampleData ItemCount=5}" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="572" BorderBrush="#FF1C6DD0" Background="#FFEEF6FF"/>
+            <Grid Height="48" Margin="14,487,0,0" VerticalAlignment="Top" Width="614" HorizontalAlignment="Left">
+                <Button x:Name="btnD_Update"
+                             
+                    BorderThickness="0"
+                    Content="Update"
+                    Foreground="Black"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Click="btnD_Update_Click" Height="47" Background="Turquoise" Width="150" VerticalAlignment="Center" Margin="155,0,309,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#FF40E0D0"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF71A4E1"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="btnD_Insert_"
+                             
+                    BorderThickness="0"
+                    Content="Insert"
+                    Foreground="Black"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Click="btnD_Insert__Click" Height="47" Background="#FF7AB3EF" VerticalAlignment="Center" Margin="0,0,464,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#FF7AB3EF"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF1C6DD0"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="btnD_Delete"
+                             
+                    BorderThickness="0"
+                    Content="Delete"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Click="btnD_Delete_Click" Height="47" VerticalAlignment="Center" Margin="464,0,0,0">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Red"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="Orange"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="btnD_Load"
+                             
+                    BorderThickness="0"
+                    Content="Load"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="Montserrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Click="btnD_Insert__Click" Height="47" VerticalAlignment="Center" Margin="309,0,155,0" Background="#FF1C6DD0" Width="150">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#FF7AB3EF"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF1C6DD0"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </Grid>
+
+        </Grid>
+    </Border>
 </Window>
