@@ -24,7 +24,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,91,0,0" Height="20" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="100"/>
+                    Margin="51,89,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -33,7 +33,7 @@
                     Width="350"
                     Margin="41,103,0,0" Height="44" VerticalAlignment="Top" Grid.Column="1" Background="White"
                     >
-                    <TextBox x:Name="txtUser"
+                    <TextBox x:Name="txtC_Name"
                         FontSize="15"
                         TextAlignment="Left"
                         FontWeight="Medium"
@@ -58,7 +58,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="530,90,0,0" HorizontalAlignment="Left" Width="93" Height="21" VerticalAlignment="Top"/>
+                    Margin="529,88,0,0" HorizontalAlignment="Left" Width="93" Height="21" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -90,7 +90,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,168,0,0" HorizontalAlignment="Left" Width="129" Height="16" VerticalAlignment="Top" Grid.Column="1"/>
+                    Margin="51,166,0,0" HorizontalAlignment="Left" Width="129" Height="16" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -122,7 +122,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="530,170,0,0" HorizontalAlignment="Left" Width="93" RenderTransformOrigin="0.724,0.402" Height="18" VerticalAlignment="Top"/>
+                    Margin="529,168,0,0" HorizontalAlignment="Left" Width="93" RenderTransformOrigin="0.724,0.402" Height="18" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -152,7 +152,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,257,0,0" HorizontalAlignment="Left" Width="115" Height="26" VerticalAlignment="Top" Grid.Column="1"/>
+                    Margin="51,255,0,0" HorizontalAlignment="Left" Width="115" Height="26" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -187,14 +187,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="530,257,0,0" HorizontalAlignment="Left" Width="151" Height="19" VerticalAlignment="Top"/>
+                    Margin="55,427,0,0" HorizontalAlignment="Left" Width="151" Height="19" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="515,270,0,0" Height="44" VerticalAlignment="Top" Background="White"
+                    Margin="41,442,0,0" Height="44" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="V_Chassis"
                         FontSize="15"
@@ -218,26 +218,29 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,420,0,0" HorizontalAlignment="Left" Width="84" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.222"/>
+                    Margin="525,249,0,0" HorizontalAlignment="Left" Width="84" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.222"/>
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="41,436,0,0" Height="48" VerticalAlignment="Top" Background="White"
+                    Margin="515,265,0,0" Height="48" VerticalAlignment="Top" Background="White"
                     >
                     <ComboBox 
                     
-                        Margin="0,8,0,8" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="230" VerticalContentAlignment="Center">
-                        <ComboBox.Background>
-                            <LinearGradientBrush EndPoint="0,1">
-                                <GradientStop Color="#FF7AB3EF"/>
-                                <GradientStop Color="#FF7AB3EF" Offset="1"/>
-                            </LinearGradientBrush>
-                        </ComboBox.Background>
-                        <ComboBoxItem x:Name="P1" Content="Budget" IsSelected="True"/>
-                        <ComboBoxItem x:Name="P2" Content="Family"/>
-                        <ComboBoxItem x:Name="P3" Content="Custom"/>
+                        Margin="0,8,0,8" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="230" VerticalContentAlignment="Center" Background="#FFEEF6FF">
+                        <ComboBoxItem x:Name="DailyCar" Content="Car - 1 Day" IsSelected="True" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="WeeklyCar" Content="Car - 1 Week" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="MonthlyCar" Content="Car - 1 Month" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="AnnualyCar" Content="Car - 1 Year" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="DailyVan" Content="Van - 1 Day" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="WeeklyVan" Content="Van - 1 Week" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="MonthlyVan" Content="Van - 1 Month" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="AnnualyVan" Content="Van - 1 Year" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="DailySUV" Content="SUV - 1 Day" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="WeeklySUV" Content="SUV - 1 Week" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="MonthlySUV" Content="SUV - 1 Month" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                        <ComboBoxItem x:Name="AnnualySUV" Content="SUV - 1 Year" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
 
                     </ComboBox>
                 </Border>
@@ -248,7 +251,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="51,341,0,0" HorizontalAlignment="Left" Width="58" Height="17" VerticalAlignment="Top"/>
+                    Margin="51,339,0,0" HorizontalAlignment="Left" Width="58" Height="17" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -261,7 +264,7 @@
                         Height="25"
                         Margin="8,8,8,8"
                         VerticalAlignment="Top" 
-                        Width="230" BorderBrush="#FF7AB3EF"/>
+                        Width="230" BorderBrush="{x:Null}"/>
 
 
 
@@ -272,7 +275,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="530,342,0,0" HorizontalAlignment="Left" Width="64" Height="18" VerticalAlignment="Top" RenderTransformOrigin="0.804,0.608"/>
+                    Margin="529,340,0,0" HorizontalAlignment="Left" Width="64" Height="18" VerticalAlignment="Top" RenderTransformOrigin="0.804,0.608"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -285,7 +288,7 @@
                         Height="25"
                         Margin="8,8,8,8"
                         VerticalAlignment="Top" 
-                        Width="230" BorderBrush="#FF7AB3EF"/>
+                        Width="230" BorderBrush="{x:Null}"/>
 
 
 

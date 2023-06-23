@@ -28,6 +28,7 @@ namespace VehicleRentalSystem_V1._0
         {
             HireIDtxt.Clear();
             EndMilatxt.Clear();
+            DFeeTxt.Clear();
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)

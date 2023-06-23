@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="End Rent" Height="329" Width="500" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
-    <Grid Margin="0,0,0,-40" Height="335">
+        Title="End Rent" Height="406" Width="500" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid Margin="0,32,0,23" Height="335">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="209*"/>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="237*"/>
+        </Grid.ColumnDefinitions>
         <Button x:Name="btnNext"
                              
             BorderThickness="0"
@@ -15,7 +20,7 @@
             FontSize="12"
             FontFamily="MonteSerrat"
             Cursor="Hand"
-            Click="btnSubmit_Click" Margin="262,227,-10,63">
+            Click="btnSubmit_Click" Margin="53,269,-10,21" Grid.ColumnSpan="2" Grid.Column="1">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="#71A4E1"/>
@@ -46,7 +51,7 @@
             FontSize="12"
             FontFamily="MonteSerrat"
             Cursor="Hand"
-            Click="btnClear_Click" Margin="-9,227,261,63">
+            Click="btnClear_Click" Margin="-9,269,24,21" Grid.ColumnSpan="2">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="Red"/>
@@ -74,11 +79,11 @@
             Foreground="Black"
             FontWeight="ExtraBold"
             FontFamily="Century Gothic"
-            Margin="88,66,166,256"><Run Language="en-gb" Text="Rent"/><Run Text=" ID"/></TextBlock>
+            Margin="94,24,160,298" Grid.ColumnSpan="3"><Run Language="en-gb" Text="Rent"/><Run Text=" ID"/></TextBlock>
         <Border CornerRadius="15"  
             BorderBrush="Black" 
             BorderThickness="2" 
-            Margin="86,82,86,221"
+            Margin="86,38,86,265" Grid.ColumnSpan="3"
                     >
             <TextBox x:Name="RentDtxt"
                 FontSize="15"
@@ -100,11 +105,11 @@
             Foreground="Black"
             FontWeight="ExtraBold"
             FontFamily="Century Gothic"
-            Margin="88,134,166,189"><Run Language="en-gb" Text="Return Date"/></TextBlock>
+            Margin="92,102,162,221" Grid.ColumnSpan="3"><Run Language="en-gb" Text="Return Date"/></TextBlock>
         <Border CornerRadius="15"  
             BorderBrush="Black" 
             BorderThickness="2" 
-            Margin="86,150,86,154"
+            Margin="86,116,86,188" Grid.ColumnSpan="3"
                     >
             <DatePicker x:Name="ReturnDate" Width="308" Background="{x:Null}" BorderBrush="{x:Null}" SelectedDateFormat="Short" FirstDayOfWeek="Monday" Foreground="Black" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="8,3,1,0"/>
         </Border>
@@ -114,7 +119,40 @@
             Foreground="#71A4E1"
             FontWeight="ExtraBold"
             FontFamily="Century Gothic"
-            Margin="140,19,114,297"><Run Language="en-gb" Text="Enter Details"/></TextBlock>
+            Margin="126,-29,128,345" Grid.ColumnSpan="3"><Run Language="en-gb" Text="Enter Details"/></TextBlock>
+        <TextBlock
+            FontSize="10"
+            Foreground="Black"
+            FontWeight="ExtraBold"
+            FontFamily="Century Gothic"
+            Margin="92,174,162,131" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="en-gb" Text="Damage Fee"/></TextBlock>
+        <Border CornerRadius="15"  
+            BorderBrush="Black" 
+            BorderThickness="2" 
+            Margin="86,188,86,113" Grid.ColumnSpan="3"
+                    >
+            <TextBox x:Name="DFeeTxt"
+                FontSize="15"
+                FontWeight="Medium"
+                FontFamily="Montserrat"
+                Foreground="Black"
+                CaretBrush="Gray"
+                BorderBrush="{x:Null}"
+                BorderThickness="0,0,0,1" Height="34" Background="{x:Null}" SelectionBrush="{x:Null}" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" Width="308"
+                             />
+
+
+
+
+        </Border>
 
     </Grid>
 </Window>

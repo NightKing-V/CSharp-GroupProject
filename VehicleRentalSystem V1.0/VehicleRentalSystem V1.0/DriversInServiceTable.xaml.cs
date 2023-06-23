@@ -15,24 +15,13 @@ using System.Windows.Shapes;
 namespace VehicleRentalSystem_V1._0
 {
     /// <summary>
-    /// Interaction logic for EndRentDetail.xaml
+    /// Interaction logic for DriversInServiceTable.xaml
     /// </summary>
-    public partial class EndRentDetail : Window
+    public partial class DriversInServiceTable : Window
     {
-        public EndRentDetail()
+        public DriversInServiceTable()
         {
             InitializeComponent();
-        }
-
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnClear_Click(object sender, RoutedEventArgs e)
-        {
-            RentDtxt.Clear(); 
-            DFeeTxt.Clear();
         }
     }
 }
