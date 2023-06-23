@@ -84,7 +84,8 @@ namespace VehicleRentalSystem_V1._0
               
 
                 DataBaseFunctions dbFunctions = new DataBaseFunctions();
-                dbFunctions.setdata("INSERT INTO Vehicle (V_CN,V_Brand,V_Model,V_Passenger,V_Condition,V_ImageFolderPath,Car,Bike,Van,Bus,Lorry,_threewheel) VALUES ('"+V_CN+"','"+V_Brand+"','"+V_Model+"','"+V_Passengers+"','"+V_State+"','"+ SelectedImage.Source + "','"+Car+"','"+bike+"','"+van+"','"+bus+"','"+lorry+",'"+threewheel+"')");
+                dbFunctions.setdata("INSERT INTO Vehicle (V_CN,V_Brand,V_Model,V_Passengers,V_Condition,V_ImageFolderPath,Car,Bike,Van,Bus,Lorry,_threewheel) VALUES ('" + V_CN + "','" + V_Brand + "','" + V_Model + "','" + V_Passengers + "','" + V_State + "','" + SelectedImage.Source + "','" + Car + "','" + bike + "','" + van + "','" + bus + "','" + lorry + "','" + threewheel + "')");
+
 
                 MessageBox.Show("Inserted Successfully");         
             }
