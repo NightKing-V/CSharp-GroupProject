@@ -31,11 +31,11 @@ namespace VehicleRentalSystem_V1._0
         private void SelectImage_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image files (*.png;*.jpeg;*.jpg)|*.png;*.jpeg;*.jpg|All files (*.*)|*.*";
+            openFileDialog.Filter = "Image files (.png;.jpeg;.jpg)|.png;.jpeg;.jpg|All files (.)|.";
             if (openFileDialog.ShowDialog() == true)
             {
                 SelectedImage.Source = new BitmapImage(new Uri(openFileDialog.FileName));
-             
+
             }
         }
 
@@ -45,12 +45,12 @@ namespace VehicleRentalSystem_V1._0
             txtV_ChassisNo.Text = "";
             txtV_Brand.Text = "";
             txtV_No.Text = "";
-            CarCheckBox.IsChecked= false;
-            BikeCheckBox.IsChecked= false;
-            VanCheckBox.IsChecked= false;
+            CarCheckBox.IsChecked = false;
+            BikeCheckBox.IsChecked = false;
+            VanCheckBox.IsChecked = false;
             _3wheelCheckBox.IsChecked = false;
-            BusCheckBox.IsChecked= false;
-            LorryCheckBox.IsChecked= false;
+            BusCheckBox.IsChecked = false;
+            LorryCheckBox.IsChecked = false;
             No_of_Passengers.Text = "";
             Vehicle_Condition.Text = "";
             SelectedImage.Source = null;
@@ -62,19 +62,19 @@ namespace VehicleRentalSystem_V1._0
         {
             try
             {
-                if (txtV_No.Text==""||
-                    txtV_Model.Text == ""||
-                    txtV_ChassisNo.Text == ""||
-                    txtV_Brand.Text == ""||
-                    txtV_No.Text == ""||
-                    CarCheckBox.IsChecked == false||
-                    BikeCheckBox.IsChecked == false||
-                    VanCheckBox.IsChecked == false||
-                    _3wheelCheckBox.IsChecked == false||
-                    BusCheckBox.IsChecked == false||
-                    LorryCheckBox.IsChecked == false||
-                    No_of_Passengers.Text == ""||
-                    Vehicle_Condition.Text == ""||
+                if (txtV_No.Text == "" ||
+                    txtV_Model.Text == "" ||
+                    txtV_ChassisNo.Text == "" ||
+                    txtV_Brand.Text == "" ||
+                    txtV_No.Text == "" ||
+                    CarCheckBox.IsChecked == false ||
+                    BikeCheckBox.IsChecked == false ||
+                    VanCheckBox.IsChecked == false ||
+                    _3wheelCheckBox.IsChecked == false ||
+                    BusCheckBox.IsChecked == false ||
+                    LorryCheckBox.IsChecked == false ||
+                    No_of_Passengers.Text == "" ||
+                    Vehicle_Condition.Text == "" ||
                     SelectedImage.Source == null)
                 {
                     MessageBox.Show("Data Missing");
@@ -82,7 +82,7 @@ namespace VehicleRentalSystem_V1._0
 
                 else
                 {
-                    string V_PN = txtV_No.Text; 
+                    string V_PN = txtV_No.Text;
                     string V_CN = txtV_ChassisNo.Text;
                     //vehicle plate number not included include it
                     string V_Brand = txtV_Brand.Text;
@@ -118,7 +118,7 @@ namespace VehicleRentalSystem_V1._0
                     V_type = V_type.TrimEnd(',', ' ');
 
                     // Use the V_type variable as needed
-                    string V_Passenger= No_of_Passengers.Text;
+                    string V_Passenger = No_of_Passengers.Text;
                     string V_Condition = Vehicle_Condition.Text;
 
 
@@ -135,7 +135,7 @@ namespace VehicleRentalSystem_V1._0
                     string V_State = V_Condition;
 
                     string Query1 = "INSERT INTO Vehicle (V_PN,V_CN,V_Brand,V_Model,V_type,V_Passenger,V_Condition,V_ImageFolderPath) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}','{5}','{6}','{7}')";
-                    Query1 = string.Format(Query1,V_PN,V_CN,V_Brand,V_Model,V_type,V_Passenger,V_Condition,SelectedImage );
+                    Query1 = string.Format(Query1, V_PN, V_CN, V_Brand, V_Model, V_type, V_Passenger, V_Condition, SelectedImage);
                     con.setdata(Query1);
 
 
@@ -145,13 +145,18 @@ namespace VehicleRentalSystem_V1._0
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void txtV_Brand_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
