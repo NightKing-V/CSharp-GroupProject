@@ -65,7 +65,7 @@ namespace VehicleRentalSystem_V1._0
             string message = "";
             try 
             {
-                if(C_Name == "" || C_NIC == "" || C_Emails == "" || C_Add == "" || C_Tel == "" || V_C == "" || StartD == "" || EndD == "" || R_NIC == "" || E_Mileage.Text == "" || A_Payment.Text == "" || S_Mileage.Text == "" || !Regex.IsMatch(C_Emails,@"^[^@\s]+@[^@\s]+\.[^@\s]+$",RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250)))
+                if(C_Name == "" || C_NIC == "" || C_Emails == "" || C_Add == "" || C_Tel == "" || V_C == "" || StartD == "" || EndD == "" || E_Mileage.Text == "" || A_Payment.Text == "" || S_Mileage.Text == "" || !Regex.IsMatch(C_Emails,@"^[^@\s]+@[^@\s]+\.[^@\s]+$",RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250)))
                 {
                     MessageBox.Show("Fill all the fields correctly", "Error");
                 }
