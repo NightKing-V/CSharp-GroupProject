@@ -1,0 +1,20 @@
+﻿VehicleRentalSystem V1.0
+
+
+winexe
+C#
+.cs
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\
+VehicleRentalSystem_V1._0
+none
+false
+DEBUG;TRACE
+G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\App.xaml
+16-1936446943
+2-239665352
+23-780480864
+23-254334783
+AdminUC.xaml;BookingsUC.xaml;DetailsDataGrid.xaml;DetailsUC.xaml;DriversUC.xaml;EndHireDetail.xaml;EndRentDetail.xaml;ForgotPassword.xaml;Login.xaml;MainWindow.xaml;ManageDriverForm.xaml;ManageVehicleFor.xaml;RentPackagesFrom.xaml;RentalForms.xaml;VehicleHireForm.xaml;VehicleUC.xaml;
+
+True
+
