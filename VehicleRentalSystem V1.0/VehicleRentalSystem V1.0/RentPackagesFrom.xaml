@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
         Title="Rent_packages" Height="700" Width="900">
-    <Border Margin="120,60,105,38" BorderBrush="#FF1C6DD0" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" Background="#FFEEF6FF">
-        <Grid Height="558" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="654">
+    <Border Margin="108,60,91,38" BorderBrush="#FF1C6DD0" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" Background="#FFEEF6FF">
+        <Grid Height="558" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="654" Margin="27,0,0,0">
             <TextBlock Text="Manage Rent Pacakges Form"
                 TextAlignment="Center"
                 FontSize="20"
@@ -166,137 +166,6 @@
 
             </Border>
             <DataGrid x:Name="RentPackagesTable" Margin="35,316,0,0" d:ItemsSource="{d:SampleData ItemCount=5}" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="572" BorderBrush="#FF1C6DD0" Background="#FFEEF6FF"/>
-            <Grid Height="48" Margin="14,487,0,0" VerticalAlignment="Top" Width="614" HorizontalAlignment="Left">
-                <Button x:Name="btnD_Update"
-                             
-                    BorderThickness="0"
-                    Content="Update"
-                    Foreground="Black"
-                    FontSize="12"
-                    FontFamily="Montserrat"
-                    FontWeight="SemiBold"
-                    Cursor="Hand"
-                    Click="btnD_Update_Click" Height="47" Background="Turquoise" Width="150" VerticalAlignment="Center" Margin="155,0,309,0">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="#FF40E0D0"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#FF71A4E1"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-
-                    <Button.Template>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border Width="150" Height="40"
-                                CornerRadius="20"
-                                Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-                <Button x:Name="btnD_Insert_"
-                             
-                    BorderThickness="0"
-                    Content="Insert"
-                    Foreground="Black"
-                    FontSize="12"
-                    FontFamily="Montserrat"
-                    FontWeight="SemiBold"
-                    Cursor="Hand"
-                    Click="btnD_Insert__Click" Height="47" Background="#FF7AB3EF" VerticalAlignment="Center" Margin="0,0,464,0">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="#FF7AB3EF"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#FF1C6DD0"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-
-                    <Button.Template>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border Width="150" Height="40"
-                                CornerRadius="20"
-                                Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-                <Button x:Name="btnD_Delete"
-                             
-                    BorderThickness="0"
-                    Content="Delete"
-                    Foreground="White"
-                    FontSize="12"
-                    FontFamily="Montserrat"
-                    FontWeight="SemiBold"
-                    Cursor="Hand"
-                    Click="btnD_Delete_Click" Height="47" VerticalAlignment="Center" Margin="464,0,0,0">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="Red"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="Orange"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-
-                    <Button.Template>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border Width="150" Height="40"
-                                CornerRadius="20"
-                                Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-                <Button x:Name="btnD_Load"
-                             
-                    BorderThickness="0"
-                    Content="Load"
-                    Foreground="White"
-                    FontSize="12"
-                    FontFamily="Montserrat"
-                    FontWeight="SemiBold"
-                    Cursor="Hand"
-                    Click="btnD_Insert__Click" Height="47" VerticalAlignment="Center" Margin="309,0,155,0" Background="#FF1C6DD0" Width="150">
-                    <Button.Style>
-                        <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="#FF7AB3EF"/>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#FF1C6DD0"/>
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-
-                    <Button.Template>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border Width="150" Height="40"
-                                CornerRadius="20"
-                                Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-
-            </Grid>
 
         </Grid>
     </Border>
