@@ -61,7 +61,6 @@ namespace VehicleRentalSystem_V1._0
             StartD = StartDate.Text;
             EndD = EndDate.Text;
             R_NIC = txtR_NIC.Text;
-            PPLiter = 0;
             P_Name = ((ComboBoxItem)CMBP.SelectedItem).Tag.ToString();
 
             string message = "";
@@ -73,6 +72,7 @@ namespace VehicleRentalSystem_V1._0
                 }
                 else
                 {
+                    PPLiter = double.Parse(txtO_Price.Text);
                     ETAM = double.Parse(E_Mileage.Text);
                     SMil = double.Parse(S_Mileage.Text);
                     ADPay = double.Parse(A_Payment.Text);
