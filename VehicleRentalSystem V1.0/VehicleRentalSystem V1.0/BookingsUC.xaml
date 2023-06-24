@@ -25,28 +25,28 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Button x:Name="NewRentBtn" Content="NEW RENT" HorizontalAlignment="Center" Height="50" Margin="0,60,0,0" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" FontSize="14" Click="NewRentBtn_Click">
+        <Button x:Name="NewRentBtn" Content="New Rent" HorizontalAlignment="Center" Height="50" Margin="0,60,0,0" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Montserrat" FontWeight="Medium" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" FontSize="14" Click="NewRentBtn_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="NewHireBtn" Content="NEW HIRE" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" Margin="0,140,0,0" FontSize="14" Click="NewHireBtn_Click">
+        <Button x:Name="NewHireBtn" Content="New Hire" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Montserrat" FontWeight="Medium" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" Margin="0,140,0,0" FontSize="14" Click="NewHireBtn_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="CloseRentBtn" Content="END RENT" HorizontalAlignment="Center" Height="50" Margin="0,225,0,0" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" FontSize="14" Click="CloseRentBtn_Click">
+        <Button x:Name="CloseRentBtn" Content="End Rent" HorizontalAlignment="Center" Height="50" Margin="0,225,0,0" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Montserrat" FontWeight="Medium" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" FontSize="14" Click="CloseRentBtn_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="CloseHireBtn" Content="END HIRE" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" Margin="0,312,0,0" FontSize="14" Click="CloseHireBtn_Click">
+        <Button x:Name="CloseHireBtn" Content="End Hire" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Montserrat" FontWeight="Medium" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" Margin="0,312,0,0" FontSize="14" Click="CloseHireBtn_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
