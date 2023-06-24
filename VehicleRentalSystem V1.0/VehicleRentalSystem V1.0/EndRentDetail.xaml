@@ -89,7 +89,7 @@
                 BorderThickness="2" 
                 Margin="85,76,87,227" Grid.ColumnSpan="4" Background="White"
                     >
-                <TextBox x:Name="RentDtxt"
+                <TextBox x:Name="RentIDtxt"
                     FontSize="15"
                     FontWeight="Medium"
                     FontFamily="Century Gothic"
