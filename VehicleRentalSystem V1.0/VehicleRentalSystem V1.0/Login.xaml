@@ -12,15 +12,15 @@
             Margin="7,7,7,-3"
             Grid.Row="2" >
 
-            <Image Source="C:\NSBM\1st Year\Semester 03\OOP with C#\Group Project\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\Icon.png"
-                   Margin="73,-4,73,244"/>
+            <Image Source="/Asset 1.png"
+                   Margin="58,-4,67,242"/>
 
 
             <TextBlock Text="Username"
                 Foreground="#FF1C6DD0"
                 FontWeight="Bold"
                 FontFamily="Montserrat"
-                Margin="38,102,159,226"/>
+                Margin="38,102,159,233"/>
 
             <Border CornerRadius="15"  
                 BorderBrush="Black" 
@@ -58,14 +58,14 @@
                 Foreground="#FF1C6DD0"
                 FontWeight="Bold"
                 FontFamily="Montserrat"
-                Margin="38,185,181,147"/>
+                Margin="38,175,181,161"/>
 
             <Border CornerRadius="15"  
                 BorderBrush="Black" 
                 BorderThickness="2" 
                 HorizontalAlignment="Left" 
                 Width="251"
-                Margin="25,204,0,114"
+                Margin="25,193,0,125"
                     >
 
                 <PasswordBox   x:Name="txtPass"
@@ -107,8 +107,8 @@
                 FontFamily="MonteSerrat"
                 FontWeight="SemiBold"
                 Cursor="Hand"
-                Margin="0,256,77,0"
-                Click="btnLogin_Click" Height="58" VerticalAlignment="Top" HorizontalAlignment="Right" Width="162">
+                Margin="74,245,0,0"
+                Click="btnLogin_Click" Height="58" VerticalAlignment="Top" HorizontalAlignment="Left" Width="162">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="#FF7AB3EF"/>
@@ -133,10 +133,10 @@
             </Button>
 
 
-            <TextBlock Text="Contact IT for Support"
-                Foreground="Black"
+            <TextBlock Text="*Contact IT for Support"
+                Foreground="Red"
                 FontFamily="Montserrat"
-                Margin="205,314,-8,14" FontSize="10" FontWeight="Bold"/>
+                Margin="189,316,-1,12" FontSize="10" FontWeight="Bold"/>
 
 
 

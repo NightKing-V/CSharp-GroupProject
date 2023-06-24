@@ -26,21 +26,21 @@
     </UserControl.Resources>
     
     <Grid>
-        <Button x:Name="VehicleInUseBtn" Content="IN USE" HorizontalAlignment="Center" Height="50" Margin="0,60,0,0" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" FontSize="14">
+        <Button x:Name="VehicleInUseBtn" Content="In Use" HorizontalAlignment="Center" Height="50" Margin="0,60,0,0" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Montserrat" FontWeight="Medium" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" FontSize="14">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="VehicleAvBtn" Content="AVAILABLE" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" Margin="0,140,0,0" FontSize="14">
+        <Button x:Name="VehicleAvBtn" Content="Available" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Montserrat" FontWeight="Medium" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" Margin="0,140,0,0" FontSize="14">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="VehicleMBtn" Content="MANAGE VEHICLES" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Century Gothic" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" Margin="0,219,0,0" FontSize="14" Click="VehicleMBtn_Click">
+        <Button x:Name="VehicleMBtn" Content="Manage Vehicles" HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="250" Background="#FF1572A1" FontFamily="Montserrat" FontWeight="Medium" Foreground="White" BorderBrush="#FF7AB3EF" RenderTransformOrigin="1,1" BorderThickness="2,2,2,2" Margin="0,219,0,0" FontSize="14" Click="VehicleMBtn_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>

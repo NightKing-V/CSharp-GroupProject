@@ -216,7 +216,7 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="214,524,424,0"
+                    Margin="230,524,408,0"
                     Click="btnUpdate_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" Background="Turquoise" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -251,7 +251,7 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="392,522,214,0"
+                    Margin="390,522,216,0"
                     Click="btnClear_Click" Height="50" VerticalAlignment="Top">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -287,7 +287,7 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="614,524,24,0"
+                    Margin="586,524,52,0"
                     Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -322,7 +322,7 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="20,524,616,0"
+                    Margin="54,524,582,0"
                     Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
