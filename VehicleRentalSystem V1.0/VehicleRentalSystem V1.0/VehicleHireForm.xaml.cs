@@ -48,6 +48,7 @@ namespace VehicleRentalSystem_V1._0
             E_Mileage.Clear();
             S_Mileage.Clear();
             A_Payment.Clear();
+            txtO_Price.Clear();
         }
 
         private void btnSubmitVH_Click(object sender, RoutedEventArgs e)
