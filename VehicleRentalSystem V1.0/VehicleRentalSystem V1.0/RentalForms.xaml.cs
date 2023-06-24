@@ -150,7 +150,7 @@ namespace VehicleRentalSystem_V1._0
 
                     if (newvhresult != 0)
                     {
-                        message += "New Hire Added!\n";
+                        message += "New Rent Added!\n";
 
                         //Retrieving ID
                         List<string> ID = new List<string>();
@@ -175,14 +175,14 @@ namespace VehicleRentalSystem_V1._0
                     }
                     else
                     {
-                        message += "Couldn't Add New Hire!\n";
+                        message += "Couldn't Add New Rent!\n";
                     }
                     MessageBoxResult next = MessageBox.Show(message, "Result", MessageBoxButton.OK);
                     if (next == MessageBoxResult.OK)
                     {
                         FormResultGenerator FRG = new FormResultGenerator();
                         MessageBox.Show(""+Rent_ID);
-                        FRG.generateformresult(Rent_ID);
+                        FRG.generateRentformresult(Rent_ID);
                     }
                     DBF.conclose();
                 }
