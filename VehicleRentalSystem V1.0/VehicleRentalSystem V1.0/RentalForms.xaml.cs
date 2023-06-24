@@ -61,14 +61,14 @@ namespace VehicleRentalSystem_V1._0
             P_Name = ((ComboBoxItem)CMBP.SelectedItem).Tag.ToString();
 
             string message = "";
-            //try
-            //{
-            //    if (txtC_Name.Text == "" || txtC_Name.Text == "" || txtC_Telephone.Text == "" || txtC_Email.Text == "" || C_address.Text == "" || V_Chassis.Text == "" || Startdate.Text == "" || Startdate == null || Enddate.Text == "" || Enddate == null || !Regex.IsMatch(C_Emails, @"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250)))
-            //    {
-            //        System.Windows.MessageBox.Show("Fill all the fields correctly", "Error");
-            //    }
-            //    else
-            //    {
+            try
+            {
+                if (txtC_Name.Text == "" || txtC_Name.Text == "" || txtC_Telephone.Text == "" || txtC_Email.Text == "" || C_address.Text == "" || V_Chassis.Text == "" || Startdate.Text == "" || Startdate == null || Enddate.Text == "" || Enddate == null || !Regex.IsMatch(C_Emails, @"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250)))
+                {
+                    System.Windows.MessageBox.Show("Fill all the fields correctly", "Error");
+                }
+                else
+                {
 
                     //Checing Customer
                     DataBaseFunctions DBF = new DataBaseFunctions();
@@ -117,7 +117,6 @@ namespace VehicleRentalSystem_V1._0
                     //getting package ID
 
                     List<string> PID = new List<string>();
-                    MessageBox.Show("" + P_Name);
 
                     using (SqlCommand getpidcmd = new SqlCommand("SELECT P_ID FROM RentPackages WHERE P_Name= @P_Name", DBF.GetSqlCon()))
                     {
@@ -131,36 +130,37 @@ namespace VehicleRentalSystem_V1._0
                             }
                         }
                     }
-                    //P_ID = PID[0];
-                    MessageBox.Show("" + PID[0]);
-
-
+                    P_ID = PID[0];
+                 
                     //Adding new Rent
 
                     int newvhresult;
-                    using (SqlCommand newcuscmd = new SqlCommand("INSERT INTO VehicleRent(C_NIC, V_CN, StartDate, EndDate, P_ID, Active) VALUES(@C_NIC,@V_C,@StartD,@EndD,@P_ID,1)", DBF.GetSqlCon()))
+                    using (SqlCommand newrentcmd = new SqlCommand("INSERT INTO VehicleRent(C_NIC, V_CN, StartDate, EndDate, P_ID, Active) VALUES(@C_NIC,@V_C,@StartD,@EndD,@P_ID,1)", DBF.GetSqlCon()))
                     {
-                        newcuscmd.Parameters.AddWithValue("@C_NIC", C_NIC);
-                        newcuscmd.Parameters.AddWithValue("@C_Name", C_Name);
-                        newcuscmd.Parameters.AddWithValue("@C_Tel", C_Tel);
-                        newcuscmd.Parameters.AddWithValue("@C_Email", C_Emails);
-                        newcuscmd.Parameters.AddWithValue("@C_Add", C_Add);
-                        newvhresult = newcuscmd.ExecuteNonQuery();
+                        var SD = Convert.ToDateTime(this.StartD);
+                        var ED = Convert.ToDateTime(this.EndD);
+                        newrentcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
+                        newrentcmd.Parameters.AddWithValue("@V_C", V_C);
+                        newrentcmd.Parameters.AddWithValue("@StartD", SD);
+                        newrentcmd.Parameters.AddWithValue("@EndD", ED);
+                        newrentcmd.Parameters.AddWithValue("@P_ID", P_ID);
+                        newvhresult = newrentcmd.ExecuteNonQuery();
                     }
 
 
                     if (newvhresult != 0)
                     {
-                        message += "New Hire Added!\n";
+                        message += "New Rent Added!\n";
 
                         //Retrieving ID
                         List<string> ID = new List<string>();
 
-                        using (SqlCommand getidcmd = new SqlCommand("SELECT Hire_ID FROM VehicleRent WHERE C_NIC=@C_NIC && V_CN=@V_C && StartDate=@StartD", DBF.GetSqlCon()))
+                        using (SqlCommand getidcmd = new SqlCommand("SELECT Rent_ID FROM VehicleRent WHERE C_NIC=@C_NIC AND V_CN=@V_C AND StartDate=@StartD", DBF.GetSqlCon()))
                         {
+                            var SD = Convert.ToDateTime(this.StartD);
                             getidcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
                             getidcmd.Parameters.AddWithValue("@V_C", V_C);
-                            getidcmd.Parameters.AddWithValue("@StartD", StartD);
+                            getidcmd.Parameters.AddWithValue("@StartD", SD);
 
                             using (SqlDataReader reader = getidcmd.ExecuteReader())
                             {
@@ -175,22 +175,22 @@ namespace VehicleRentalSystem_V1._0
                     }
                     else
                     {
-                        message += "Couldn't Add New Hire!\n";
+                        message += "Couldn't Add New Rent!\n";
                     }
                     MessageBoxResult next = MessageBox.Show(message, "Result", MessageBoxButton.OK);
                     if (next == MessageBoxResult.OK)
                     {
                         FormResultGenerator FRG = new FormResultGenerator();
                         MessageBox.Show(""+Rent_ID);
-                        FRG.generateformresult(Rent_ID);
+                        FRG.generateRentformresult(Rent_ID);
                     }
                     DBF.conclose();
-                    //}
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
     }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,7 +28,40 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnD_Update_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                DataBaseFunctions db = new DataBaseFunctions();
+                db.conopen();
 
+                using (SqlCommand updatecmd = new SqlCommand("UPDATE Rider SET R_Name = @R_Name, R_LN = @R_LN, R_Email = @R_Email,R_Address=@R_Add,Car=@Car,Bike=@Bike,Van=@Van,ThreeWheel=@ThreeWheel,Bus=@Bus,Lorry=@Lorry,R_State=@R_State WHERE R_NIC = @R_NIC"))
+                {
+                    updatecmd.Connection = db.GetSqlCon(); // Assign the connection
+
+                    updatecmd.Parameters.AddWithValue("@R_NIC", txtD_NIC.Text);
+                    updatecmd.Parameters.AddWithValue("@R_Name", txtD_Name.Text);
+                    updatecmd.Parameters.AddWithValue("@R_LN", txtD_lisence.Text);
+                    updatecmd.Parameters.AddWithValue("@R_Address", txtD_Name1.Text);
+                    updatecmd.Parameters.AddWithValue("@R_Email", txtD_Email.Text);
+                    updatecmd.Parameters.AddWithValue("@Car", CarCheckBox.IsChecked);
+                    updatecmd.Parameters.AddWithValue("@Van", VanCheckBox.IsChecked);
+                    updatecmd.Parameters.AddWithValue("@Bus", BusCheckBox.IsChecked);
+                    updatecmd.Parameters.AddWithValue("@Lorry", LorryCheckBox.IsChecked);
+                    updatecmd.Parameters.AddWithValue("@Bike", BikeCheckBox.IsChecked);
+
+
+
+                    // Add rest of the variables
+                    updatecmd.ExecuteNonQuery();
+
+
+                }
+
+                MessageBox.Show("Updated Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnD_Insert__Click(object sender, RoutedEventArgs e)
@@ -63,18 +98,30 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnD_Delete_Click(object sender, RoutedEventArgs e)
         {
-            txtD_Name.Text = "";
-            txtD_NIC.Text = "";
-            txtD_lisence.Text = "";
-            txtD_Email.Text = "";
-            DriversPhone.Text = "";
-            DriverState.Text = "";
-            CarCheckBox.IsChecked = false;
-            BikeCheckBox.IsChecked = false;
-            VanCheckBox.IsChecked = false;
-            _3wheelCheckBox.IsChecked = false;
-            BusCheckBox.IsChecked = false;
-            LorryCheckBox.IsChecked = false;
+            try
+            {
+                DataBaseFunctions db = new DataBaseFunctions();
+                db.conopen();
+
+                MessageBox.Show("Enter the Driver's NIC to delete the record");
+
+                string  R_NIC= txtD_NIC.Text;
+
+                using (SqlCommand deletecmd = new SqlCommand("DELETE FROM Rider WHERE R_NIC = @R_NIC"))
+                {
+                    deletecmd.Connection = db.GetSqlCon(); // Assign the connection
+
+                    deletecmd.Parameters.AddWithValue("@R_NIC", R_NIC);
+
+                    deletecmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Record deleted successfully");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

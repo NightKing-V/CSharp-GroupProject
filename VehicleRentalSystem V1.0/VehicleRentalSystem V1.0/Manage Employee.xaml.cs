@@ -89,12 +89,12 @@ namespace VehicleRentalSystem_V1._0
                 {
                     updatecmd.Connection = db.GetSqlCon(); // Assign the connection
 
-                    updatecmd.Parameters.AddWithValue("@E_NIC", txtE_NIC);
-                    updatecmd.Parameters.AddWithValue("@E_Name", txtE_Name);
-                    updatecmd.Parameters.AddWithValue("@E_Tel", txtE_Telephone);
-                    updatecmd.Parameters.AddWithValue("@Department", department);
-                    updatecmd.Parameters.AddWithValue("@E_Address", E_address);
-                    updatecmd.Parameters.AddWithValue("@E_Email", txtE_Email);
+                    updatecmd.Parameters.AddWithValue("@E_NIC", txtE_NIC.Text);
+                    updatecmd.Parameters.AddWithValue("@E_Name", txtE_Name.Text);
+                    updatecmd.Parameters.AddWithValue("@E_Tel", txtE_Telephone.Text);
+                    updatecmd.Parameters.AddWithValue("@Department", department.Text);
+                    updatecmd.Parameters.AddWithValue("@E_Address", E_address.Text);
+                    updatecmd.Parameters.AddWithValue("@E_Email", txtE_Email.Text);
                     
 
                     // Add rest of the variables
