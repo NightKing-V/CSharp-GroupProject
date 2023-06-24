@@ -15,6 +15,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -177,19 +178,20 @@ namespace VehicleRentalSystem_V1._0
                     {
                         message += "Couldn't Add New Rent!\n";
                     }
-                    MessageBoxResult next = MessageBox.Show(message, "Result", MessageBoxButton.OK);
+                    MessageBoxResult next = System.Windows.MessageBox.Show(message, "Result", MessageBoxButton.OK);
                     if (next == MessageBoxResult.OK)
                     {
+                        List<string> Data = new List<string> { Rent_ID, C_NIC, C_Name, C_Add, C_Tel, V_C, StartD, EndD, P_Name };
+
                         FormResultGenerator FRG = new FormResultGenerator();
-                        MessageBox.Show(""+Rent_ID);
-                        FRG.generateRentformresult(Rent_ID);
+                        FRG.generateRentformresult(Data);
                     }
                     DBF.conclose();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
             }
         }
 
