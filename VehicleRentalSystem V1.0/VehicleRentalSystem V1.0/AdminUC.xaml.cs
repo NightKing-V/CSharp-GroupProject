@@ -27,7 +27,8 @@ namespace VehicleRentalSystem_V1._0
 
         private void VehicleInUseBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Manage_Employee manage_Employee =new Manage_Employee();
+            manage_Employee.Show();
         }
 
         private void VehicleAvBtn_Click(object sender, RoutedEventArgs e)

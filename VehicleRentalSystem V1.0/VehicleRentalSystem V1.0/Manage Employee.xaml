@@ -192,7 +192,7 @@
                     Width="250"
                     Margin="515,266,0,0" Height="48" VerticalAlignment="Top" Background="White"
                     >
-                    <ComboBox 
+                    <ComboBox x:Name="department" 
                     
                         Margin="0,8,0,8" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="230" VerticalContentAlignment="Center" Background="#FFEEF6FF">
                         <ComboBoxItem x:Name="IT" Content="IT" IsSelected="True" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
@@ -204,7 +204,7 @@
                 </Border>
 
                 <!--Next-->
-                <DataGrid Margin="102,356,102,108" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF7AB3EF"/>
+                <DataGrid Margin="102,356,102,108" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF7AB3EF" SelectionChanged="DataGrid_SelectionChanged"/>
 
                 <!--Next-->
                 <Button x:Name="btnUpdate"
@@ -217,7 +217,7 @@
                     FontWeight="SemiBold"
                     Cursor="Hand"
                     Margin="214,524,424,0"
-                    Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" Background="Turquoise" >
+                    Click="btnUpdate_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" Background="Turquoise" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="#FF7AB3EF"/>

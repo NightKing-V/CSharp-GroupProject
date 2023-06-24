@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Xaml.Behaviors.Core;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static System.Windows.Forms.AxHost;
 
 namespace VehicleRentalSystem_V1._0
 {
@@ -26,12 +29,92 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+              DataBaseFunctions db = new DataBaseFunctions();
+              db.setdata("INSERT INTO Employee (E_NIC,E_Name,E_Tel,E_Email,E_Address,Department) VALUES ('" + txtE_NIC.Text + "','" + txtE_Name.Text + "','" + txtE_Telephone.Text + "','" + txtE_Email.Text + "','" + E_address.Text + "','" + department.Text + "')");
 
+                MessageBox.Show("Inserted Successfully");
+                this.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                this.Close();
+            }
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                DataBaseFunctions db = new DataBaseFunctions();
+                db.conopen();
+
+                MessageBox.Show("Enter the Employee NIC to delete the record");
+
+                string E_NIC = txtE_NIC.Text;
+
+                using (SqlCommand deletecmd = new SqlCommand("DELETE FROM Employee WHERE E_NIC = @E_NIC"))
+                {
+                    deletecmd.Connection = db.GetSqlCon(); // Assign the connection
+
+                    deletecmd.Parameters.AddWithValue("@E_NIC", E_NIC);
+
+                    deletecmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Record deleted successfully");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
-    }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DataBaseFunctions db = new DataBaseFunctions();
+                db.conopen();
+
+                using (SqlCommand updatecmd = new SqlCommand("UPDATE Employee SET E_Name = @E_Name, E_Tel = @E_Tel, E_Email = @E_Email, Department = @Department,E_Address=@E_Add WHERE E_NIC = @E_NIC"))
+                {
+                    updatecmd.Connection = db.GetSqlCon(); // Assign the connection
+
+                    updatecmd.Parameters.AddWithValue("@E_NIC", txtE_NIC);
+                    updatecmd.Parameters.AddWithValue("@E_Name", txtE_Name);
+                    updatecmd.Parameters.AddWithValue("@E_Tel", txtE_Telephone);
+                    updatecmd.Parameters.AddWithValue("@Department", department);
+                    updatecmd.Parameters.AddWithValue("@E_Address", E_address);
+                    updatecmd.Parameters.AddWithValue("@E_Email", txtE_Email);
+                    
+
+                    // Add rest of the variables
+                    updatecmd.ExecuteNonQuery();
+
+                    
+                }
+
+
+
+
+                MessageBox.Show("Updated Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+            
+
 }
+    }
+

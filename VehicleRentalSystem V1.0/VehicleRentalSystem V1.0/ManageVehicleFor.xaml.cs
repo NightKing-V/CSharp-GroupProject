@@ -195,7 +195,7 @@ namespace VehicleRentalSystem_V1._0
                     // Add rest of the variables
                     updatecmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Updated Successfully");
+                    
                 }
 
 
