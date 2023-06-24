@@ -65,8 +65,8 @@ namespace VehicleRentalSystem_V1._0
             P_Name = ((ComboBoxItem)CMBP.SelectedItem).Tag.ToString();
 
             string message = "";
-            try 
-            {
+            //try 
+            //{
                 if(C_Name == "" || C_NIC == "" || C_Emails == "" || C_Add == "" || C_Tel == "" || V_C == "" || StartD == "" || EndD == "" || E_Mileage.Text == "" || A_Payment.Text == "" || S_Mileage.Text == "" || !Regex.IsMatch(C_Emails,@"^[^@\s]+@[^@\s]+\.[^@\s]+$",RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250)))
                 {
                     MessageBox.Show("Fill all the fields correctly", "Error");
@@ -143,7 +143,7 @@ namespace VehicleRentalSystem_V1._0
                     //Adding new hire
 
                     int newvhresult;
-                    using (SqlCommand newrentcmd = new SqlCommand("INSERT INTO VehicleHire(C_NIC, V_CN, StartDate, StartMileage, EtaMileage, EndDate, R_NIC, Active, P_ID, PricePerLiter, Advancefee) VALUES(@C_Name, @V_C, @StartD, @ETAM, @SMil, @EndD, @R_NIC, 1, @P_ID, @PPLiter, @ADPay)", DBF.GetSqlCon()))
+                    using (SqlCommand newrentcmd = new SqlCommand("INSERT INTO VehicleHire(C_NIC, V_CN, StartDate, StartMileage, EtaMileage, EndDate, R_NIC, Active, P_ID, PricePerLiter, Advancefee) VALUES(@C_NIC, @V_C, @StartD, @ETAM, @SMil, @EndD, @R_NIC, 1, @P_ID, @PPLiter, @ADPay)", DBF.GetSqlCon()))
                     {
                         var SD = Convert.ToDateTime(this.StartD);
                         var ED = Convert.ToDateTime(this.EndD);
@@ -198,11 +198,11 @@ namespace VehicleRentalSystem_V1._0
                     }
                     DBF.conclose();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
 
         }
 
