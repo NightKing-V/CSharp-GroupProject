@@ -2,6 +2,7 @@
 using Microsoft.Xaml.Behaviors.Core;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -97,7 +98,29 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
+            string V_PN = txtV_No.Text;
+            string V_CN = txtV_ChassisNo.Text;
+            //vehicle plate number not included include it
+            string V_Brand = txtV_Brand.Text;
+            string V_Model = txtV_Model.Text;
+            string V_State = Vehicle_Condition.Text;
+            string V_Passengers = No_of_Passengers.Text;
+            bool Car = CarCheckBox.IsChecked ?? false;
+            bool bike = BikeCheckBox.IsChecked ?? false;
+            bool van = VanCheckBox.IsChecked ?? false;
+            bool threewheel = _3wheelCheckBox.IsChecked ?? false;
+            bool bus = BusCheckBox.IsChecked ?? false;
+            bool lorry = LorryCheckBox.IsChecked ?? false;
 
+            using (SqlCommand updatecmd = new SqlCommand("UPDATE Vehicle SET V_CN = @V_CN, V_PN = @V_PN, V_Brand = @V_Brand, V_Model = @V_Model, V_Type = @V_Type, V_Passengers = @V_Pass, V_Condition = @V_Cond, V_State = @V_State, DisPerLiter = @DPL"))
+            {
+                updatecmd.Parameters.AddWithValue("@V_CN", V_CN);
+                updatecmd.Parameters.AddWithValue("@V_PN", V_PN);
+                updatecmd.Parameters.AddWithValue("@V_Brand", V_Brand);
+                updatecmd.Parameters.AddWithValue("@V_Model", V_Model);
+                //add rest of the variables
+                updatecmd.ExecuteNonQuery();
+            }
         }
 
         private void txtV_Brand_TextChanged(object sender, TextChangedEventArgs e)
