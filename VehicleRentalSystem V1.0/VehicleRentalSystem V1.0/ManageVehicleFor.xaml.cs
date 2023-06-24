@@ -112,7 +112,7 @@ namespace VehicleRentalSystem_V1._0
             bool bus = BusCheckBox.IsChecked ?? false;
             bool lorry = LorryCheckBox.IsChecked ?? false;
 
-            using (SqlCommand updatecmd = new SqlCommand("UPDATE Vehicle SET V_CN = @V_CN, V_PN = @V_PN, V_Brand = @V_Brand, V_Model = @V_Model, V_Type = @V_Type, V_Passengers = @V_Pass, V_Condition = @V_Cond, V_State = @V_State, DisPerLiter = @DPL"))
+            using (SqlCommand updatecmd = new SqlCommand("UPDATE Vehicle SET V_PN = @V_PN, V_Brand = @V_Brand, V_Model = @V_Model, V_Type = @V_Type, V_Passengers = @V_Pass, V_Condition = @V_Cond, V_State = @V_State, DisPerLiter = @DPL WHERE V_CN = @V_CN"))
             {
                 updatecmd.Parameters.AddWithValue("@V_CN", V_CN);
                 updatecmd.Parameters.AddWithValue("@V_PN", V_PN);
