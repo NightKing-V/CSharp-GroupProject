@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="VehicleHireForm" Height="614" Width="950"  WindowStartupLocation="CenterScreen">
+        Title="VehicleHireForm" Height="800" Width="950"  WindowStartupLocation="CenterScreen">
     <ScrollViewer>
         <Border Height="731"
             Width="811" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" BorderBrush="#FF1C6DD0" Background="#FFEEF6FF"
@@ -222,12 +222,12 @@
 
                 <!--Next-->
 
-                <TextBlock Text="Rider Name"
+                <TextBlock Text="Oil Price Per Litre"
                     FontSize="12"
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="128,351,612,0" Height="18" VerticalAlignment="Top"/>
+                    Margin="581,350,159,0" Height="18" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -236,7 +236,7 @@
                     Width="250"
                     Margin="114,366,0,0" Height="40" VerticalAlignment="Top" Background="White"
                     >
-                    <TextBox x:Name="txtR_Name"
+                    <TextBox x:Name="txtO_Price"
                         FontSize="15"
                         FontWeight="Medium"
                         FontFamily="Century Gothic"
@@ -260,7 +260,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="581,351,167,0" Height="17" VerticalAlignment="Top"/>
+                    Margin="128,350,620,0" Height="17" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -359,7 +359,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="128,505,622,0" Height="19" VerticalAlignment="Top"/>
+                    Margin="128,504,622,0" Height="19" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -441,7 +441,7 @@
                              
                     BorderThickness="0"
                     Content="Submit"
-                    Foreground="White"
+                    Foreground="Black"
                     FontSize="12"
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
@@ -507,7 +507,28 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                
+                <TextBlock Text="Package"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="578,580,0,0" HorizontalAlignment="Left" Width="84" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.222"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="568,596,0,0" Height="48" VerticalAlignment="Top" Background="White"
+                    >
+                    <ComboBox x:Name="CMBP" 
+                    
+                        Margin="0,8,0,8" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="230" VerticalContentAlignment="Center" Background="#FFEEF6FF">
+                        <ComboBoxItem x:Name="DailyCar" Content="Car - 1 Day" IsSelected="True" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Cursor="" Tag="DailyCar"/>
+                        <ComboBoxItem x:Name="DailyVan" Content="Van - 1 Day" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="DailyVan"/>
+                        <ComboBoxItem x:Name="DailySUV" Content="SUV - 1 Day" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="DailySUV"/>
+                    
+                    </ComboBox>
+                </Border>
+
 
 
             </Grid>
