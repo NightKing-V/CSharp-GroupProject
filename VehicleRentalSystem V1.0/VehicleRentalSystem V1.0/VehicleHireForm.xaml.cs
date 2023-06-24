@@ -65,9 +65,9 @@ namespace VehicleRentalSystem_V1._0
             P_Name = ((ComboBoxItem)CMBP.SelectedItem).Tag.ToString();
 
             string message = "";
-            //try 
-            //{
-                if(C_Name == "" || C_NIC == "" || C_Emails == "" || C_Add == "" || C_Tel == "" || V_C == "" || StartD == "" || EndD == "" || E_Mileage.Text == "" || A_Payment.Text == "" || S_Mileage.Text == "" || !Regex.IsMatch(C_Emails,@"^[^@\s]+@[^@\s]+\.[^@\s]+$",RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250)))
+            try
+            {
+                if (C_Name == "" || C_NIC == "" || C_Emails == "" || C_Add == "" || C_Tel == "" || V_C == "" || StartD == "" || EndD == "" || E_Mileage.Text == "" || A_Payment.Text == "" || S_Mileage.Text == "" || !Regex.IsMatch(C_Emails,@"^[^@\s]+@[^@\s]+\.[^@\s]+$",RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250)))
                 {
                     MessageBox.Show("Fill all the fields correctly", "Error");
                 }
@@ -194,16 +194,19 @@ namespace VehicleRentalSystem_V1._0
                     MessageBoxResult next = MessageBox.Show(message, "Result", MessageBoxButton.OK);
                     if(next == MessageBoxResult.OK)
                     {
+
+                        List<string> Data = new List<string> {Hire_ID, C_NIC,C_Name, C_Add, C_Tel, V_C,StartD,SMil.ToString(),ETAM.ToString(), EndD, R_NIC, PPLiter.ToString(), ADPay.ToString() };
+                       
                         FormResultGenerator FRG = new FormResultGenerator();
-                        FRG.generateHireformresult(Hire_ID);
+                        FRG.generateHireformresult(Data);
                     }
                     DBF.conclose();
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
