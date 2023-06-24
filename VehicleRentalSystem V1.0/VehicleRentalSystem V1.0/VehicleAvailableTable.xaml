@@ -12,7 +12,7 @@
             <TextBlock HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" FontFamily="Montserrat" Text="Available Vehicles" VerticalAlignment="Center" Width="194" Margin="82,0,0,0" FontWeight="SemiBold" FontSize="20"/>
 
         </Grid>
-        <DataGrid x:Name="VehicleAvailableTable1" Margin="84,150,84,139" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF1C6DD0" BorderThickness="2,2,2,2"/>
+        <DataGrid x:Name="VehicleAvailableTable1" Margin="84,150,84,139" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF1C6DD0" BorderThickness="2,2,2,2" SelectionChanged="VehicleAvailableTable1_SelectionChanged"/>
 
     </Grid>
 </Window>

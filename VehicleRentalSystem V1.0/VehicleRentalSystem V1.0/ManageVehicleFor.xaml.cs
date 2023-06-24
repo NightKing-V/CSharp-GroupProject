@@ -87,7 +87,8 @@ namespace VehicleRentalSystem_V1._0
                 dbFunctions.setdata("INSERT INTO Vehicle (V_CN,V_Brand,V_Model,V_Passengers,V_Condition,V_ImageFolderPath,Car,Bike,Van,Bus,Lorry,_threewheel) VALUES ('" + V_CN + "','" + V_Brand + "','" + V_Model + "','" + V_Passengers + "','" + V_State + "','" + SelectedImage.Source + "','" + Car + "','" + bike + "','" + van + "','" + bus + "','" + lorry + "','" + threewheel + "')");
 
 
-                MessageBox.Show("Inserted Successfully");         
+                MessageBox.Show("Inserted Successfully"); 
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -97,6 +98,36 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
+            private void btnUpdate_Click(object sender, RoutedEventArgs e)
+            {
+                try
+                {
+                    string V_PN = txtV_No.Text;
+                    string V_CN = txtV_ChassisNo.Text;
+                    //vehicle plate number not included include it
+                    string V_Brand = txtV_Brand.Text;
+                    string V_Model = txtV_Model.Text;
+                    string V_State = Vehicle_Condition.Text;
+                    string V_Passengers = No_of_Passengers.Text;
+                    bool Car = CarCheckBox.IsChecked ?? false;
+                    bool bike = BikeCheckBox.IsChecked ?? false;
+                    bool van = VanCheckBox.IsChecked ?? false;
+                    bool threewheel = _3wheelCheckBox.IsChecked ?? false;
+                    bool bus = BusCheckBox.IsChecked ?? false;
+                    bool lorry = LorryCheckBox.IsChecked ?? false;
+                    string imageName = SelectedImage.Source != null ? SelectedImage.Source.ToString() : string.Empty;
+
+                    DataBaseFunctions dbFunctions = new DataBaseFunctions();
+                   dbFunctions.setdata("UPDATE Vehicle SET V_Brand = '"+ V_Brand.Text + "', V_Model = '"+V_Model+"', V_Passengers = '"+V_Passengers+"', V_Condition = '"+Vehicle_Condition+"', V_ImageFolderPath = '"+SelectedImage.Source+"', Car = '"+Car+"', Bike = '"+bike+"', Van = '"+van+"', Bus = '"+bus+"', Lorry = '"+lorry+"', _threewheel = '"+threewheel+"' WHERE V_CN = '"+V_CN+"'");
+
+                    MessageBox.Show("Updated Successfully");
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
 
         }
 
