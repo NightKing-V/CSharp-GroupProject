@@ -26,7 +26,8 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-
+            ReceiptGenarator RG = new ReceiptGenarator();
+            RG.RentFee(RentIDtxt.Text, ReturnDate.Text, DFeeTxt.Text);
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)

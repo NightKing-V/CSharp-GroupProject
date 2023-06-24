@@ -33,8 +33,8 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-
-
+            ReceiptGenarator RG = new ReceiptGenarator();
+            RG.HireFee(HireIDtxt.Text, ReturnDate.Text,DFeeTxt.Text, EndMilatxt.Text);
         }
     }
 }

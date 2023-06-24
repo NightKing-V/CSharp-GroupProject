@@ -48,7 +48,7 @@ namespace VehicleRentalSystem_V1._0
 
             List<string> Cresults = new List<string>();
 
-            using (SqlCommand CNcmd = new SqlCommand("select C_Name from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
+            using (SqlCommand CNcmd = new SqlCommand("select C_NAME from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
             {
                 CNcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
                 using (SqlDataReader reader = CNcmd.ExecuteReader())
