@@ -137,10 +137,10 @@
                 Foreground="Red"
                 FontFamily="Montserrat"
                 Margin="179,324,9,4" FontSize="10" FontWeight="Bold"/>
-            <TextBlock Text="AMARASINGHE TARVELS"
+            <TextBlock Text="LUXURY TRAVELS"
                 Foreground="#FF00B3FF"
                 FontFamily="Comic Sans MS"
-                Margin="80,74,80,261" FontWeight="Medium"/>
+                Margin="102,74,101,261" FontWeight="Medium"/>
 
 
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="VehicleHireForm" Height="621" Width="950"  WindowStartupLocation="CenterScreen">
+        Title="VehicleHireForm" Height="821" Width="950"  WindowStartupLocation="CenterScreen">
     <ScrollViewer>
         <Border Height="731"
             Width="811" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" BorderBrush="#FF1C6DD0" Background="#FFEEF6FF"
@@ -17,7 +17,7 @@
                     TextAlignment="Center"
                     FontSize="20"
                     Foreground="Black"
-                    FontWeight="ExtraBold"
+                    FontWeight="Bold"
                     FontFamily="Montserrat"
                     Margin="322,42,284,0" Height="26" VerticalAlignment="Top"/>
 
