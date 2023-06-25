@@ -30,5 +30,17 @@ namespace VehicleRentalSystem_V1._0
             ManageVehicleFor managevehicleform = new ManageVehicleFor();
             managevehicleform.Show();
         }
+
+        private void VehicleInUseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            VehicleInUseTable inUseTable= new VehicleInUseTable();
+            inUseTable.Show();
+        }
+
+        private void VehicleAvBtn_Click(object sender, RoutedEventArgs e)
+        {
+            VehicleAvailableTable av = new VehicleAvailableTable();
+            av.Show(); 
+        }
     }
 }

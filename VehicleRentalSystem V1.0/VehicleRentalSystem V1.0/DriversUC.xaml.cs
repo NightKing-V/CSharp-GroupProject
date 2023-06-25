@@ -30,5 +30,18 @@ namespace VehicleRentalSystem_V1._0
             ManageDriverForm manageDriverForm = new ManageDriverForm();
             manageDriverForm.Show();
         }
+
+        private void DriverInSrvcBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DriversInServiceTable driversInServiceTable = new DriversInServiceTable();
+            driversInServiceTable.Show();
+        }
+
+        private void DriverAvBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DriversAvailableTable driversAvailable = new DriversAvailableTable();
+            driversAvailable.Show();
+
+        }
     }
 }

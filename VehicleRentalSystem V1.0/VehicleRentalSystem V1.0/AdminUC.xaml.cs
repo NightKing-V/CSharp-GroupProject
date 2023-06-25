@@ -33,7 +33,8 @@ namespace VehicleRentalSystem_V1._0
 
         private void VehicleAvBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Rent_packages rent = new Rent_packages();
+            rent.Show();
         }
     }
 }
