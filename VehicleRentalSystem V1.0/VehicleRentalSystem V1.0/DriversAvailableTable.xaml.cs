@@ -24,30 +24,27 @@ namespace VehicleRentalSystem_V1._0
         public DriversAvailableTable()
         {
             InitializeComponent();
-        }
-
-        private void DriversAvailableTable1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
             try
             {
-
                 DataBaseFunctions db = new DataBaseFunctions();
-                //DataGridView
+                db.conopen();
+                string query = "SELECT * FROM Rider WHERE R_State = 0";
+                SqlDataAdapter da = new SqlDataAdapter(query, db.GetSqlCon());
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                DriversAvailableTable1.ItemsSource = dt.DefaultView;
 
-
-                using (db.GetSqlCon())
-                {
-                    db.conopen();
-                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employee WHERE V_STATE= true", db.GetSqlCon());
-                    DataTable dbv = new DataTable();
-                    da.Fill(dbv);
-                    DriversAvailableTable1.ItemsSource = dbv.DefaultView;
-                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void DriversAvailableTable1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {        
+            //DriversAvailableTable1.ItemsSource = dbv.DefaultView;
         }
     }
 }
