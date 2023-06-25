@@ -26,11 +26,10 @@ namespace VehicleRentalSystem_V1._0
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection( @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleRentalDB.mdf"";Integrated Security=True");
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            DataBaseFunctions DBF = new DataBaseFunctions();
             string username = txtUser.Text;
             string password = txtPass.Password;
 
@@ -38,10 +37,9 @@ namespace VehicleRentalSystem_V1._0
             {
                 using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleRentalDB.mdf"";Integrated Security=True"))
                 {
-                    connection.Open();
-
+                    DBF.conopen();
                     string query = "SELECT * FROM Employee WHERE E_UName=@E_UName AND E_Password=@E_Password";
-                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlCommand command = new SqlCommand(query, DBF.GetSqlCon());
                     command.Parameters.AddWithValue("@E_Uname", username);
                     command.Parameters.AddWithValue("@E_Password", password);
 
