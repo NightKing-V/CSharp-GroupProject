@@ -9,7 +9,7 @@
     <ScrollViewer>
         <Border Height="698"
             Width="658" BorderThickness="3,3,3,3" BorderBrush="#FF1C6DD0" CornerRadius="15,15,15,15" Background="#FFEEF6FF" >
-            <Grid HorizontalAlignment="Left" Width="580" Margin="54,-12,0,-12"
+            <Grid Width="580" Margin="54,-12,0,-12"
                     >
 
                 <TextBlock Text="Manage Driver Form"
@@ -18,21 +18,21 @@
                     Foreground="Black"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="127,48,127,0" Height="23" VerticalAlignment="Top"/>
+                    Margin="127,37,127,0" Height="23" VerticalAlignment="Top"/>
 
                 <TextBlock Text="Driver Name"
                     Foreground="#FF1C6DD0"
                     FontSize="12"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="4,101,250,0" Height="12" VerticalAlignment="Top"/>
+                    Margin="4,86,250,0" Height="12" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="475"
-                    Margin="-8,116,0,0" Background="White" Height="42" VerticalAlignment="Top"
+                    Margin="-8,101,0,0" Background="White" Height="42" VerticalAlignment="Top"
                     >
                     <TextBox x:Name="txtD_Name"
                         FontSize="15"
@@ -58,14 +58,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="4,176,476,0" Width="100" Height="12" VerticalAlignment="Top"/>
+                    Margin="4,161,476,0" Width="100" Height="12" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="273"
-                    Margin="-8,191,0,0" Height="42" VerticalAlignment="Top" Background="White"
+                    Margin="-8,176,0,0" Height="42" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="txtD_NIC"
                         FontSize="15"
@@ -91,14 +91,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="298,177,63,0" Height="12" VerticalAlignment="Top"/>
+                    Margin="298,162,63,0" Height="12" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="273"
-                    Margin="286,192,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    Margin="286,177,0,0" Height="40" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="txtD_lisence"
                         FontSize="15"
@@ -124,14 +124,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="5,255,249,0" Height="16" VerticalAlignment="Top"/>
+                    Margin="5,240,249,0" Height="16" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="420"
-                    Margin="-8,270,0,0" Height="42" VerticalAlignment="Top" Background="White"
+                    Margin="-8,255,0,0" Height="42" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="txtD_Email"
                         FontSize="15"
@@ -154,13 +154,13 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="3,333,251,0" Height="12" VerticalAlignment="Top"/>
+                    Margin="3,314,251,0" Height="12" VerticalAlignment="Top"/>
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="475"
-                    Margin="-10,348,0,0" Background="White" Height="42" VerticalAlignment="Top"
+                    Margin="-10,330,0,0" Background="White" Height="42" VerticalAlignment="Top"
                     >
                     <TextBox x:Name="txtD_Name1"
                         FontSize="15"
@@ -185,14 +185,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="1,409,362,0" Height="12" VerticalAlignment="Top"/>
+                    Margin="1,388,362,0" Height="12" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="-10,424,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    Margin="-10,404,0,0" Height="40" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="DriversPhone"
                         FontSize="15"
@@ -220,14 +220,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="302,409,63,0" Height="12" VerticalAlignment="Top"/>
+                    Margin="302,388,63,0" Height="12" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="290,424,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    Margin="290,404,0,0" Height="40" VerticalAlignment="Top" Background="White"
                     >
                     <TextBox x:Name="DriverState"
                         FontSize="15"
@@ -251,46 +251,10 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="0,484,428,0" Height="18" VerticalAlignment="Top"/>
-
-                <Border CornerRadius="15"  
-                    BorderBrush="Black" 
-                    BorderThickness="2" 
-                    HorizontalAlignment="Left" 
-                    Width="136"
-                    Margin="62,510,0,0" Height="104" VerticalAlignment="Top"
-                    >
-                    <Grid HorizontalAlignment="Center">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="Car" Grid.Row="0" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="CarCheckBox" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="80 0 0 0"/>
-                        <TextBlock Text="Bike" Grid.Row="1" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="BikeCheckBox" Grid.Row="1" VerticalAlignment="Bottom" Margin="80,0,0,1"/>
-                        <TextBlock Text="Van" Grid.Row="2" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="VanCheckBox" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="80 0 0 0"/>
-                        <TextBlock Text="ThreeWheel" Grid.Row="3" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="_3wheelCheckBox" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="80 0 0 0"/>
-                        <TextBlock Text="Bus" Grid.Row="4" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="BusCheckBox" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="80 0 0 0"/>
-                        <TextBlock Text="Lorry" Grid.Row="5" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="LorryCheckBox" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" Margin="80 0 0 0"/>
-                    </Grid>
+                    Margin="0,464,428,0" Height="18" VerticalAlignment="Top"/>
 
 
-
-
-
-                </Border>
-
-
-                <Grid Margin="6,628,-2,0" Height="70" VerticalAlignment="Top">
+                <Grid Margin="-3,632,7,0" Height="70" VerticalAlignment="Top">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="102.667"/>
@@ -403,6 +367,18 @@
 
 
                 </Grid>
+                <Border Width="138" Margin="53,485,389,91" Padding="2,2,2,2" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="15,15,15,15">
+                    <Grid Margin="22,6,18,1">
+                        <RadioButton x:Name="CarCheckBox" Content="Car" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="CarCheckBox1_Checked"/>
+                        <RadioButton x:Name="BikeCheckBox" Content="Bike" HorizontalAlignment="Left" Margin="0,21,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+                        <RadioButton x:Name="VanCheckBox" Content="Van" HorizontalAlignment="Left" Margin="0,42,0,0" VerticalAlignment="Top" Checked="VanCheckBox1_Checked"/>
+                        <RadioButton x:Name="_3wheelCheckBox" Content="ThreeWheel" Margin="0,63,0,46" Checked="_3wheelCheckBox1_Checked"/>
+                        <RadioButton x:Name="BusCheckBox" Content="Bus" HorizontalAlignment="Left" Margin="0,84,0,0" VerticalAlignment="Top" Checked="BusCheckBox1_Checked"/>
+                        <RadioButton x:Name="LorryCheckBox" Content="Lorry" HorizontalAlignment="Left" Margin="0,105,0,0" VerticalAlignment="Top" Checked="LorryCheckBox1_Checked"/>
+
+
+                    </Grid>
+                </Border>
 
 
             </Grid>
