@@ -87,7 +87,7 @@ namespace VehicleRentalSystem_V1._0
 
                     using (SqlCommand checkv = new SqlCommand("SELECT V_State FROM Vehicle WHERE V_CN=@V_C", DBF.GetSqlCon()))
                     {
-                        checkv.Parameters.AddWithValue("@V_CN", V_C);
+                        checkv.Parameters.AddWithValue("@V_C", V_C);
                         using (SqlDataReader reader = checkv.ExecuteReader())
                         {
                             while (reader.Read())
