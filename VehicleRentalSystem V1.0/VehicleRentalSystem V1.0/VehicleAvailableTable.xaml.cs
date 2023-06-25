@@ -24,31 +24,36 @@ namespace VehicleRentalSystem_V1._0
         public VehicleAvailableTable()
         {
             InitializeComponent();
-        }
-        ManageVehicleFor mdv= new ManageVehicleFor();
-
-        private void VehicleAvailableTable1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
             try
             {
                 //DataGridView
                 DataBaseFunctions db = new DataBaseFunctions();
-                db.GetSqlCon();
+                db.conopen();
+                string query = "SELECT * FROM Vehicle WHERE V_State = 0";
+                SqlDataAdapter da = new SqlDataAdapter(query, db.GetSqlCon());
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                VehicleAvailableTable1.ItemsSource = dt.DefaultView;
 
-                using (db.GetSqlCon())
-                {
-                    db.conopen();
-                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employee", db.GetSqlCon());
-                    DataTable dbv = new DataTable();
-                    da.Fill(dbv);
-                    VehicleAvailableTable1.ItemsSource = dbv.DefaultView;
-                }
+                //using (db.GetSqlCon())
+                //{
+                //    db.conopen();
+                //    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employee", db.GetSqlCon());
+                //    DataTable dbv = new DataTable();
+                //    da.Fill(dbv);
+                //    VehicleAvailableTable1.ItemsSource = dbv.DefaultView;
+                //}
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        ManageVehicleFor mdv= new ManageVehicleFor();
 
+        private void VehicleAvailableTable1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+ 
         }
     }
 }
