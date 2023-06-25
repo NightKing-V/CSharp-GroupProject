@@ -217,13 +217,13 @@
                     FontWeight="SemiBold"
                     Cursor="Hand"
                     Margin="230,524,408,0"
-                    Click="btnUpdate_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" Background="Turquoise" >
+                    Click="btnUpdate_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="#FF7AB3EF"/>
+                            <Setter Property="Background" Value="Turquoise"/>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#FF1C6DD0"/>
+                                    <Setter Property="Background" Value="Gold"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
