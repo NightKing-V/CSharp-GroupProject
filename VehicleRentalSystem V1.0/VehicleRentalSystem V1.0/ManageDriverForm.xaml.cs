@@ -123,5 +123,35 @@ namespace VehicleRentalSystem_V1._0
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void CarCheckBox1_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void VanCheckBox1_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void _3wheelCheckBox1_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BusCheckBox1_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LorryCheckBox1_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

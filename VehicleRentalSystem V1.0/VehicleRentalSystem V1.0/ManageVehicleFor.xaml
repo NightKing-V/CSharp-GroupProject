@@ -160,43 +160,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="-33,342,168,0" Height="15" VerticalAlignment="Top"/>
-
-                <Border CornerRadius="15"  
-                    BorderBrush="Black" 
-                    BorderThickness="2" 
-                    HorizontalAlignment="Left" 
-                    Width="136"
-                    Margin="39,374,0,0" Height="103" VerticalAlignment="Top"
-                    >
-                    <Grid HorizontalAlignment="Center">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="Car" Grid.Row="0" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="CarCheckBox" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="80 0 0 0"/>
-                        <TextBlock Text="Bike" Grid.Row="1" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="BikeCheckBox" Grid.Row="1" VerticalAlignment="Bottom" Margin="80,0,0,1"/>
-                        <TextBlock Text="Van" Grid.Row="2" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="VanCheckBox" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="80 0 0 0"/>
-                        <TextBlock Text="ThreeWheel" Grid.Row="3" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="_3wheelCheckBox" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Margin="80 0 0 0"/>
-                        <TextBlock Text="Bus" Grid.Row="4" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="BusCheckBox" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="80 0 0 0"/>
-                        <TextBlock Text="Lorry" Grid.Row="5" VerticalAlignment="Center" Margin="0 0 10 0"/>
-                        <CheckBox x:Name="LorryCheckBox" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" Margin="80 0 0 0"/>
-                    </Grid>
-
-
-
-
-
-                </Border>
+                    Margin="-33,330,168,0" Height="15" VerticalAlignment="Top"/>
 
 
 
@@ -266,7 +230,6 @@
 
 
                 </Border>
-                <StackPanel Margin="295,315,29,0" Grid.ColumnSpan="2" Height="171" VerticalAlignment="Top"/>
 
                 <!--Next-->
 
@@ -390,6 +353,18 @@
 
 
                 </Grid>
+                <Border Width="138" Margin="5,356,270,98" Padding="2,2,2,2" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="15,15,15,15">
+                    <Grid Margin="22,6,18,1">
+                        <RadioButton x:Name="CarCheckBox" Content="Car" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="CarCheckBox1_Checked"/>
+                        <RadioButton x:Name="BikeCheckBox" Content="Bike" HorizontalAlignment="Left" Margin="0,21,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+                        <RadioButton x:Name="VanCheckBox" Content="Van" HorizontalAlignment="Left" Margin="0,42,0,0" VerticalAlignment="Top" Checked="VanCheckBox1_Checked"/>
+                        <RadioButton x:Name="_3wheelCheckBox" Content="ThreeWheel" Margin="0,63,0,46" Checked="_3wheelCheckBox1_Checked"/>
+                        <RadioButton x:Name="BusCheckBox" Content="Bus" HorizontalAlignment="Left" Margin="0,84,0,0" VerticalAlignment="Top" Checked="BusCheckBox1_Checked"/>
+                        <RadioButton x:Name="LorryCheckBox" Content="Lorry" HorizontalAlignment="Left" Margin="0,105,0,0" VerticalAlignment="Top" Checked="LorryCheckBox1_Checked"/>
+
+
+                    </Grid>
+                </Border>
 
 
             </Grid>
@@ -400,5 +375,3 @@
 
     </ScrollViewer>
 </Window>
-
-
