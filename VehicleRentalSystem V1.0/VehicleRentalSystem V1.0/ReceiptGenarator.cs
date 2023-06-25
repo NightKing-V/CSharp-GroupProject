@@ -20,176 +20,175 @@ namespace VehicleRentalSystem_V1._0
 
         public void RentFee(string Rent_ID, string ReturnD, string damagefee)
         {
-            ReceiptNO = Rent_ID;
-            this.returndate = ReturnD;
-            this.damagefee = double.Parse(damagefee);
-
-            var startdate = Convert.ToDateTime(this.startdate);
-            var enddate = Convert.ToDateTime(this.enddate);
-            var returndate = Convert.ToDateTime(this.returndate);
-            var validdays = (enddate - startdate).TotalDays;
-            var invaliddays = (returndate - enddate).TotalDays;
-
-            List<string> rentrecord = new List<string>();
-            DataBaseFunctions DBF = new DataBaseFunctions();
-            DBF.conopen();
-            using (SqlCommand rentrecordcmd = new SqlCommand("select C_NIC from VehicleRent where Rent_ID = @Rent_ID", DBF.GetSqlCon()))
+            try
             {
-                rentrecordcmd.Parameters.AddWithValue("@Rent_ID", Rent_ID);
-                using (SqlDataReader reader = rentrecordcmd.ExecuteReader())
+                ReceiptNO = Rent_ID;
+                this.returndate = ReturnD;
+                this.damagefee = double.Parse(damagefee);
+
+                var startdate = Convert.ToDateTime(this.startdate);
+                var enddate = Convert.ToDateTime(this.enddate);
+                var returndate = Convert.ToDateTime(this.returndate);
+                var validdays = (enddate - startdate).TotalDays;
+                var invaliddays = (returndate - enddate).TotalDays;
+
+                List<string> rentrecord = new List<string>();
+                DataBaseFunctions DBF = new DataBaseFunctions();
+                DBF.conopen();
+                using (SqlCommand rentrecordcmd = new SqlCommand("select C_NIC from VehicleRent where Rent_ID = @Rent_ID", DBF.GetSqlCon()))
                 {
-                    while (reader.Read())
+                    rentrecordcmd.Parameters.AddWithValue("@Rent_ID", Rent_ID);
+                    using (SqlDataReader reader = rentrecordcmd.ExecuteReader())
                     {
-                        rentrecord.Add(reader[0].ToString());
+                        while (reader.Read())
+                        {
+                            rentrecord.Add(reader[0].ToString());
+                        }
                     }
                 }
-            }
-            C_NIC = rentrecord[0];
-            MessageBox.Show("" + C_NIC);
+                C_NIC = rentrecord[0];
 
-            List<string> Cresults1 = new List<string>();
+                List<string> Cresults1 = new List<string>();
 
-            using (SqlCommand CNcmd = new SqlCommand("select C_NAME from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
-            {
-                CNcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
-                using (SqlDataReader reader = CNcmd.ExecuteReader())
+                using (SqlCommand CNcmd = new SqlCommand("select C_NAME from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
                 {
-                    while (reader.Read())
+                    CNcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
+                    using (SqlDataReader reader = CNcmd.ExecuteReader())
                     {
-                        Cresults1.Add(reader[0].ToString());
+                        while (reader.Read())
+                        {
+                            Cresults1.Add(reader[0].ToString());
+                        }
                     }
                 }
-            }
-            C_NAME = Cresults1[0];
-            MessageBox.Show("" + C_NAME);
+                C_NAME = Cresults1[0];
 
-            List<string> Cresults2 = new List<string>();
+                List<string> Cresults2 = new List<string>();
 
-            using (SqlCommand CTcmd = new SqlCommand("select C_Tel from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
-            {
-                CTcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
-                using (SqlDataReader reader = CTcmd.ExecuteReader())
+                using (SqlCommand CTcmd = new SqlCommand("select C_Tel from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
                 {
-                    while (reader.Read())
-                    {                    
-                        Cresults2.Add(reader[0].ToString());
-
-                    }
-                }
-            }
-            C_Tel = int.Parse(Cresults2[0]);
-            MessageBox.Show("" + C_Tel);
-
-            List<string> Cresults3 = new List<string>();
-
-            using (SqlCommand CAcmd = new SqlCommand("select C_Address from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
-                {
-                    while (reader.Read())
+                    CTcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
+                    using (SqlDataReader reader = CTcmd.ExecuteReader())
                     {
-                        Cresults3.Add(reader[0].ToString());
+                        while (reader.Read())
+                        {
+                            Cresults2.Add(reader[0].ToString());
+
+                        }
                     }
                 }
-            }
-            C_Address = Cresults3[0];
-            MessageBox.Show("" + C_Address);
+                C_Tel = int.Parse(Cresults2[0]);
 
+                List<string> Cresults3 = new List<string>();
 
-            List<string> Cresults4 = new List<string>();
-
-            using (SqlCommand CAcmd = new SqlCommand("select P_ID from VehicleRent where Rent_ID = @Rent_ID", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@Rent_ID", Rent_ID);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
+                using (SqlCommand CAcmd = new SqlCommand("select C_Address from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
                 {
-                    while (reader.Read())
+                    CAcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
                     {
-                        Cresults4.Add(reader[0].ToString());
-
+                        while (reader.Read())
+                        {
+                            Cresults3.Add(reader[0].ToString());
+                        }
                     }
                 }
-            }
+                C_Address = Cresults3[0];
 
-            P_ID = Cresults4[0];
-            MessageBox.Show("" + P_ID);
 
-            List<string> Cresults5 = new List<string>();
+                List<string> Cresults4 = new List<string>();
 
-            using (SqlCommand CAcmd = new SqlCommand("select Rental from RentPackages where P_ID = @P_ID", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@P_ID", P_ID);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
+                using (SqlCommand CAcmd = new SqlCommand("select P_ID from VehicleRent where Rent_ID = @Rent_ID", DBF.GetSqlCon()))
                 {
-                    while (reader.Read())
+                    CAcmd.Parameters.AddWithValue("@Rent_ID", Rent_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
                     {
-                        Cresults5.Add(reader[0].ToString());
+                        while (reader.Read())
+                        {
+                            Cresults4.Add(reader[0].ToString());
 
+                        }
                     }
                 }
-            }
-            Rental = double.Parse(Cresults5[0]);
-            MessageBox.Show("" + Rental);
 
+                P_ID = Cresults4[0];
 
+                List<string> Cresults5 = new List<string>();
 
-            List<string> Cresults6 = new List<string>();
-
-            using (SqlCommand CAcmd = new SqlCommand("select Duration from RentPackages where P_ID = @P_ID", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@P_ID", P_ID);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
+                using (SqlCommand CAcmd = new SqlCommand("select Rental from RentPackages where P_ID = @P_ID", DBF.GetSqlCon()))
                 {
-                    while (reader.Read())
+                    CAcmd.Parameters.AddWithValue("@P_ID", P_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
                     {
-                        Cresults6.Add(reader[0].ToString());
+                        while (reader.Read())
+                        {
+                            Cresults5.Add(reader[0].ToString());
 
+                        }
                     }
                 }
-            }
-
-            duration = Cresults6[0];
-            MessageBox.Show("" + duration);
+                Rental = double.Parse(Cresults5[0]);
 
 
-            if (duration == "1Dy")
-            {
-                fee = validdays * Rental;
-                penaltyfee = invaliddays * Rental * penaltyrate / 100;
-                totalfee = fee + penaltyfee + this.damagefee;
-            }
-            else if (duration == "7Dys")
-            {
-                fee = validdays / 7 * Rental;
-                penaltyfee = invaliddays / 7 * Rental * penaltyrate / 100;
-                totalfee = fee + penaltyfee + this.damagefee;
-            }
-            else if (duration == "30Dys")
-            {
-                fee = validdays / 30 * Rental;
-                penaltyfee = invaliddays / 30 * Rental * penaltyrate / 100;
-                totalfee = fee + penaltyfee + this.damagefee;
-            }
-            else if (duration == "12Mnths")
-            {
-                fee = validdays / 365 * Rental;
-                penaltyfee = invaliddays / 365 * Rental * penaltyrate / 100;
-                totalfee = fee + penaltyfee + this.damagefee;
-            }
+                List<string> Cresults6 = new List<string>();
 
-            using (SqlCommand newcuscmd = new SqlCommand("UPDATE VehicleRent SET ReturnDate = @RD, Active = 0, Rentalfee = @RF, Penaltyfee = @PF, Damagefee = @DF, Totalfee = @TF WHERE Rent_ID = @Rent_ID", DBF.GetSqlCon()))
-            {
-                newcuscmd.Parameters.AddWithValue("@RD", this.returndate);
-                newcuscmd.Parameters.AddWithValue("@RF", fee);
-                newcuscmd.Parameters.AddWithValue("@PF", penaltyfee);
-                newcuscmd.Parameters.AddWithValue("@DF", this.damagefee);
-                newcuscmd.Parameters.AddWithValue("@TF", totalfee);
-                newcuscmd.Parameters.AddWithValue("@Rent_ID", Rent_ID);
-                newcuscmd.ExecuteNonQuery();
-            }
+                using (SqlCommand CAcmd = new SqlCommand("select Duration from RentPackages where P_ID = @P_ID", DBF.GetSqlCon()))
+                {
+                    CAcmd.Parameters.AddWithValue("@P_ID", P_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults6.Add(reader[0].ToString());
 
-            RentReceipt();
+                        }
+                    }
+                }
+
+                duration = Cresults6[0];
+
+
+                if (duration == "1Dy")
+                {
+                    fee = validdays * Rental;
+                    penaltyfee = invaliddays * Rental * penaltyrate / 100;
+                    totalfee = fee + penaltyfee + this.damagefee;
+                }
+                else if (duration == "7Dys")
+                {
+                    fee = validdays / 7 * Rental;
+                    penaltyfee = invaliddays / 7 * Rental * penaltyrate / 100;
+                    totalfee = fee + penaltyfee + this.damagefee;
+                }
+                else if (duration == "30Dys")
+                {
+                    fee = validdays / 30 * Rental;
+                    penaltyfee = invaliddays / 30 * Rental * penaltyrate / 100;
+                    totalfee = fee + penaltyfee + this.damagefee;
+                }
+                else if (duration == "12Mnths")
+                {
+                    fee = validdays / 365 * Rental;
+                    penaltyfee = invaliddays / 365 * Rental * penaltyrate / 100;
+                    totalfee = fee + penaltyfee + this.damagefee;
+                }
+
+                using (SqlCommand newcuscmd = new SqlCommand("UPDATE VehicleRent SET ReturnDate = @RD, Active = 0, Rentalfee = @RF, Penaltyfee = @PF, Damagefee = @DF, Totalfee = @TF WHERE Rent_ID = @Rent_ID", DBF.GetSqlCon()))
+                {
+                    newcuscmd.Parameters.AddWithValue("@RD", this.returndate);
+                    newcuscmd.Parameters.AddWithValue("@RF", fee);
+                    newcuscmd.Parameters.AddWithValue("@PF", penaltyfee);
+                    newcuscmd.Parameters.AddWithValue("@DF", this.damagefee);
+                    newcuscmd.Parameters.AddWithValue("@TF", totalfee);
+                    newcuscmd.Parameters.AddWithValue("@Rent_ID", Rent_ID);
+                    newcuscmd.ExecuteNonQuery();
+                }
+
+                RentReceipt();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public void HireFee(string Hire_ID, string ReturnD, string damagefee, string EM)
         {
