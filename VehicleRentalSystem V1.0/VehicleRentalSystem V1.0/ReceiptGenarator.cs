@@ -418,11 +418,30 @@ namespace VehicleRentalSystem_V1._0
                         }
                     }
                 }
+                //
+                //
+                //
+                //calculation
                 advance = double.Parse(Cresults10[0]);
                 oilfee = PricePerLiter * (ETAmilage / DisPerLiter);
                 fee = validdays * Rental;
                 penaltyfee = invaliddays * Rental * penaltyrate / 100;
                 totalfee = fee + penaltyfee + oilfee + this.damagefee - advance;
+
+                using (SqlCommand newcuscmd = new SqlCommand("UPDATE VehicleHire SET ReturnDate = @RD, EndMileage = @EM, Active = 0, Rentalfee = @RF, Oilfee = @OF, Penaltyfee = @PF, Damagefee = @DF, Totalfee = @TF WHERE Rent_ID = @Rent_ID", DBF.GetSqlCon()))
+                {
+                    newcuscmd.Parameters.AddWithValue("@RD", this.returndate);
+                    newcuscmd.Parameters.AddWithValue("@RF", fee);
+                    newcuscmd.Parameters.AddWithValue("@EM", EM);
+                    newcuscmd.Parameters.AddWithValue("@OF", oilfee);
+                    newcuscmd.Parameters.AddWithValue("@PF", penaltyfee);
+                    newcuscmd.Parameters.AddWithValue("@DF", this.damagefee);
+                    newcuscmd.Parameters.AddWithValue("@TF", totalfee);
+                    newcuscmd.Parameters.AddWithValue("@Rent_ID", Hire_ID);
+                    newcuscmd.ExecuteNonQuery();
+                }
+
+
 
                 HireReceipt();
 

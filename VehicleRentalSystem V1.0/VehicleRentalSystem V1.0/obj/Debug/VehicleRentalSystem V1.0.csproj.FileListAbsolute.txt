@@ -100,7 +100,6 @@ G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSys
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\DriversUC.g.cs
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\EndHireDetail.g.cs
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\EndRentDetail.g.cs
-G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\ForgotPassword.g.cs
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\Login.g.cs
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\MainWindow.g.cs
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\Manage Employee.g.cs
@@ -125,7 +124,6 @@ G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSys
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\DriversUC.baml
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\EndHireDetail.baml
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\EndRentDetail.baml
-G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\ForgotPassword.baml
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\Login.baml
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\MainWindow.baml
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\Manage Employee.baml
