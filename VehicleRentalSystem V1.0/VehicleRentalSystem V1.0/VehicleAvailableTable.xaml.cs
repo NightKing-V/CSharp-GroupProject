@@ -40,7 +40,7 @@ namespace VehicleRentalSystem_V1._0
                     SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employee", con);
                     DataTable dbv = new DataTable();
                     da.Fill(dbv);
-                    dgv1.ItemsSource = dbv.DefaultView;
+                    VehicleAvailableTable1.ItemsSource = dbv.DefaultView;
                 }
             }
             catch (Exception ex)
