@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="Login" Height="580" Width="1000" WindowStartupLocation="CenterScreen" Background="#FFEEF6FF">
+        Title="Login" Height="580" Width="1000" WindowStartupLocation="CenterScreen" Background="#FFEEF6FF" Icon="/Icon.png">
 
     <Border  CornerRadius="15"  BorderBrush="#FF1C6DD0" BorderThickness="3" Grid.Row="1" Margin="0,100,0,0" HorizontalAlignment="Center" Width="336" Height="364" VerticalAlignment="Top" Background="White">
         <Grid

@@ -194,6 +194,23 @@ namespace VehicleRentalSystem_V1._0
 
                 duration = Cresults6[0];
 
+                List<string> Cresults7 = new List<string>();
+
+                using (SqlCommand CAcmd = new SqlCommand("select PenaltyRate from RentPackages where P_ID = @P_ID", DBF.GetSqlCon()))
+                {
+                    CAcmd.Parameters.AddWithValue("@P_ID", P_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults7.Add(reader[0].ToString());
+
+                        }
+                    }
+                }
+
+                penaltyrate = int.Parse(Cresults7[0]);
+
                 var startdate = Convert.ToDateTime(this.startdate);
                 var enddate = Convert.ToDateTime(this.enddate);
                 var returndate = Convert.ToDateTime(this.returndate);
@@ -503,7 +520,7 @@ namespace VehicleRentalSystem_V1._0
 
                 List<string> Cresults10 = new List<string>();
 
-                using (SqlCommand CAcmd = new SqlCommand("select P_ID from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
+                using (SqlCommand CAcmd = new SqlCommand("select Advancefee from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
                 {
                     CAcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
                     using (SqlDataReader reader = CAcmd.ExecuteReader())
@@ -514,6 +531,23 @@ namespace VehicleRentalSystem_V1._0
                         }
                     }
                 }
+                advance = double.Parse(Cresults10[0]);
+
+                List<string> Cresults11 = new List<string>();
+
+                using (SqlCommand CAcmd = new SqlCommand("select PenaltyRate from RentPackages where P_ID = @P_ID", DBF.GetSqlCon()))
+                {
+                    CAcmd.Parameters.AddWithValue("@P_ID", P_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults11.Add(reader[0].ToString());
+                        }
+                    }
+                }
+                penaltyrate = int.Parse(Cresults11[0]);
+
                 //
                 //
                 //
@@ -525,7 +559,6 @@ namespace VehicleRentalSystem_V1._0
                 var validdays = (enddate - startdate).TotalDays;
                 var invaliddays = (returndate - enddate).TotalDays;
 
-                advance = double.Parse(Cresults10[0]);
                 oilfee = PricePerLiter * (ETAmilage / DisPerLiter);
                 fee = validdays * Rental;
                 penaltyfee = invaliddays * Rental * penaltyrate / 100;
