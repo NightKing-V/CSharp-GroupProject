@@ -53,7 +53,7 @@ namespace VehicleRentalSystem_V1._0
             html += ""+P_Name+"";
             html += "</div>\r\n                            </div>\r\n                        \r\n\r\n\r\n\r\n                                <div class='row border-b-2 brc-default-l2'></div>\r\n                                <br>\r\n                                <div class='row mt-3'>\r\n                                    <div class='col-12 col-m-7 text-grey-d2 text-95 mt-2 mt-lg-0'>\r\n                                        <br>Delayed Returns Will Cause Extra Charges...\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</body>\r\n\r\n</html>";
 
-            FileCreator();
+            RentFileCreator();
         }
 
 
@@ -109,16 +109,34 @@ namespace VehicleRentalSystem_V1._0
             html += " "+ADPay+" RS";
             html += "</span>\r\n                                    </div>\r\n                                    <div class='col-12 col-m-7 text-grey-d2 text-95 mt-2 mt-lg-0'>\r\n                                        <br>Delayed Returns Will Cause Extra Charges...\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</body>\r\n\r\n</html>";
 
-            FileCreator();
+            HireFileCreator();
 
         }
-        public void FileCreator()
+        public void HireFileCreator()
         {
             using (FolderBrowserDialog dialog = new FolderBrowserDialog())
             {
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    String FileName = System.IO.Path.Combine(dialog.SelectedPath, ID + "INFO.htm");
+                    String FileName = System.IO.Path.Combine(dialog.SelectedPath, ID + "HINFO.htm");
+                    File.WriteAllText(FileName, html);
+
+
+                    Process fileopener = new Process();
+                    fileopener.StartInfo.FileName = "msedge";
+                    fileopener.StartInfo.Arguments = "\"" + FileName + "\"";
+                    fileopener.Start();
+                }
+            }
+
+        }
+        public void RentFileCreator()
+        {
+            using (FolderBrowserDialog dialog = new FolderBrowserDialog())
+            {
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    String FileName = System.IO.Path.Combine(dialog.SelectedPath, ID + "RINFO.htm");
                     File.WriteAllText(FileName, html);
 
 

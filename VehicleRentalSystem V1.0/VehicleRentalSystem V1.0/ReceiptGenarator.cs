@@ -15,7 +15,7 @@ namespace VehicleRentalSystem_V1._0
     internal class ReceiptGenarator
     {
         private string html, startdate, enddate, returndate, duration, ReceiptNO,C_NIC, C_NAME, C_Address, Date, P_ID, V_CN;
-        private double Rental, fee, penaltyfee, totalfee, oilfee, damagefee, PricePerLiter;
+        private double Rental, fee, penaltyfee, totalfee, oilfee, damagefee, PricePerLiter, advance;
         private int penaltyrate, DisPerLiter, ETAmilage, C_Tel;
 
         public void RentFee(string Rent_ID, string ReturnD, string damagefee)
@@ -193,132 +193,206 @@ namespace VehicleRentalSystem_V1._0
         public void HireFee(string Hire_ID, string ReturnD, string damagefee, string EM)
         {
 
-            ReceiptNO = Hire_ID;
-            this.returndate = ReturnD;
-            this.damagefee = double.Parse(damagefee);
-
-            //oilfee = etamilage*oilprice
-            //oilfee+
-            var startdate = Convert.ToDateTime(this.startdate);
-            var enddate = Convert.ToDateTime(this.enddate);
-            var returndate = Convert.ToDateTime(this.returndate);
-
-            var validdays = (enddate - startdate).TotalDays;
-            var invaliddays = (returndate - enddate).TotalDays;
-
-            List<string> hirerecord = new List<string>();
-            DataBaseFunctions DBF = new DataBaseFunctions();
-            DBF.conopen();
-            using (SqlCommand hirerecordcmd = new SqlCommand("select C_NIC from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
+            try
             {
-                hirerecordcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
-                using (SqlDataReader reader = hirerecordcmd.ExecuteReader())
+                ReceiptNO = Hire_ID;
+                this.returndate = ReturnD;
+                this.damagefee = double.Parse(damagefee);
+
+                //oilfee = etamilage*oilprice
+                //oilfee+
+                var startdate = Convert.ToDateTime(this.startdate);
+                var enddate = Convert.ToDateTime(this.enddate);
+                var returndate = Convert.ToDateTime(this.returndate);
+
+                var validdays = (enddate - startdate).TotalDays;
+                var invaliddays = (returndate - enddate).TotalDays;
+
+                List<string> hirerecord = new List<string>();
+                DataBaseFunctions DBF = new DataBaseFunctions();
+                DBF.conopen();
+
+                using (SqlCommand hirerecordcmd = new SqlCommand("select C_NIC from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
                 {
-                    while (reader.Read())
+                    hirerecordcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
+                    using (SqlDataReader reader = hirerecordcmd.ExecuteReader())
                     {
-                        hirerecord.Add(reader[0].ToString());
+                        while (reader.Read())
+                        {
+                            hirerecord.Add(reader[0].ToString());
+                        }
                     }
                 }
-            }
-            C_NIC = hirerecord[0];
+                C_NIC = hirerecord[0];
 
-            List<string> Cresults = new List<string>();
+                List<string> Cresults1 = new List<string>();
 
-            using (SqlCommand CNcmd = new SqlCommand("select C_Name from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
-            {
-                CNcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
-                using (SqlDataReader reader = CNcmd.ExecuteReader())
+                using (SqlCommand CNcmd = new SqlCommand("select C_Name from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
                 {
-                    Cresults.Add(reader[0].ToString());
+                    CNcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
+                    using (SqlDataReader reader = CNcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults1.Add(reader[0].ToString());
+                        }
+                    }
                 }
-            }
-            using (SqlCommand CTcmd = new SqlCommand("select C_Tel from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
-            {
-                CTcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
-                using (SqlDataReader reader = CTcmd.ExecuteReader())
+                C_NAME = Cresults1[0];
+
+                List<string> Cresults2 = new List<string>();
+
+                using (SqlCommand CTcmd = new SqlCommand("select C_Tel from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
                 {
-                    Cresults.Add(reader[0].ToString());
+                    CTcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
+                    using (SqlDataReader reader = CTcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults2.Add(reader[0].ToString());
+                        }
+                    }
                 }
-            }
-            using (SqlCommand CAcmd = new SqlCommand("select C_Address from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
+                C_Tel = int.Parse(Cresults2[0]);
+
+
+                List<string> Cresults3 = new List<string>();
+
+                using (SqlCommand CAcmd = new SqlCommand("select C_Address from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
                 {
-                    Cresults.Add(reader[0].ToString());
+                    CAcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults3.Add(reader[0].ToString());
+                        }
+                    }
                 }
-            }
-            using (SqlCommand CAcmd = new SqlCommand("select P_ID from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@Rent_ID", Hire_ID);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
+                C_Address = Cresults3[0];
+
+
+                List<string> Cresults4 = new List<string>();
+
+                using (SqlCommand CAcmd = new SqlCommand("select P_ID from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
                 {
-                    Cresults.Add(reader[0].ToString());
+                    CAcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults4.Add(reader[0].ToString());
+                        }
+                    }
                 }
-            }
+                P_ID = Cresults4[0];
 
 
-            C_NAME = Cresults[0];
-            C_Tel = int.Parse(Cresults[1]);
-            C_Address = Cresults[2];
-            P_ID = Cresults[3];
+                List<string> Cresults5 = new List<string>();
 
-            using (SqlCommand CAcmd = new SqlCommand("select Rental from RentPackages where P_ID = @P_ID", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@P_ID", P_ID);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
+                using (SqlCommand CAcmd = new SqlCommand("select Rental from RentPackages where P_ID = @P_ID", DBF.GetSqlCon()))
                 {
-                    Cresults.Add(reader[0].ToString());
+                    CAcmd.Parameters.AddWithValue("@P_ID", P_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults5.Add(reader[0].ToString());
+                        }
+                    }
                 }
-            }
+                Rental = double.Parse(Cresults5[0]);
 
-            Rental = double.Parse(Cresults[4]);
+                List<string> Cresults6 = new List<string>();
 
-            using (SqlCommand CAcmd = new SqlCommand("select EtaMileage from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@Rent_ID", Hire_ID);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
+                using (SqlCommand CAcmd = new SqlCommand("select EtaMileage from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
                 {
-                    Cresults.Add(reader[0].ToString());
+                    CAcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults6.Add(reader[0].ToString());
+                        }
+                    }
                 }
-            }
-            using (SqlCommand CAcmd = new SqlCommand("select PricePerLiter from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@Rent_ID", Hire_ID);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
+                ETAmilage = int.Parse(Cresults6[0]);
+
+
+
+                List<string> Cresults7 = new List<string>();
+
+                using (SqlCommand CAcmd = new SqlCommand("select PricePerLiter from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
                 {
-                    Cresults.Add(reader[0].ToString());
+                    CAcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults7.Add(reader[0].ToString());
+                        }
+                    }
                 }
-            }
-            using (SqlCommand CAcmd = new SqlCommand("select V_CN from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@Rent_ID", Hire_ID);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
+                PricePerLiter = int.Parse(Cresults7[0]);
+
+
+                List<string> Cresults8 = new List<string>();
+
+                using (SqlCommand CAcmd = new SqlCommand("select V_CN from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
                 {
-                    Cresults.Add(reader[0].ToString());
+                    CAcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults8.Add(reader[0].ToString());
+                        }
+                    }
                 }
-            }
-            ETAmilage = int.Parse(Cresults[5]);
-            PricePerLiter = int.Parse(Cresults[6]);
-            V_CN = Cresults[7];
+                V_CN = Cresults8[0];
 
-            using (SqlCommand CAcmd = new SqlCommand("select DisPerLiter from Vehicle where V_CN = @V_CN", DBF.GetSqlCon()))
-            {
-                CAcmd.Parameters.AddWithValue("@V_CN", V_CN);
-                using (SqlDataReader reader = CAcmd.ExecuteReader())
+                List<string> Cresults9 = new List<string>();
+
+                using (SqlCommand CAcmd = new SqlCommand("select DisPerLiter from Vehicle where V_CN = @V_CN", DBF.GetSqlCon()))
                 {
-                    Cresults.Add(reader[0].ToString());
+                    CAcmd.Parameters.AddWithValue("@V_CN", V_CN);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults9.Add(reader[0].ToString());
+                        }
+                    }
                 }
+                DisPerLiter = int.Parse(Cresults9[0]);
+
+
+                List<string> Cresults10 = new List<string>();
+
+                using (SqlCommand CAcmd = new SqlCommand("select P_ID from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
+                {
+                    CAcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
+                    using (SqlDataReader reader = CAcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Cresults10.Add(reader[0].ToString());
+                        }
+                    }
+                }
+                advance = double.Parse(Cresults10[0]);
+                oilfee = PricePerLiter * (ETAmilage / DisPerLiter);
+                fee = validdays * Rental;
+                penaltyfee = invaliddays * Rental * penaltyrate / 100;
+                totalfee = fee + penaltyfee + oilfee + this.damagefee - advance;
+
+                HireReceipt();
+
             }
-            DisPerLiter = int.Parse(Cresults[8]);
-
-            oilfee = PricePerLiter * (ETAmilage / DisPerLiter);
-            fee = validdays * Rental;
-            penaltyfee = invaliddays * Rental * penaltyrate / 100;
-            totalfee = fee + penaltyfee + oilfee + this.damagefee;
-
-            HireReceipt();
-
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public void HireReceipt()
         {
@@ -348,7 +422,7 @@ namespace VehicleRentalSystem_V1._0
             html += "" + totalfee + "";
             html += "</span>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <hr />\r\n\r\n                    <div>\r\n                        <span class='text-secondary-d1 text-105'>Thank you for your business</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n</body>\r\n\r\n</html>";
 
-            FileCreator();
+            HireFileCreator();
         }
          public void RentReceipt()
         { 
@@ -377,22 +451,40 @@ namespace VehicleRentalSystem_V1._0
             html += "</span>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <hr />\r\n\r\n                    <div>\r\n                        <span class='text-secondary-d1 text-105'>Thank you for your business</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n</body>\r\n\r\n</html>";
 
 
-            FileCreator();
+            RentFileCreator();
          }
 
-        public void FileCreator()
+        public void RentFileCreator()
         {
             using (FolderBrowserDialog dialog = new FolderBrowserDialog())
             {
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    String FileName = System.IO.Path.Combine(dialog.SelectedPath, ReceiptNO + "PAY.htm");
+                    String FileName = System.IO.Path.Combine(dialog.SelectedPath, ReceiptNO + "RPAY.htm");
                     File.WriteAllText(FileName, html);
 
 
                     Process fileopener = new Process();
                     fileopener.StartInfo.FileName = "msedge";
                     fileopener.StartInfo.Arguments = "\""+FileName+"\"";
+                    fileopener.Start();
+                }
+            }
+
+        }
+        public void HireFileCreator()
+        {
+            using (FolderBrowserDialog dialog = new FolderBrowserDialog())
+            {
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    String FileName = System.IO.Path.Combine(dialog.SelectedPath, ReceiptNO + "HPAY.htm");
+                    File.WriteAllText(FileName, html);
+
+
+                    Process fileopener = new Process();
+                    fileopener.StartInfo.FileName = "msedge";
+                    fileopener.StartInfo.Arguments = "\"" + FileName + "\"";
                     fileopener.Start();
                 }
             }
