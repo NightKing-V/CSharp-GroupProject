@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-<<<<<<< Updated upstream
-=======
 using System.Data;
->>>>>>> Stashed changes
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -33,7 +30,7 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< Updated upstream
+
             string username = txtUser.Text;
             string password = txtPass.Password;
 
@@ -69,40 +66,8 @@ namespace VehicleRentalSystem_V1._0
                 System.Windows.MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-
-=======
-            
-            string username = txtUser.Text;
-            string pass = txtPass.Password;
-            try
-            {
-                DataBaseFunctions db= new DataBaseFunctions();
-                string Query = "SELECT * FROM Employee WHERE username='" + txtUser.Text + "' AND pass='" + txtPass.Password + "'";
-
-                SqlDataAdapter da = new SqlDataAdapter(Query, con);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                if(dt.Rows.Count > 0 )
-                {   
-                    username = txtUser.Text;
-                    pass = txtPass.Password;
-
-                    MainWindow main = new MainWindow();
-                    main.Show();
-                    this.Close();
-                }
-                else
-                {
-                    System.Windows.MessageBox.Show("Invalid Username or Password", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-
-              
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
->>>>>>> Stashed changes
+          
+           
         }
     }
 }
