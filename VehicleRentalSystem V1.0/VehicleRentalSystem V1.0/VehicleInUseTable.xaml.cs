@@ -28,5 +28,10 @@ namespace VehicleRentalSystem_V1._0
         {
 
         }
+
+        private void VehicleInUseTable1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

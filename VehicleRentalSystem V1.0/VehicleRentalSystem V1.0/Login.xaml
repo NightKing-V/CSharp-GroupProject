@@ -78,8 +78,8 @@
                     CaretBrush="Gray"
                     BorderBrush="White"
                     BorderThickness="0,0,0,0"
-                    Margin="10,0,0,0"
-                    Padding="30,0,0,0" Height="16" VerticalAlignment="Center" HorizontalAlignment="Left" Width="229">
+                    Margin="10,0,0,8"
+                    Padding="30,0,0,0" Height="16" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="229">
                     <PasswordBox.Background>
                         <ImageBrush ImageSource="/Icons/password.png" 
 
