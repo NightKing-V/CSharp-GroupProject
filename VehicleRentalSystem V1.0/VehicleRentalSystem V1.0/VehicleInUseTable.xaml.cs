@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,13 @@ namespace VehicleRentalSystem_V1._0
         public VehicleInUseTable()
         {
             InitializeComponent();
+            DataBaseFunctions db = new DataBaseFunctions();
+            db.conopen();
+            string query = "SELECT * FROM Vehicle WHERE V_State = 1";
+            SqlDataAdapter da = new SqlDataAdapter(query, db.GetSqlCon());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            VehicleInUseTable1.ItemsSource = dt.DefaultView;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
