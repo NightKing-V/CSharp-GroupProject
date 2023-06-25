@@ -45,76 +45,121 @@ namespace VehicleRentalSystem_V1._0
                 }
             }
             C_NIC = rentrecord[0];
+            MessageBox.Show("" + C_NIC);
 
-            List<string> Cresults = new List<string>();
+            List<string> Cresults1 = new List<string>();
 
             using (SqlCommand CNcmd = new SqlCommand("select C_NAME from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
             {
                 CNcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
                 using (SqlDataReader reader = CNcmd.ExecuteReader())
                 {
-                     Cresults.Add(reader[0].ToString());
+                    while (reader.Read())
+                    {
+                        Cresults1.Add(reader[0].ToString());
+                    }
                 }
             }
+            C_NAME = Cresults1[0];
+            MessageBox.Show("" + C_NAME);
+
+            List<string> Cresults2 = new List<string>();
+
             using (SqlCommand CTcmd = new SqlCommand("select C_Tel from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
             {
                 CTcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
                 using (SqlDataReader reader = CTcmd.ExecuteReader())
                 {
-                    Cresults.Add(reader[0].ToString());
+                    while (reader.Read())
+                    {                    
+                        Cresults2.Add(reader[0].ToString());
+
+                    }
                 }
             }
+            C_Tel = int.Parse(Cresults2[0]);
+            MessageBox.Show("" + C_Tel);
+
+            List<string> Cresults3 = new List<string>();
+
             using (SqlCommand CAcmd = new SqlCommand("select C_Address from Customer where C_NIC = @C_NIC", DBF.GetSqlCon()))
             {
                 CAcmd.Parameters.AddWithValue("@C_NIC", C_NIC);
                 using (SqlDataReader reader = CAcmd.ExecuteReader())
                 {
-                    Cresults.Add(reader[0].ToString());
+                    while (reader.Read())
+                    {
+                        Cresults3.Add(reader[0].ToString());
+                    }
                 }
             }
+            C_Address = Cresults3[0];
+            MessageBox.Show("" + C_Address);
+
+
+            List<string> Cresults4 = new List<string>();
+
             using (SqlCommand CAcmd = new SqlCommand("select P_ID from VehicleRent where Rent_ID = @Rent_ID", DBF.GetSqlCon()))
             {
                 CAcmd.Parameters.AddWithValue("@Rent_ID", Rent_ID);
                 using (SqlDataReader reader = CAcmd.ExecuteReader())
                 {
-                    Cresults.Add(reader[0].ToString());
+                    while (reader.Read())
+                    {
+                        Cresults4.Add(reader[0].ToString());
+
+                    }
                 }
             }
 
+            P_ID = Cresults4[0];
+            MessageBox.Show("" + P_ID);
 
-            C_NAME = Cresults[0];
-            C_Tel = int.Parse(Cresults[1]);
-            C_Address = Cresults[2];
-            P_ID = Cresults[3];
+            List<string> Cresults5 = new List<string>();
 
             using (SqlCommand CAcmd = new SqlCommand("select Rental from RentPackages where P_ID = @P_ID", DBF.GetSqlCon()))
             {
                 CAcmd.Parameters.AddWithValue("@P_ID", P_ID);
                 using (SqlDataReader reader = CAcmd.ExecuteReader())
                 {
-                    Cresults.Add(reader[0].ToString());
+                    while (reader.Read())
+                    {
+                        Cresults5.Add(reader[0].ToString());
+
+                    }
                 }
             }
+            Rental = double.Parse(Cresults5[0]);
+            MessageBox.Show("" + Rental);
+
+
+
+            List<string> Cresults6 = new List<string>();
+
             using (SqlCommand CAcmd = new SqlCommand("select Duration from RentPackages where P_ID = @P_ID", DBF.GetSqlCon()))
             {
                 CAcmd.Parameters.AddWithValue("@P_ID", P_ID);
                 using (SqlDataReader reader = CAcmd.ExecuteReader())
                 {
-                    Cresults.Add(reader[0].ToString());
+                    while (reader.Read())
+                    {
+                        Cresults6.Add(reader[0].ToString());
+
+                    }
                 }
             }
 
-            Rental = double.Parse(Cresults[4]);
-            duration = Cresults[5];
+            duration = Cresults6[0];
+            MessageBox.Show("" + duration);
 
 
-            if (duration == "1Dy") 
+            if (duration == "1Dy")
             {
                 fee = validdays * Rental;
                 penaltyfee = invaliddays * Rental * penaltyrate / 100;
                 totalfee = fee + penaltyfee + this.damagefee;
             }
-            else if (duration == "7Dys") 
+            else if (duration == "7Dys")
             {
                 fee = validdays / 7 * Rental;
                 penaltyfee = invaliddays / 7 * Rental * penaltyrate / 100;
@@ -300,7 +345,7 @@ namespace VehicleRentalSystem_V1._0
             html += "" + oilfee + "";
             html += "</div>\r\n                        </div>\r\n                        <div class='row mb-2 mb-sm-0 py-25 bgc-default-l4'>\r\n                            <div class='d-none d-sm-block col-1'>3</div>\r\n                            <div class='col-9 col-sm-5'>Damage Fee</div>\r\n                            <div class='d-none d-sm-block col-2'></div>\r\n                            <div class='d-none d-sm-block col-2 text-95'></div>\r\n                            <div class='col-2 text-secondary-d2'>";
             html += "" + damagefee + "";
-            html += "</div>\r\n                        </div>\r\n\r\n                        <!-- <div class='row mb-2 mb-sm-0 py-25'>\r\n                            <div class='d-none d-sm-block col-1'>4</div>\r\n                            <div class='col-9 col-sm-5'>Software development</div>\r\n                            <div class='d-none d-sm-block col-2'></div>\r\n                            <div class='d-none d-sm-block col-2 text-95'></div>\r\n                            <div class='col-2 text-secondary-d2'>$1,000</div>\r\n                        </div>\r\n\r\n                        <div class='row mb-2 mb-sm-0 py-25 bgc-default-l4'>\r\n                            <div class='d-none d-sm-block col-1'>4</div>\r\n                            <div class='col-9 col-sm-5'>Consulting</div>\r\n                            <div class='d-none d-sm-block col-2'></div>\r\n                            <div class='d-none d-sm-block col-2 text-95'></div>\r\n                            <div class='col-2 text-secondary-d2'>$500</div>\r\n                        </div>\r\n                    </div> -->\r\n\r\n                    <div class='row border-b-2 brc-default-l2'></div>\r\n\r\n                    <!-- or use a table instead -->\r\n                    <!--\r\n            <div class='table-responsive'>\r\n                <table class='table table-striped table-borderless border-0 border-b-2 brc-default-l1'>\r\n                    <thead class='bg-none bgc-default-tp1'>\r\n                        <tr class='text-white'>\r\n                            <th class='opacity-2'>#</th>\r\n                            <th>Description</th>\r\n                            <th>Qty</th>\r\n                            <th>Unit Price</th>\r\n                            <th width='140'>Amount</th>\r\n                        </tr>\r\n                    </thead>\r\n\r\n                    <tbody class='text-95 text-secondary-d3'>\r\n                        <tr></tr>\r\n                        <tr>\r\n                            <td>1</td>\r\n                            <td>Domain registration</td>\r\n                            <td>2</td>\r\n                            <td class='text-95'>$10</td>\r\n                            <td class='text-secondary-d2'>$20</td>\r\n                        </tr> \r\n                    </tbody>\r\n                </table>\r\n            </div>\r\n            -->\r\n\r\n                    <div class='row mt-3'>\r\n                        <div class='col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0'>\r\n                            Extra note such as company or payment information...\r\n                        </div>\r\n\r\n                        <!-- <div class='col-12 col-sm-5 text-grey text-90 order-first order-sm-last'>\r\n                            <div class='row my-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    SubTotal\r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-120 text-secondary-d1'>$2,250</span>\r\n                                </div>\r\n                            </div>\r\n\r\n                            <div class='row my-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    Tax (10%)\r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-110 text-secondary-d1'>$225</span>\r\n                                </div>\r\n                            </div>\r\n -->\r\n                            <div class='row my-2 align-items-center bgc-primary-l3 p-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    Total Amount\r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-150 text-success-d3 opacity-2'>";
+            html += "</div>\r\n                        </div>\r\n\r\n                        <!-- <div class='row mb-2 mb-sm-0 py-25'>\r\n                            <div class='d-none d-sm-block col-1'>4</div>\r\n                            <div class='col-9 col-sm-5'>Software development</div>\r\n                            <div class='d-none d-sm-block col-2'></div>\r\n                            <div class='d-none d-sm-block col-2 text-95'></div>\r\n                            <div class='col-2 text-secondary-d2'>$1,000</div>\r\n                        </div>\r\n\r\n                        <div class='row mb-2 mb-sm-0 py-25 bgc-default-l4'>\r\n                            <div class='d-none d-sm-block col-1'>4</div>\r\n                            <div class='col-9 col-sm-5'>Consulting</div>\r\n                            <div class='d-none d-sm-block col-2'></div>\r\n                            <div class='d-none d-sm-block col-2 text-95'></div>\r\n                            <div class='col-2 text-secondary-d2'>$500</div>\r\n                        </div>\r\n                    </div> -->\r\n\r\n                    <div class='row border-b-2 brc-default-l2'></div>\r\n\r\n                    <!-- or use a table instead -->\r\n                    <!--\r\n            <div class='table-responsive'>\r\n                <table class='table table-striped table-borderless border-0 border-b-2 brc-default-l1'>\r\n                    <thead class='bg-none bgc-default-tp1'>\r\n                        <tr class='text-white'>\r\n                            <th class='opacity-2'>#</th>\r\n                            <th>Description</th>\r\n                            <th>Qty</th>\r\n                            <th>Unit Price</th>\r\n                            <th width='140'>Amount</th>\r\n                        </tr>\r\n                    </thead>\r\n\r\n                    <tbody class='text-95 text-secondary-d3'>\r\n                        <tr></tr>\r\n                        <tr>\r\n                            <td>1</td>\r\n                            <td>Domain registration</td>\r\n                            <td>2</td>\r\n                            <td class='text-95'>$10</td>\r\n                            <td class='text-secondary-d2'>$20</td>\r\n                        </tr> \r\n                    </tbody>\r\n                </table>\r\n            </div>\r\n            -->\r\n\r\n                    <div class='row mt-3'>\r\n                        <div class='col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0'>\r\n                            \r\n                        </div>\r\n\r\n                        <!-- <div class='col-12 col-sm-5 text-grey text-90 order-first order-sm-last'>\r\n                            <div class='row my-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    SubTotal\r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-120 text-secondary-d1'>$2,250</span>\r\n                                </div>\r\n                            </div>\r\n\r\n                            <div class='row my-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    Tax (10%)\r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-110 text-secondary-d1'>$225</span>\r\n                                </div>\r\n                            </div>\r\n -->\r\n                            <div class='row my-2 align-items-center bgc-primary-l3 p-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    Total Amount : \r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-150 text-success-d3 opacity-2'>";
             html += "" + totalfee + "";
             html += "</span>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <hr />\r\n\r\n                    <div>\r\n                        <span class='text-secondary-d1 text-105'>Thank you for your business</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n</body>\r\n\r\n</html>";
 
@@ -328,7 +373,7 @@ namespace VehicleRentalSystem_V1._0
             html += "" + penaltyfee + "";
             html += "</div>\r\n                        </div>\r\n                        \r\n                        <div class='row mb-2 mb-sm-0 py-25 bgc-default-l4'>\r\n                            <div class='d-none d-sm-block col-1'>3</div>\r\n                            <div class='col-9 col-sm-5'>Damage Fee</div>\r\n                            <div class='d-none d-sm-block col-2'></div>\r\n                            <div class='d-none d-sm-block col-2 text-95'></div>\r\n                            <div class='col-2 text-secondary-d2'>";
             html += "" + damagefee + "";
-            html += "</div>\r\n                        </div>\r\n\r\n                        <!-- <div class='row mb-2 mb-sm-0 py-25'>\r\n                            <div class='d-none d-sm-block col-1'>3</div>\r\n                            <div class='col-9 col-sm-5'>Software development</div>\r\n                            <div class='d-none d-sm-block col-2'></div>\r\n                            <div class='d-none d-sm-block col-2 text-95'></div>\r\n                            <div class='col-2 text-secondary-d2'>$1,000</div>\r\n                        </div>\r\n\r\n                        <div class='row mb-2 mb-sm-0 py-25 bgc-default-l4'>\r\n                            <div class='d-none d-sm-block col-1'>4</div>\r\n                            <div class='col-9 col-sm-5'>Consulting</div>\r\n                            <div class='d-none d-sm-block col-2'></div>\r\n                            <div class='d-none d-sm-block col-2 text-95'></div>\r\n                            <div class='col-2 text-secondary-d2'>$500</div>\r\n                        </div>\r\n                    </div> -->\r\n\r\n                    <div class='row border-b-2 brc-default-l2'></div>\r\n\r\n                    <!-- or use a table instead -->\r\n                    <!--\r\n            <div class='table-responsive'>\r\n                <table class='table table-striped table-borderless border-0 border-b-2 brc-default-l1'>\r\n                    <thead class='bg-none bgc-default-tp1'>\r\n                        <tr class='text-white'>\r\n                            <th class='opacity-2'>#</th>\r\n                            <th>Description</th>\r\n                            <th>Qty</th>\r\n                            <th>Unit Price</th>\r\n                            <th width='140'>Amount</th>\r\n                        </tr>\r\n                    </thead>\r\n\r\n                    <tbody class='text-95 text-secondary-d3'>\r\n                        <tr></tr>\r\n                        <tr>\r\n                            <td>1</td>\r\n                            <td>Domain registration</td>\r\n                            <td>2</td>\r\n                            <td class='text-95'>$10</td>\r\n                            <td class='text-secondary-d2'>$20</td>\r\n                        </tr> \r\n                    </tbody>\r\n                </table>\r\n            </div>\r\n            -->\r\n\r\n                    <div class='row mt-3'>\r\n                        <div class='col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0'>\r\n                            Extra note such as company or payment information...\r\n                        </div>\r\n\r\n                        <!-- <div class='col-12 col-sm-5 text-grey text-90 order-first order-sm-last'>\r\n                            <div class='row my-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    SubTotal\r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-120 text-secondary-d1'>$2,250</span>\r\n                                </div>\r\n                            </div>\r\n\r\n                            <div class='row my-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    Tax (10%)\r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-110 text-secondary-d1'>$225</span>\r\n                                </div>\r\n                            </div>\r\n -->\r\n                            <div class='row my-2 align-items-center bgc-primary-l3 p-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    Total Amount\r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-150 text-success-d3 opacity-2'>";
+            html += "</div>\r\n                        </div>\r\n\r\n                        <!-- <div class='row mb-2 mb-sm-0 py-25'>\r\n                            <div class='d-none d-sm-block col-1'>3</div>\r\n                            <div class='col-9 col-sm-5'>Software development</div>\r\n                            <div class='d-none d-sm-block col-2'></div>\r\n                            <div class='d-none d-sm-block col-2 text-95'></div>\r\n                            <div class='col-2 text-secondary-d2'>$1,000</div>\r\n                        </div>\r\n\r\n                        <div class='row mb-2 mb-sm-0 py-25 bgc-default-l4'>\r\n                            <div class='d-none d-sm-block col-1'>4</div>\r\n                            <div class='col-9 col-sm-5'>Consulting</div>\r\n                            <div class='d-none d-sm-block col-2'></div>\r\n                            <div class='d-none d-sm-block col-2 text-95'></div>\r\n                            <div class='col-2 text-secondary-d2'>$500</div>\r\n                        </div>\r\n                    </div> -->\r\n\r\n                    <div class='row border-b-2 brc-default-l2'></div>\r\n\r\n                    <!-- or use a table instead -->\r\n                    <!--\r\n            <div class='table-responsive'>\r\n                <table class='table table-striped table-borderless border-0 border-b-2 brc-default-l1'>\r\n                    <thead class='bg-none bgc-default-tp1'>\r\n                        <tr class='text-white'>\r\n                            <th class='opacity-2'>#</th>\r\n                            <th>Description</th>\r\n                            <th>Qty</th>\r\n                            <th>Unit Price</th>\r\n                            <th width='140'>Amount</th>\r\n                        </tr>\r\n                    </thead>\r\n\r\n                    <tbody class='text-95 text-secondary-d3'>\r\n                        <tr></tr>\r\n                        <tr>\r\n                            <td>1</td>\r\n                            <td>Domain registration</td>\r\n                            <td>2</td>\r\n                            <td class='text-95'>$10</td>\r\n                            <td class='text-secondary-d2'>$20</td>\r\n                        </tr> \r\n                    </tbody>\r\n                </table>\r\n            </div>\r\n            -->\r\n\r\n                    <div class='row mt-3'>\r\n                        <div class='col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0'>\r\n                            \r\n                        </div>\r\n\r\n                        <!-- <div class='col-12 col-sm-5 text-grey text-90 order-first order-sm-last'>\r\n                            <div class='row my-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    SubTotal\r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-120 text-secondary-d1'>$2,250</span>\r\n                                </div>\r\n                            </div>\r\n\r\n                            <div class='row my-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    Tax (10%)\r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-110 text-secondary-d1'>$225</span>\r\n                                </div>\r\n                            </div>\r\n -->\r\n                            <div class='row my-2 align-items-center bgc-primary-l3 p-2'>\r\n                                <div class='col-7 text-right'>\r\n                                    Total Amount : \r\n                                </div>\r\n                                <div class='col-5'>\r\n                                    <span class='text-150 text-success-d3 opacity-2'>";
             html += "" + totalfee + "";
             html += "</span>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <hr />\r\n\r\n                    <div>\r\n                        <span class='text-secondary-d1 text-105'>Thank you for your business</span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n</body>\r\n\r\n</html>";
 
