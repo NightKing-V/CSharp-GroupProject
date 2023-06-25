@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Xml.Linq;
+using System.Windows.Forms;
 
 namespace VehicleRentalSystem_V1._0
 {
@@ -48,9 +49,17 @@ namespace VehicleRentalSystem_V1._0
             {
                 sqlcon.Open();
             }
-            sqlcmd = new SqlCommand(Query, sqlcon);
-            count = sqlcmd.ExecuteNonQuery();
-            sqlcon.Close();
+            try
+            { 
+                sqlcmd = new SqlCommand(Query, sqlcon);
+                count = sqlcmd.ExecuteNonQuery();
+                sqlcon.Close();
+               
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             return count;
         }
         public DataTable getdata(string Query)
@@ -59,10 +68,17 @@ namespace VehicleRentalSystem_V1._0
             {
                 sqlcon.Open();
             }
-            dt = new DataTable();
-            sqlcmd = new SqlCommand(Query, sqlcon);
-            dataadapter = new SqlDataAdapter(sqlcmd);
-            dataadapter.Fill(dt);
+            try
+            {
+                dt = new DataTable();
+                sqlcmd = new SqlCommand(Query, sqlcon);
+                dataadapter = new SqlDataAdapter(sqlcmd);
+                dataadapter.Fill(dt);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             return dt;
         }
         public SqlConnection GetSqlCon()

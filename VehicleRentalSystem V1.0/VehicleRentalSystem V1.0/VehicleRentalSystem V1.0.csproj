@@ -120,9 +120,6 @@
     <Compile Include="EndRentDetail.xaml.cs">
       <DependentUpon>EndRentDetail.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ForgotPassword.xaml.cs">
-      <DependentUpon>ForgotPassword.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FormResultGenerator.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -184,10 +181,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EndRentDetail.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ForgotPassword.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

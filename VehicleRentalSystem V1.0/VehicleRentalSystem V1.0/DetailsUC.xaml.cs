@@ -32,62 +32,69 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnSubmitVH_Click(object sender, RoutedEventArgs e)
         {
-            searchtxt = searchTxt.Text;
-            DG.ItemsSource = null;
-            if (searchtxt == "")
+            try
             {
-                MessageBox.Show("Enter Search Text");
-            }
-            else
-            {
-                DataBaseFunctions SB = new DataBaseFunctions();
-                if (CMBPIT.Text == "Customer NIC")
+                searchtxt = searchTxt.Text;
+                DG.ItemsSource = null;
+                if (searchtxt == "")
                 {
-                    if (CMBPST.Text == "Hire")
-                    {
-
-                        Query = "SELECT * from VehicleHire WHERE C_NIC LIKE '" + searchtxt + "';";
-                        dt = SB.getdata(Query);
-
-                    }
-                    else if (CMBPST.Text == "Rent")
-                    {
-                        Query = "SELECT * from VehicleRent WHERE C_NIC LIKE '" + searchtxt + "';";
-                        dt = SB.getdata(Query);
-                    }
-                    DG.ItemsSource = dt.DefaultView;
+                    MessageBox.Show("Enter Search Text");
                 }
-                else if (CMBPIT.Text == "Rider NIC")
+                else
                 {
-                    if (CMBPST.Text == "Hire")
+                    DataBaseFunctions SB = new DataBaseFunctions();
+                    if (CMBPIT.Text == "Customer NIC")
                     {
+                        if (CMBPST.Text == "Hire")
+                        {
 
-                        Query = "SELECT * from VehicleHire WHERE R_NIC LIKE '" + searchtxt + "';";
-                        dt = SB.getdata(Query);
+                            Query = "SELECT * from VehicleHire WHERE C_NIC LIKE '" + searchtxt + "';";
+                            dt = SB.getdata(Query);
+
+                        }
+                        else if (CMBPST.Text == "Rent")
+                        {
+                            Query = "SELECT * from VehicleRent WHERE C_NIC LIKE '" + searchtxt + "';";
+                            dt = SB.getdata(Query);
+                        }
                         DG.ItemsSource = dt.DefaultView;
-
                     }
-                    else if (CMBPST.Text == "Rent")
+                    else if (CMBPIT.Text == "Rider NIC")
                     {
-                        MessageBox.Show("There are no Riders in Rent");
+                        if (CMBPST.Text == "Hire")
+                        {
+
+                            Query = "SELECT * from VehicleHire WHERE R_NIC LIKE '" + searchtxt + "';";
+                            dt = SB.getdata(Query);
+                            DG.ItemsSource = dt.DefaultView;
+
+                        }
+                        else if (CMBPST.Text == "Rent")
+                        {
+                            MessageBox.Show("There are no Riders in Rent");
+                        }
+                    }
+                    else if (CMBPIT.Text == "Vehicle ChassisNO")
+                    {
+                        if (CMBPST.Text == "Hire")
+                        {
+
+                            Query = "SELECT * from VehicleHire WHERE V_CN LIKE '" + searchtxt + "';";
+                            dt = SB.getdata(Query);
+
+                        }
+                        else if (CMBPST.Text == "Rent")
+                        {
+                            Query = "SELECT * from VehicleRent WHERE V_CN LIKE '" + searchtxt + "';";
+                            dt = SB.getdata(Query);
+                        }
+                        DG.ItemsSource = dt.DefaultView;
                     }
                 }
-                else if (CMBPIT.Text == "Vehicle ChassisNO")
-                {
-                    if (CMBPST.Text == "Hire")
-                    {
-
-                        Query = "SELECT * from VehicleHire WHERE V_CN LIKE '" + searchtxt + "';";
-                        dt = SB.getdata(Query);
-
-                    }
-                    else if (CMBPST.Text == "Rent")
-                    {
-                        Query = "SELECT * from VehicleRent WHERE V_CN LIKE '" + searchtxt + "';";
-                        dt = SB.getdata(Query);
-                    }
-                    DG.ItemsSource = dt.DefaultView;
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
