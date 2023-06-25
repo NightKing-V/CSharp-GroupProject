@@ -32,12 +32,13 @@ namespace VehicleRentalSystem_V1._0
             try
             {
                 //DataGridView
-                string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleRentalDB.mdf"";Integrated Security=True";
+                DataBaseFunctions db = new DataBaseFunctions();
+                db.GetSqlCon();
 
-                using (SqlConnection con = new SqlConnection(constring))
+                using (db.GetSqlCon())
                 {
-                    con.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employee", con);
+                    db.conopen();
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employee", db.GetSqlCon());
                     DataTable dbv = new DataTable();
                     da.Fill(dbv);
                     VehicleAvailableTable1.ItemsSource = dbv.DefaultView;
