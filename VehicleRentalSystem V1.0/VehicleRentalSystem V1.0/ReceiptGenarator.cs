@@ -14,7 +14,7 @@ namespace VehicleRentalSystem_V1._0
 {
     internal class ReceiptGenarator
     {
-        private string html, startdate, enddate, returndate, duration, ReceiptNO,C_NIC, C_NAME, C_Address, Date, P_ID, V_CN, R_NIC;
+        private string html, startdate , enddate, returndate, duration, ReceiptNO,C_NIC, C_NAME, C_Address, Date, P_ID, V_CN, R_NIC;
         private double Rental, fee, penaltyfee, totalfee, oilfee, damagefee, PricePerLiter, advance;
         private int penaltyrate, DisPerLiter, ETAmilage, C_Tel;
 
@@ -22,15 +22,11 @@ namespace VehicleRentalSystem_V1._0
         {
             try
             {
+                this.Date = ReturnD;
                 ReceiptNO = Rent_ID;
                 this.returndate = ReturnD;
                 this.damagefee = double.Parse(damagefee);
 
-                var startdate = Convert.ToDateTime(this.startdate);
-                var enddate = Convert.ToDateTime(this.enddate);
-                var returndate = Convert.ToDateTime(this.returndate);
-                var validdays = (enddate - startdate).TotalDays;
-                var invaliddays = (returndate - enddate).TotalDays;
 
                 List<string> rentrecord = new List<string>();
                 DataBaseFunctions DBF = new DataBaseFunctions();
@@ -61,6 +57,34 @@ namespace VehicleRentalSystem_V1._0
                     }
                 }
                 V_CN = rentvrecord[0];
+
+                List<string> rentSDrecord = new List<string>();
+                using (SqlCommand rentSDrecordcmd = new SqlCommand("select StartDate from VehicleRent where Rent_ID = @Rent_ID", DBF.GetSqlCon()))
+                {
+                    rentSDrecordcmd.Parameters.AddWithValue("@Rent_ID", Rent_ID);
+                    using (SqlDataReader reader = rentSDrecordcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            rentSDrecord.Add(reader[0].ToString());
+                        }
+                    }
+                }
+                this.startdate = rentSDrecord[0];
+
+                List<string> rentEDrecord = new List<string>();
+                using (SqlCommand rentEDrecordcmd = new SqlCommand("select EndDate from VehicleRent where Rent_ID = @Rent_ID", DBF.GetSqlCon()))
+                {
+                    rentEDrecordcmd.Parameters.AddWithValue("@Rent_ID", Rent_ID);
+                    using (SqlDataReader reader = rentEDrecordcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            rentEDrecord.Add(reader[0].ToString());
+                        }
+                    }
+                }
+                this.enddate = rentEDrecord[0];
 
 
                 //Making vehicle ava
@@ -170,6 +194,11 @@ namespace VehicleRentalSystem_V1._0
 
                 duration = Cresults6[0];
 
+                var startdate = Convert.ToDateTime(this.startdate);
+                var enddate = Convert.ToDateTime(this.enddate);
+                var returndate = Convert.ToDateTime(this.returndate);
+                var validdays = (enddate - startdate).TotalDays;
+                var invaliddays = (returndate - enddate).TotalDays;
 
                 if (duration == "1Dy")
                 {
@@ -232,18 +261,14 @@ namespace VehicleRentalSystem_V1._0
 
             try
             {
+                Date = ReturnD;
                 ReceiptNO = Hire_ID;
                 this.returndate = ReturnD;
                 this.damagefee = double.Parse(damagefee);
 
                 //oilfee = etamilage*oilprice
                 //oilfee+
-                var startdate = Convert.ToDateTime(this.startdate);
-                var enddate = Convert.ToDateTime(this.enddate);
-                var returndate = Convert.ToDateTime(this.returndate);
-
-                var validdays = (enddate - startdate).TotalDays;
-                var invaliddays = (returndate - enddate).TotalDays;
+                
 
                 List<string> hirerecord = new List<string>();
                 DataBaseFunctions DBF = new DataBaseFunctions();
@@ -289,6 +314,35 @@ namespace VehicleRentalSystem_V1._0
                     }
                 }
                 R_NIC = hirerecordr[0];
+
+                List<string> hireSDrecordr = new List<string>();
+                using (SqlCommand hireSDrecordcmd = new SqlCommand("select StartDate from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
+                {
+                    hireSDrecordcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
+                    using (SqlDataReader reader = hireSDrecordcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            hireSDrecordr.Add(reader[0].ToString());
+                        }
+                    }
+                }
+                this.startdate = hireSDrecordr[0];
+
+
+                List<string> hireEDrecordr = new List<string>();
+                using (SqlCommand hireEDrecordcmd = new SqlCommand("select EndDate from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
+                {
+                    hireEDrecordcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
+                    using (SqlDataReader reader = hireEDrecordcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            hireEDrecordr.Add(reader[0].ToString());
+                        }
+                    }
+                }
+                this.enddate = hireEDrecordr[0];
 
                 //making rider available
                 using (SqlCommand Rstate = new SqlCommand("UPDATE Rider SET R_State = @R_State WHERE R_NIC = @R_NIC", DBF.GetSqlCon()))
@@ -464,6 +518,13 @@ namespace VehicleRentalSystem_V1._0
                 //
                 //
                 //calculation
+                var startdate = Convert.ToDateTime(this.startdate);
+                var enddate = Convert.ToDateTime(this.enddate);
+                var returndate = Convert.ToDateTime(this.returndate);
+
+                var validdays = (enddate - startdate).TotalDays;
+                var invaliddays = (returndate - enddate).TotalDays;
+
                 advance = double.Parse(Cresults10[0]);
                 oilfee = PricePerLiter * (ETAmilage / DisPerLiter);
                 fee = validdays * Rental;

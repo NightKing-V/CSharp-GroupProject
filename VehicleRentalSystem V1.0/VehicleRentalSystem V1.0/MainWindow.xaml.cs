@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,56 @@ namespace VehicleRentalSystem_V1._0
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(string E_NIC)
         {
             InitializeComponent();
+
+            string E_Name, Department;
+            DataBaseFunctions DBF = new DataBaseFunctions();
+            DBF.conopen();
+
+            List<string> emp1 = new List<string>();
+            using(SqlCommand cmd = new SqlCommand("SELECT E_Name From Employee WHERE E_NIC = @E_NIC", DBF.GetSqlCon()))
+            {
+                cmd.Parameters.AddWithValue("@E_NIC", E_NIC);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        emp1.Add(reader[0].ToString());
+                    }
+                }
+                   
+            }
+            E_Name = emp1[0];
+
+            List<string> emp2 = new List<string>();
+            using (SqlCommand cmd = new SqlCommand("SELECT Department From Employee WHERE E_NIC = @E_NIC", DBF.GetSqlCon()))
+            {
+                cmd.Parameters.AddWithValue("@E_NIC", E_NIC);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        emp2.Add(reader[0].ToString());
+                    }
+                }
+            }
+            Department = emp2[0];
+
+
+            EMPName.Content = E_Name;
+            EMPID.Content = E_NIC;
+
+            if (Department  != "IT") 
+            {
+                AdminBtn.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                AdminBtn.Visibility = Visibility.Visible;
+            }
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -84,6 +132,12 @@ namespace VehicleRentalSystem_V1._0
         private void DetailsDataGrid_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ABT(object sender, MouseButtonEventArgs e)
+        {
+            About AB = new About();
+            AB.Show();
         }
     }
 }

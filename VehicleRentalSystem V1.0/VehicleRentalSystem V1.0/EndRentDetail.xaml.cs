@@ -28,6 +28,7 @@ namespace VehicleRentalSystem_V1._0
         {
             ReceiptGenarator RG = new ReceiptGenarator();
             RG.RentFee(RentIDtxt.Text, ReturnDate.Text, DFeeTxt.Text);
+            this.Hide();
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)

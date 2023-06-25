@@ -26,7 +26,7 @@ namespace VehicleRentalSystem_V1._0
     public partial class ManageVehicleFor : Window
 
     {
-        DataBaseFunctions con;
+        
         public ManageVehicleFor()
         {
             InitializeComponent();

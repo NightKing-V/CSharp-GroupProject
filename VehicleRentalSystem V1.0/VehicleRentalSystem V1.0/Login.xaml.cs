@@ -49,7 +49,15 @@ namespace VehicleRentalSystem_V1._0
 
                     if (reader.HasRows)
                     {
-                        MainWindow main = new MainWindow();
+                        List<string> ID = new List<string>();
+                        while (reader.Read())
+                        {
+                            ID.Add(reader[0].ToString());
+                        }
+                        reader.Close();
+                        string E_NIC = ID[0];
+                        MainWindow main = new MainWindow(E_NIC);
+
                         main.Show();
                         this.Close();
                     }
@@ -57,8 +65,6 @@ namespace VehicleRentalSystem_V1._0
                     {
                         System.Windows.MessageBox.Show("Invalid Username or Password", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
-
-                    reader.Close();
                 }
             }
             catch (Exception ex)
@@ -66,8 +72,8 @@ namespace VehicleRentalSystem_V1._0
                 System.Windows.MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-          
-           
-        }
+
+
+        }   
     }
 }

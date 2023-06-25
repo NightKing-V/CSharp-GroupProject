@@ -35,6 +35,7 @@ namespace VehicleRentalSystem_V1._0
         {
             ReceiptGenarator RG = new ReceiptGenarator();
             RG.HireFee(HireIDtxt.Text, ReturnDate.Text,DFeeTxt.Text, EndMilatxt.Text);
+            this.Hide();
         }
     }
 }

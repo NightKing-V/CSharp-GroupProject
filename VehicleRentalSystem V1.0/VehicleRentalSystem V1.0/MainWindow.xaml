@@ -41,7 +41,7 @@
             <ColumnDefinition Width="309*"/>
         </Grid.ColumnDefinitions>
         <DockPanel x:Name="CategoryPanel" LastChildFill="False" Width="200" Background="#FFBEDAF7" Grid.RowSpan="2" HorizontalAlignment="Left" Margin="0,0,0,7">
-            <Rectangle DockPanel.Dock="Top" Height="130">
+            <Rectangle x:Name="IMG" DockPanel.Dock="Top" Height="130" MouseRightButtonDown="ABT">
                 <Rectangle.Fill>
                     <ImageBrush ImageSource="/Asset 1.png" Stretch="UniformToFill"/>
                 </Rectangle.Fill>
@@ -69,8 +69,8 @@
 
         <Grid HorizontalAlignment="Left" Height="73" Margin="0,0,0,3" Grid.Row="1" VerticalAlignment="Bottom" Width="209">
             <Rectangle Height="67" Stroke="#FF368CE7" Width="200" StrokeThickness="3" Fill="#FFEEF6FF" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-            <Label x:Name="EMPName" Content="J.A.K.Jayawardana" Margin="34,10,18,32" Foreground="#FF368CE7" FontWeight="SemiBold" FontFamily="Montserrat" FontSize="13"/>
-            <Label x:Name="EMPID" Content="ID - 700134" Height="27" Margin="58,36,24,10" Width="127" Foreground="#FF041562" FontWeight="SemiBold" FontFamily="Montserrat" FontSize="13"/>
+            <Label x:Name="EMPName" Content="J.A.K.Jayawardana" Margin="0,10,9,32" Foreground="#FF368CE7" FontWeight="SemiBold" FontFamily="Montserrat" FontSize="13" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+            <Label x:Name="EMPID" Content="ID - 700134" Height="27" Margin="0,36,10,10" Foreground="#FF041562" FontWeight="SemiBold" FontFamily="Montserrat" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
         </Grid>
     </Grid>
 </Window>
