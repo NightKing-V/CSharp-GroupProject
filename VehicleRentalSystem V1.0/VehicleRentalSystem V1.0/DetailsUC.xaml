@@ -24,13 +24,14 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Grid>
-        <Border CornerRadius="15"  
+    <Border>
+        <Grid>
+            <Border CornerRadius="15"  
                 BorderBrush="Black" 
                 BorderThickness="2" 
-                Margin="0,53,0,0" Background="White" Width="228" VerticalAlignment="Top" HorizontalAlignment="Center"
+                Margin="0,0,0,362" Background="White" Width="228" VerticalAlignment="Bottom" HorizontalAlignment="Center"
                     >
-            <TextBox x:Name="searchTxt"
+                <TextBox x:Name="searchTxt"
                     FontSize="15"
                     FontWeight="Medium"
                     FontFamily="Century Gothic"
@@ -38,89 +39,90 @@
                     CaretBrush="Gray"
                     BorderBrush="{x:Null}"
                     BorderThickness="0,0,0,1"
-                    Margin="-48,0,64,0" Height="31" Background="{x:Null}" SelectionBrush="{x:Null}" VerticalContentAlignment="Center" VerticalAlignment="Center"
+                    Margin="-48,0,0,0" Height="31" Background="{x:Null}" SelectionBrush="{x:Null}" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" Width="208"
                              />
-        </Border>
-        <TextBlock
-            FontSize="12"
-            Foreground="#FF1C6DD0"
-            FontWeight="Bold"
-            FontFamily="Montserrat"
-            Margin="0,39,596,0" VerticalAlignment="Top" HorizontalAlignment="Right"><Run Language="en-gb" Text="Search"/></TextBlock>
-        <TextBlock
-            Foreground="#FF1C6DD0"
-            FontWeight="Bold"
-            FontFamily="Montserrat"
-            Margin="0,39,314,0" HorizontalAlignment="Right" Width="84" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.222"><Run Language="en-gb" Text="Service Type"/></TextBlock>
-        <Border CornerRadius="15"  
-            BorderBrush="Black" 
-            BorderThickness="2" 
-            HorizontalAlignment="Right" 
-            Width="115"
-            Margin="0,53,288,0" Height="35" VerticalAlignment="Top" Background="White"
+            </Border>
+            <TextBlock
+                FontSize="12"
+                Foreground="#FF1C6DD0"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="167,0,0,397" VerticalAlignment="Bottom" HorizontalAlignment="Left"><Run Language="en-gb" Text="Search"/></TextBlock>
+            <TextBlock
+                Foreground="#FF1C6DD0"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="402,0,0,391" HorizontalAlignment="Left" Width="84" Height="20" VerticalAlignment="Bottom" RenderTransformOrigin="0.493,1.222"><Run Language="en-gb" Text="Service Type"/></TextBlock>
+            <Border CornerRadius="15"  
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                HorizontalAlignment="Left" 
+                Width="115"
+                Margin="397,0,0,362" Height="35" VerticalAlignment="Bottom" Background="White"
                     >
-            <ComboBox x:Name="CMBPST" 
+                <ComboBox x:Name="CMBPST" 
                     
-                Margin="0,3,0,3" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="95" VerticalContentAlignment="Center" Background="#FFEEF6FF">
-                <ComboBoxItem Content="Hire" Tag="Hire" IsSelected="True" BorderBrush="#FF7AB3EF" Background="#FFEEF6FF"/>
-                <ComboBoxItem Content="Rent" Tag="Rent" BorderBrush="#FF7AB3EF" Background="#FFEEF6FF"/>
+                    Margin="8,3,0,3" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Left" Width="95" VerticalContentAlignment="Center" Background="#FFEEF6FF">
+                    <ComboBoxItem Content="Hire" Tag="Hire" IsSelected="True" BorderBrush="#FF7AB3EF" Background="#FFEEF6FF"/>
+                    <ComboBoxItem Content="Rent" Tag="Rent" BorderBrush="#FF7AB3EF" Background="#FFEEF6FF"/>
 
-            </ComboBox>
-        </Border>
-        <TextBlock
-            Foreground="#FF1C6DD0"
-            FontWeight="Bold"
-            FontFamily="Montserrat"
-            Margin="0,39,188,0" HorizontalAlignment="Right" Width="84" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.222"><Run Language="en-gb" Text="Index"/><Run Text=" Type"/></TextBlock>
-        <Border CornerRadius="15"  
-            BorderBrush="Black" 
-            BorderThickness="2" 
-            HorizontalAlignment="Right" 
-            Width="135"
-            Margin="0,53,148,0" Height="35" VerticalAlignment="Top" Background="White"
+                </ComboBox>
+            </Border>
+            <TextBlock
+                Foreground="#FF1C6DD0"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="528,0,0,391" HorizontalAlignment="Left" Width="84" Height="20" VerticalAlignment="Bottom" RenderTransformOrigin="0.493,1.222"><Run Language="en-gb" Text="Index"/><Run Text=" Type"/></TextBlock>
+            <Border CornerRadius="15"  
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                HorizontalAlignment="Left" 
+                Width="135"
+                Margin="517,0,0,362" Height="35" VerticalAlignment="Bottom" Background="White"
                     >
-            <ComboBox x:Name="CMBPIT" 
+                <ComboBox x:Name="CMBPIT" 
                     
-                Margin="0,3,0,3" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="114" VerticalContentAlignment="Center" Background="#FFEEF6FF">
-                <ComboBoxItem Content="Customer NIC" IsSelected="True" Tag="C_NIC" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                <ComboBoxItem Content="Rider NIC" Tag="R_NIC" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
-                <ComboBoxItem Content="Vehicle Chassis No." Tag="V_CN" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                    Margin="0,3,0,3" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="114" VerticalContentAlignment="Center" Background="#FFEEF6FF">
+                    <ComboBoxItem Content="Customer NIC" IsSelected="True" Tag="C_NIC" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                    <ComboBoxItem Content="Rider NIC" Tag="R_NIC" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
+                    <ComboBoxItem Content="Vehicle Chassis No." Tag="V_CN" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF"/>
 
-            </ComboBox>
-        </Border>
-        <Button x:Name="btnSubmitVH"
+                </ComboBox>
+            </Border>
+            <Button x:Name="btnSubmitVH"
                              
-            BorderThickness="0"
-            Content="Search"
-            Foreground="Black"
-            FontSize="12"
-            FontFamily="MonteSerrat"
-            FontWeight="SemiBold"
-            Cursor="Hand"
-            Margin="0,48,10,0"
-            Click="btnSubmitVH_Click" Height="41" VerticalAlignment="Top" HorizontalAlignment="Right" Width="123">
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="#FF7AB3EF"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#FF1C6DD0"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
+                BorderThickness="0"
+                Content="Search"
+                Foreground="Black"
+                FontSize="12"
+                FontFamily="MonteSerrat"
+                FontWeight="SemiBold"
+                Cursor="Hand"
+                Margin="667,0,0,361"
+                Click="btnSubmitVH_Click" Height="41" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="123">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF7AB3EF"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF1C6DD0"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
 
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Width="115" Height="35"
-                        CornerRadius="20"
-                        Background="{TemplateBinding Background}" Margin="3,3,5,3" HorizontalAlignment="Right" VerticalAlignment="Top">
-                        <ContentPresenter VerticalAlignment="Center"
-                            HorizontalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-        <DataGrid x:Name="DG" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,123,0,0" VerticalContentAlignment="Center" CanUserAddRows="False" CanUserDeleteRows="False"/>
-    </Grid>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="115" Height="35"
+                            CornerRadius="20"
+                            Background="{TemplateBinding Background}" Margin="3,3,5,3" HorizontalAlignment="Right" VerticalAlignment="Top">
+                            <ContentPresenter VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <DataGrid x:Name="DG" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,123,0,0" VerticalContentAlignment="Center" CanUserAddRows="False" CanUserDeleteRows="False"/>
+        </Grid>
+    </Border>
 </UserControl>
