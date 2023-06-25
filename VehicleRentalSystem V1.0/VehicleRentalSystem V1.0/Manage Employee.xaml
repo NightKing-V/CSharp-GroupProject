@@ -204,7 +204,7 @@
                 </Border>
 
                 <!--Next-->
-                <DataGrid x:Name="dgv1" Margin="102,356,102,108" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF7AB3EF" SelectionChanged="DataGrid_SelectionChanged"/>
+                <DataGrid x:Name="dgv1" Margin="102,356,102,108" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF7AB3EF" SelectionChanged="DataGrid_SelectionChanged" Background="White"/>
 
                 <!--Next-->
                 <Button x:Name="btnUpdate"
