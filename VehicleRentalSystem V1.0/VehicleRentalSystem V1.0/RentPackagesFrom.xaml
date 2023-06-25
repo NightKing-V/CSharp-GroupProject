@@ -209,7 +209,7 @@
                 FontWeight="SemiBold"
                 Cursor="Hand"
                 Margin="160,481,330,0"
-                Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" Background="Turquoise" >
+                Click="btnUpdate_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" Background="Turquoise" >
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="#FF7AB3EF"/>
@@ -275,7 +275,7 @@
                 FontWeight="SemiBold"
                 Cursor="Hand"
                 Margin="482,481,8,0"
-                Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
+                Click="btnLoad_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="#FF1C6DD0"/>

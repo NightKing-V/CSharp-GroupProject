@@ -100,14 +100,9 @@ namespace VehicleRentalSystem_V1._0
 
                     // Add rest of the variables
                     updatecmd.ExecuteNonQuery();
+                    MessageBox.Show("Updated Successfully");
 
-                    
-                }
-
-
-
-
-                MessageBox.Show("Updated Successfully");
+                }                
             }
             catch (Exception ex)
             {
