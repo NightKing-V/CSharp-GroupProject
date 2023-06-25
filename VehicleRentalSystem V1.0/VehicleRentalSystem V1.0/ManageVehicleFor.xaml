@@ -266,44 +266,7 @@
 
 
                 </Border>
-                <StackPanel Margin="295,315,29,0" Grid.ColumnSpan="2" Height="171" VerticalAlignment="Top">
-                    <Button Content="Add Image" Click="SelectImage_Click" Width="159"
-                            Margin="10,10,0,0"
-                            FontSize="12"
-                            FontFamily="MonteSerrat"
-                            FontWeight="SemiBold"
-                            Cursor="Hand" Height="51">
-                        <Button.Style>
-                            <Style TargetType="{x:Type Button}">
-                                <Setter Property="Background" Value="#71A4E1"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#71A4E1"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border Width="150" Height="40"
-                                        CornerRadius="20"
-                                        Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                            HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                    <Border BorderBrush="Black"
-                            BorderThickness="1" Width="100"
-                            Height="100"
-                            Margin="10,10,0,0">
-                        <Image x:Name="SelectedImage"
-                                Stretch="UniformToFill" Margin="-52,0,0,-12" HorizontalAlignment="Left" Width="200"
-                                 />
-                    </Border>
-                </StackPanel>
+                <StackPanel Margin="295,315,29,0" Grid.ColumnSpan="2" Height="171" VerticalAlignment="Top"/>
 
                 <!--Next-->
 

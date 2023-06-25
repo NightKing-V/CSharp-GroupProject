@@ -31,16 +31,7 @@ namespace VehicleRentalSystem_V1._0
         {
             InitializeComponent();
         }
-        private void SelectImage_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image files (.jpg)|.jpg|All files (.)|.";
-            if (openFileDialog.ShowDialog() == true)
-            {
-                SelectedImage.Source = new BitmapImage(new Uri(openFileDialog.FileName));
-
-            }
-        }
+       
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
@@ -114,15 +105,11 @@ namespace VehicleRentalSystem_V1._0
                     V_Type = "ThreeWheel";
                 }
 
-                if (SelectedImage.Source != null)
-                {
-                    string imageName = SelectedImage.Source.ToString();
-                    // Use the imageName variable as needed
-                }
+               
               
 
                 DataBaseFunctions dbFunctions = new DataBaseFunctions();
-                dbFunctions.setdata("INSERT INTO Vehicle (V_CN,V_Brand,V_Model,V_Passengers,V_Condition,V_ImageFolderPath,V_Type) VALUES ('" + V_CN + "','" + V_Brand + "','" + V_Model + "','" + V_Passengers + "','" + V_State + "','" + SelectedImage.Source + "','" + V_Type + "')");
+                dbFunctions.setdata("INSERT INTO Vehicle (V_CN,V_Brand,V_Model,V_Passengers,V_Condition,V_Type) VALUES ('" + V_CN + "','" + V_Brand + "','" + V_Model + "','" + V_Passengers + "','" + V_State + "','" + V_Type + "')");
 
 
                 MessageBox.Show("Inserted Successfully");         

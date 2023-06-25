@@ -4,28 +4,16 @@
 winexe
 C#
 .cs
-<<<<<<< Updated upstream
 C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\
-=======
-G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\
->>>>>>> Stashed changes
 VehicleRentalSystem_V1._0
 none
 false
 DEBUG;TRACE
-<<<<<<< Updated upstream
 C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\App.xaml
 19-859033062
 2-239665352
-26196785547
-231851617756
-=======
-G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\App.xaml
-19-859033062
-2-239665352
 27-1885303071
-23-254334783
->>>>>>> Stashed changes
+231851617756
 AdminUC.xaml;BookingsUC.xaml;DetailsUC.xaml;DriversAvailableTable.xaml;DriversInServiceTable.xaml;DriversUC.xaml;EndHireDetail.xaml;EndRentDetail.xaml;Login.xaml;MainWindow.xaml;Manage Employee.xaml;ManageDriverForm.xaml;ManageVehicleFor.xaml;RentPackagesFrom.xaml;RentalForms.xaml;VehicleAvailableTable.xaml;VehicleHireForm.xaml;VehicleInUseTable.xaml;VehicleUC.xaml;
 
 True
