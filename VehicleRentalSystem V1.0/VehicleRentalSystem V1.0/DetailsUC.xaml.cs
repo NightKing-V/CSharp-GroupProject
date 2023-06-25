@@ -74,7 +74,7 @@ namespace VehicleRentalSystem_V1._0
                             MessageBox.Show("There are no Riders in Rent");
                         }
                     }
-                    else if (CMBPIT.Text == "Vehicle ChassisNO")
+                    else if (CMBPIT.Text == "Vehicle Chassis NO")
                     {
                         if (CMBPST.Text == "Hire")
                         {
