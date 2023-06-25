@@ -98,7 +98,6 @@ G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSys
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\VehicleRentalSystem V1.0.csproj.SuggestedBindingRedirects.cache
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\AdminUC.g.cs
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\BookingsUC.g.cs
-G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\DetailsDataGrid.g.cs
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\DetailsUC.g.cs
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\DriversAvailableTable.g.cs
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\DriversInServiceTable.g.cs
@@ -124,7 +123,6 @@ G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSys
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\VehicleRentalSystem V1.0_MarkupCompile.lref
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\AdminUC.baml
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\BookingsUC.baml
-G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\DetailsDataGrid.baml
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\DetailsUC.baml
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\DriversAvailableTable.baml
 G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\obj\Debug\DriversInServiceTable.baml
