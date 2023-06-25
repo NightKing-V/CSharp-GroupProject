@@ -48,6 +48,21 @@ namespace VehicleRentalSystem_V1._0
                 }
                 C_NIC = rentrecord[0];
 
+                List<string> rentvrecord = new List<string>();
+                using (SqlCommand rentvrecordcmd = new SqlCommand("select V_CN from VehicleRent where Rent_ID = @Rent_ID", DBF.GetSqlCon()))
+                {
+                    rentvrecordcmd.Parameters.AddWithValue("@Rent_ID", Rent_ID);
+                    using (SqlDataReader reader = rentvrecordcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            rentvrecord.Add(reader[0].ToString());
+                        }
+                    }
+                }
+                V_CN = rentvrecord[0];
+
+
                 //Making vehicle ava
                 using (SqlCommand vhstate = new SqlCommand("UPDATE Vehicle SET V_State = @V_State WHERE V_CN = @V_CN", DBF.GetSqlCon()))
                 {
@@ -199,6 +214,19 @@ namespace VehicleRentalSystem_V1._0
                 MessageBox.Show(ex.Message);
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
         public void HireFee(string Hire_ID, string ReturnD, string damagefee, string EM)
         {
 
@@ -233,6 +261,20 @@ namespace VehicleRentalSystem_V1._0
                     }
                 }
                 C_NIC = hirerecord[0];
+
+                List<string> hirevrecord = new List<string>();
+                using (SqlCommand hirevrecordcmd = new SqlCommand("select V_CN from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
+                {
+                    hirevrecordcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
+                    using (SqlDataReader reader = hirevrecordcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            hirevrecord.Add(reader[0].ToString());
+                        }
+                    }
+                }
+                V_CN = hirevrecord[0];
 
                 List<string> hirerecordr = new List<string>();
                 using (SqlCommand hirerecordcmd = new SqlCommand("select C_NIC from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))

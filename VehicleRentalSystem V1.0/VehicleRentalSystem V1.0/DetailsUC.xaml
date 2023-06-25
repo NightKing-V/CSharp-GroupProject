@@ -84,7 +84,7 @@
                 Margin="0,3,0,3" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="95" VerticalContentAlignment="Center" Background="{x:Null}">
                 <ComboBoxItem Content="Customer NIC" IsSelected="True" Tag="C_NIC"/>
                 <ComboBoxItem Content="Rider NIC" Tag="R_NIC"/>
-                <ComboBoxItem Content="Vehicle ChassisNO" Tag="V_CN"/>
+                <ComboBoxItem Content="Vehicle Chassis NO" Tag="V_CN"/>
 
             </ComboBox>
         </Border>
