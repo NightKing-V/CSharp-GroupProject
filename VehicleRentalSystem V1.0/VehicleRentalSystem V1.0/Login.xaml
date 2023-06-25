@@ -35,7 +35,7 @@
                     Foreground="Black"
                     CaretBrush="Gray"
                     BorderBrush="White"
-                    BorderThickness="0,0,0,1"
+                    BorderThickness="0,0,0,0"
                     Padding="30,0,0,0" Margin="0,0,8,0" HorizontalAlignment="Right" Width="229" Height="17" VerticalAlignment="Center">
                     <TextBox.Background>
                         <ImageBrush ImageSource="/Icons/user.png"
