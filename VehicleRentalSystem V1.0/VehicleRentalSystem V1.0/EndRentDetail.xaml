@@ -17,19 +17,19 @@
             <Button x:Name="btnNext"
                              
                 BorderThickness="0"
-                Content="Next"
+                Content="Finish"
                 Foreground="Black"
                 FontSize="12"
                 FontFamily="MonteSerrat"
                 FontWeight="SemiBold"
                 Cursor="Hand"
-                Click="btnSubmit_Click" Margin="39,269,60,21" Grid.Column="1" Grid.ColumnSpan="3">
+                Click="btnSubmit_Click" Margin="60,269,12,21" Grid.ColumnSpan="2">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
-                        <Setter Property="Background" Value="#71A4E1"/>
+                        <Setter Property="Background" Value="#FF7AB3EF"/>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF0351AF"/>
+                                <Setter Property="Background" Value="#FF1C6DD0"/>
                             </Trigger>
                         </Style.Triggers>
                     </Style>
@@ -55,7 +55,7 @@
                 FontFamily="MonteSerrat"
                 FontWeight="SemiBold"
                 Cursor="Hand"
-                Click="btnClear_Click" Margin="61,269,13,21" Grid.ColumnSpan="2">
+                Click="btnClear_Click" Margin="42,269,60,21" Grid.ColumnSpan="3" Grid.Column="1">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="Red"/>
@@ -123,7 +123,7 @@
                 Foreground="Black"
                 FontWeight="Bold"
                 FontFamily="Montserrat"
-                Margin="124,2,130,314" Grid.ColumnSpan="4" Text="End Rent Form"/>
+                Margin="128,2,126,314" Grid.ColumnSpan="4" Text="End Rent Form"/>
             <TextBlock
                 FontSize="12"
                 Foreground="#FF1C6DD0"
