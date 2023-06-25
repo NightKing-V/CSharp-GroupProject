@@ -14,7 +14,7 @@ namespace VehicleRentalSystem_V1._0
 {
     internal class ReceiptGenarator
     {
-        private string html, startdate, enddate, returndate, duration, ReceiptNO,C_NIC, C_NAME, C_Address, Date, P_ID, V_CN;
+        private string html, startdate, enddate, returndate, duration, ReceiptNO,C_NIC, C_NAME, C_Address, Date, P_ID, V_CN, R_NIC;
         private double Rental, fee, penaltyfee, totalfee, oilfee, damagefee, PricePerLiter, advance;
         private int penaltyrate, DisPerLiter, ETAmilage, C_Tel;
 
@@ -47,6 +47,15 @@ namespace VehicleRentalSystem_V1._0
                     }
                 }
                 C_NIC = rentrecord[0];
+
+                //Making vehicle ava
+                using (SqlCommand vhstate = new SqlCommand("UPDATE Vehicle SET V_State = @V_State WHERE V_CN = @V_CN", DBF.GetSqlCon()))
+                {
+                    vhstate.Parameters.AddWithValue("@V_State", false);
+                    vhstate.Parameters.AddWithValue("@V_CN", V_CN);
+                    vhstate.ExecuteNonQuery();
+                }
+
 
                 List<string> Cresults1 = new List<string>();
 
@@ -224,6 +233,35 @@ namespace VehicleRentalSystem_V1._0
                     }
                 }
                 C_NIC = hirerecord[0];
+
+                List<string> hirerecordr = new List<string>();
+                using (SqlCommand hirerecordcmd = new SqlCommand("select C_NIC from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
+                {
+                    hirerecordcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
+                    using (SqlDataReader reader = hirerecordcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            hirerecordr.Add(reader[0].ToString());
+                        }
+                    }
+                }
+                R_NIC = hirerecordr[0];
+
+                //making rider available
+                using (SqlCommand Rstate = new SqlCommand("UPDATE Rider SET R_State = @R_State WHERE R_NIC = @R_NIC", DBF.GetSqlCon()))
+                {
+                    Rstate.Parameters.AddWithValue("@R_State", false);
+                    Rstate.Parameters.AddWithValue("@R_NIC", R_NIC);
+                    Rstate.ExecuteNonQuery();
+                }
+                //Making vehicle ava
+                using (SqlCommand vhstate = new SqlCommand("UPDATE Vehicle SET V_State = @V_State WHERE V_CN = @V_CN", DBF.GetSqlCon()))
+                {
+                    vhstate.Parameters.AddWithValue("@V_State", false);
+                    vhstate.Parameters.AddWithValue("@V_CN", V_CN);
+                    vhstate.ExecuteNonQuery();
+                }
 
                 List<string> Cresults1 = new List<string>();
 

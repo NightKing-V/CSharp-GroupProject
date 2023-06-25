@@ -166,7 +166,15 @@ namespace VehicleRentalSystem_V1._0
                             newrentcmd.Parameters.AddWithValue("@P_ID", P_ID);
                             newvhresult = newrentcmd.ExecuteNonQuery();
                         }
-
+                        //Making vehicle used
+                        int vhresult;
+                        using (SqlCommand vhstate = new SqlCommand("UPDATE Vehicle SET V_State = @V_State WHERE V_CN = @V_CN", DBF.GetSqlCon()))
+                        {
+                            vhstate.Parameters.AddWithValue("@V_State", true);
+                            vhstate.Parameters.AddWithValue("@V_CN", V_C);
+                            vhresult = vhstate.ExecuteNonQuery();
+                        }
+                        message += "Vehicle Changed States!\n";
 
                         if (newvhresult != 0)
                         {

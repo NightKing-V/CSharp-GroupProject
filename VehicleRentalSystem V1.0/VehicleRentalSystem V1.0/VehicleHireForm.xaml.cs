@@ -196,13 +196,26 @@ namespace VehicleRentalSystem_V1._0
                                 newvhresult = newrentcmd.ExecuteNonQuery();
                             }
                             //Making vehicle used
-                            int vhresult;
+                           
                             using (SqlCommand vhstate = new SqlCommand("UPDATE Vehicle SET V_State = @V_State WHERE V_CN = @V_CN", DBF.GetSqlCon()))
                             {
                                 vhstate.Parameters.AddWithValue("@V_State", true);
                                 vhstate.Parameters.AddWithValue("@V_CN", V_C);
-                                vhresult = vhstate.ExecuteNonQuery();
+                                vhstate.ExecuteNonQuery();
                             }
+
+                            message += "Vehicle Changed States!\n";
+
+                            //making rider used
+                            
+                            using (SqlCommand Rstate = new SqlCommand("UPDATE Rider SET R_State = @R_State WHERE R_NIC = @R_NIC", DBF.GetSqlCon()))
+                            {
+                                Rstate.Parameters.AddWithValue("@R_State", true);
+                                Rstate.Parameters.AddWithValue("@R_NIC", R_NIC);
+                                Rstate.ExecuteNonQuery();
+                            }
+                            message += "Rider Changed States!\n";
+
 
                             if (newvhresult != 0)
                             {
