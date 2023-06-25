@@ -58,7 +58,7 @@
 
                 <!--Next-->
 
-                <TextBlock Text="Vehicle Chasis Number"
+                <TextBlock Text="Vehicle Chassis Number"
                     FontSize="12"
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
@@ -335,13 +335,13 @@
                         Cursor="Hand"
                         Grid.Column="1"
                         Margin="170,11,-26,0"
-                        Click="btnUpdate_Click" Height="47" Width="156" VerticalAlignment="Top" Grid.ColumnSpan="3" Background="Turquoise">
+                        Click="btnUpdate_Click" Height="47" Width="156" VerticalAlignment="Top" Grid.ColumnSpan="3">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="#FF40E0D0"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#71A4E1"/>
+                                        <Setter Property="Background" Value="Gold"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -367,13 +367,13 @@
                         FontFamily="MonteSerrat"
                         FontWeight="SemiBold"
                         Cursor="Hand"
-                        Click="btnInsert__Click" Height="47" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,11,97,0" Background="#FF7AB3EF">
+                        Click="btnInsert__Click" Height="47" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,11,97,0">
                         <Button.Style>
                             <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="#FF7AB3EF"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#71A4E1"/>
+                                        <Setter Property="Background" Value="#FF1C6DD0"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -394,7 +394,7 @@
                              
                         BorderThickness="0"
                         Content="Delete"
-                        Foreground="Black"
+                        Foreground="White"
                         FontSize="12"
                         FontFamily="MonteSerrat"
                         FontWeight="SemiBold"
