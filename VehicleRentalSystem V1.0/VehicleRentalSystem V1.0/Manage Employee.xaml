@@ -204,7 +204,7 @@
                 </Border>
 
                 <!--Next-->
-                <DataGrid Margin="102,356,102,108" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF7AB3EF" SelectionChanged="DataGrid_SelectionChanged"/>
+                <DataGrid x:Name="dgv1" Margin="102,356,102,108" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF7AB3EF" SelectionChanged="DataGrid_SelectionChanged"/>
 
                 <!--Next-->
                 <Button x:Name="btnUpdate"
@@ -288,7 +288,7 @@
                     FontWeight="SemiBold"
                     Cursor="Hand"
                     Margin="586,524,52,0"
-                    Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
+                    Click="btnLoad_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="#FF1C6DD0"/>

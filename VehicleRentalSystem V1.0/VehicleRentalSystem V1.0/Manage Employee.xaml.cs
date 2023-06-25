@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xaml.Behaviors.Core;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -113,8 +114,28 @@ namespace VehicleRentalSystem_V1._0
                 MessageBox.Show(ex.Message);
             }
         }
-            
 
-}
+        private void btnLoad_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //DataGridView
+                string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleRentalDB.mdf"";Integrated Security=True";
+
+                using (SqlConnection con = new SqlConnection(constring))
+                {
+                    con.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employee", con);
+                    DataTable dbv = new DataTable();
+                    da.Fill(dbv);
+                    dgv1.ItemsSource = dbv.DefaultView;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+    }
     }
 
