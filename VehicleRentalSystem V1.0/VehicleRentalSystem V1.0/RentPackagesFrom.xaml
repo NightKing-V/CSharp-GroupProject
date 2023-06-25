@@ -165,7 +165,7 @@
 
 
             </Border>
-            <DataGrid x:Name="RentPackagesTable1" Margin="35,316,0,0" d:ItemsSource="{d:SampleData ItemCount=5}" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="572" BorderBrush="#FF7AB3EF" Background="#FFEEF6FF"/>
+            <DataGrid x:Name="RentPackagesTable1" Margin="35,316,0,0" d:ItemsSource="{d:SampleData ItemCount=5}" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="572" BorderBrush="#FF7AB3EF" Background="White"/>
             <Button x:Name="btnInsert1"
                              
                 BorderThickness="0"
