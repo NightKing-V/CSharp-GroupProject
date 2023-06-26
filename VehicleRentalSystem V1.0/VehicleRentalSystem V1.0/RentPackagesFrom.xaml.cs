@@ -56,10 +56,9 @@ namespace VehicleRentalSystem_V1._0
 
                 string P_ID = txtD_PackageID1.Text;
 
-                using (SqlCommand deletecmd = new SqlCommand("DELETE FROM RentPackages WHERE P_ID = @P_ID"))
+                using (SqlCommand deletecmd = new SqlCommand("DELETE FROM RentPackages WHERE P_ID = @P_ID", db.GetSqlCon()))
                 {
-                    deletecmd.Connection = db.GetSqlCon(); // Assign the connection
-
+                     
                     deletecmd.Parameters.AddWithValue("@P_ID", P_ID);
 
                     deletecmd.ExecuteNonQuery();

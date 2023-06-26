@@ -241,8 +241,8 @@
                 FontFamily="MonteSerrat"
                 FontWeight="SemiBold"
                 Cursor="Hand"
-                Margin="304,480,154,0"
-                Click="btnClear_Click" Height="50" VerticalAlignment="Top">
+                Margin="304,480,154,6"
+                Click="btnClear_Click">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="Red"/>

@@ -16,5 +16,5 @@ G:\DEVELOPMENT\GIT\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSys
 23-254334783
 About.xaml;AdminUC.xaml;BookingsUC.xaml;DetailsUC.xaml;DriversAvailableTable.xaml;DriversInServiceTable.xaml;DriversUC.xaml;EndHireDetail.xaml;EndRentDetail.xaml;Login.xaml;MainWindow.xaml;Manage Employee.xaml;ManageDriverForm.xaml;ManageVehicleFor.xaml;RentPackagesFrom.xaml;RentalForms.xaml;VehicleAvailableTable.xaml;VehicleHireForm.xaml;VehicleInUseTable.xaml;VehicleUC.xaml;
 
-False
+True
 
