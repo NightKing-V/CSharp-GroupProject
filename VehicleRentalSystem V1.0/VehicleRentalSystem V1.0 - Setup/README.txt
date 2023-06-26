@@ -1,0 +1,1 @@
+Installer is inside the debug folder

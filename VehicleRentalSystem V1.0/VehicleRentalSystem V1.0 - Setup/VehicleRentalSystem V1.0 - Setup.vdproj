@@ -607,7 +607,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_DF865C83364F41448698EDD513AA1CEF"
             {
-            "DefaultLocation" = "8:C:\\[ProgramFilesFolder]\\[Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer][ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -634,7 +634,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VehicleRentalSystem V1.0 - Setup"
         "ProductCode" = "8:{81452CB3-C5C7-424F-8E25-9A9C4AD930CF}"
-        "PackageCode" = "8:{86F5AC1D-42CB-4915-A2F4-D154D48518C6}"
+        "PackageCode" = "8:{80987387-0411-4D00-9302-F43F9B7D3160}"
         "UpgradeCode" = "8:{9F0E2D17-A3AB-4834-8929-46E083688E1F}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
