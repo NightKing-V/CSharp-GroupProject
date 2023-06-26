@@ -5,300 +5,302 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="Rent_packages" Height="606" Width="900" WindowStartupLocation="CenterScreen">
-    <Border Margin="92,60,91,0" BorderBrush="#FF1C6DD0" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" Background="#FFEEF6FF" Height="586" VerticalAlignment="Top">
-        <Grid Height="536" VerticalAlignment="Center" HorizontalAlignment="Left" Width="654" Margin="27,0,0,0">
-            <TextBlock Text="Manage Rent Pacakges Form"
-                TextAlignment="Center"
-                FontSize="20"
-                Foreground="Black"
-                FontWeight="Bold"
-                FontFamily="Montserrat"
-                Margin="164,4,0,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="326"/>
-
-            <TextBlock Text="Package Name"
-                Foreground="#FF1C6DD0"
-                FontSize="12"
-                FontWeight="Bold"
-                FontFamily="Montserrat"
-                Margin="35,62,0,0" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Width="326"/>
-
-            <Border CornerRadius="15"  
-                BorderBrush="Black" 
-                BorderThickness="2" 
-                HorizontalAlignment="Left" 
-                Width="475"
-                Margin="23,80,0,0" Background="White" Height="42" VerticalAlignment="Top"
-                    >
-                <TextBox x:Name="txtD_PackageName1"
-                    FontSize="15"
-                    TextAlignment="Left"
-                    FontWeight="Medium"
-                    FontFamily="Century Gothic"
+        Title="Rent_packages" Height="513" Width="900" WindowStartupLocation="CenterScreen">
+    <ScrollViewer>
+        <Border BorderBrush="#FF1C6DD0" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" Background="#FFEEF6FF" Height="586" Width="717">
+            <Grid Height="536" VerticalAlignment="Center" HorizontalAlignment="Left" Width="654" Margin="27,0,0,0">
+                <TextBlock Text="Manage Rent Pacakges Form"
+                    TextAlignment="Center"
+                    FontSize="20"
                     Foreground="Black"
-                    CaretBrush="Gray"
-                    BorderBrush="White"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="164,4,0,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="326"/>
+
+                <TextBlock Text="Package Name"
+                    Foreground="#FF1C6DD0"
+                    FontSize="12"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="35,62,0,0" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Width="326"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="475"
+                    Margin="23,80,0,0" Background="White" Height="42" VerticalAlignment="Top"
+                    >
+                    <TextBox x:Name="txtD_PackageName1"
+                        FontSize="15"
+                        TextAlignment="Left"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
                              
-                    BorderThickness="0,0,0,1"
-                    Margin="8,8,8,8" Background="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8" Background="White"
                             />
 
 
-            </Border>
-            <!--Next-->
-            <TextBlock Text="Package ID"
-                FontSize="12"
-                Foreground="#FF1C6DD0"
-                FontWeight="Bold"
-                FontFamily="Montserrat"
-                Margin="35,146,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <Border CornerRadius="15"  
-                BorderBrush="Black" 
-                BorderThickness="2" 
-                HorizontalAlignment="Left" 
-                Width="273"
-                Margin="23,163,0,0" Height="42" VerticalAlignment="Top" Background="White"
+                </Border>
+                <!--Next-->
+                <TextBlock Text="Package ID"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="35,146,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="273"
+                    Margin="23,163,0,0" Height="42" VerticalAlignment="Top" Background="White"
                     >
-                <TextBox x:Name="txtD_PackageID1"
-                    FontSize="15"
-                    FontWeight="Medium"
-                    FontFamily="Century Gothic"
-                    TextAlignment="Left"
-                    Foreground="Black"
-                    CaretBrush="Gray"
-                    BorderBrush="White"
-                    BorderThickness="0,0,0,1"
-                    Margin="8,8,8,8"
+                    <TextBox x:Name="txtD_PackageID1"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
 
 
-            </Border>
-            <!--Next-->
-            <TextBlock Text="Duration"
-                FontSize="12"
-                Foreground="#FF1C6DD0"
-                FontWeight="Bold"
-                FontFamily="Montserrat"
-                Margin="347,145,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <Border CornerRadius="15"  
-                BorderBrush="Black" 
-                BorderThickness="2" 
-                HorizontalAlignment="Left" 
-                Width="273"
-                Margin="335,162,0,0" Height="42" VerticalAlignment="Top" Background="White"
+                </Border>
+                <!--Next-->
+                <TextBlock Text="Duration"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="347,145,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="273"
+                    Margin="335,162,0,0" Height="42" VerticalAlignment="Top" Background="White"
                     >
-                <TextBox x:Name="txtD_Duration1"
-                    FontSize="15"
-                    FontWeight="Medium"
-                    FontFamily="Century Gothic"
-                    TextAlignment="Left"
-                    Foreground="Black"
-                    CaretBrush="Gray"
-                    BorderBrush="White"
-                    BorderThickness="0,0,0,1"
-                    Margin="8,8,8,8"
+                    <TextBox x:Name="txtD_Duration1"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
 
 
-            </Border>
-            <!--Next-->
-            <TextBlock Text="Rental"
-                FontSize="12"
-                Foreground="#FF1C6DD0"
-                FontWeight="Bold"
-                FontFamily="Montserrat"
-                Margin="35,226,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <Border CornerRadius="15"  
-                BorderBrush="Black" 
-                BorderThickness="2" 
-                HorizontalAlignment="Left" 
-                Width="273"
-                Margin="23,244,0,0" Background="White" Height="42" VerticalAlignment="Top"
+                </Border>
+                <!--Next-->
+                <TextBlock Text="Rental"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="35,226,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="273"
+                    Margin="23,244,0,0" Background="White" Height="42" VerticalAlignment="Top"
                     >
-                <TextBox x:Name="txtD_Rental1"
-                    FontSize="15"
-                    FontWeight="Medium"
-                    FontFamily="Century Gothic"
-                    TextAlignment="Left"
-                    Foreground="Black"
-                    CaretBrush="Gray"
-                    BorderBrush="White"
-                    BorderThickness="0,0,0,1"
-                    Margin="8,8,8,8"
+                    <TextBox x:Name="txtD_Rental1"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
 
 
-            </Border>
-            <!--Next-->
-            <TextBlock Text="Penalty Rate"
-                FontSize="12"
-                Foreground="#FF1C6DD0"
-                FontWeight="Bold"
-                FontFamily="Montserrat"
-                Margin="347,227,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <Border CornerRadius="15"  
-                BorderBrush="Black" 
-                BorderThickness="2" 
-                HorizontalAlignment="Left" 
-                Width="273"
-                Margin="335,245,0,0" Height="42" VerticalAlignment="Top" Background="White"
+                </Border>
+                <!--Next-->
+                <TextBlock Text="Penalty Rate"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="347,227,0,0" Width="100" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="273"
+                    Margin="335,245,0,0" Height="42" VerticalAlignment="Top" Background="White"
                     >
-                <TextBox x:Name="txtD_PenaltyRate1"
-                    FontSize="15"
-                    FontWeight="Medium"
-                    FontFamily="Century Gothic"
-                    TextAlignment="Left"
-                    Foreground="Black"
-                    CaretBrush="Gray"
-                    BorderBrush="White"
-                    BorderThickness="0,0,0,1"
-                    Margin="8,8,8,8"
+                    <TextBox x:Name="txtD_PenaltyRate1"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
                              />
 
 
 
 
-            </Border>
-            <DataGrid x:Name="RentPackagesTable1" Margin="35,316,0,0" d:ItemsSource="{d:SampleData ItemCount=5}" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="572" BorderBrush="#FF7AB3EF" Background="White"/>
-            <Button x:Name="btnInsert1"
+                </Border>
+                <DataGrid x:Name="RentPackagesTable1" Margin="35,316,0,0" d:ItemsSource="{d:SampleData ItemCount=5}" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="572" BorderBrush="#FF7AB3EF" Background="White"/>
+                <Button x:Name="btnInsert1"
                              
-                BorderThickness="0"
-                Content="Insert"
-                Foreground="Black"
-                FontSize="12"
-                FontFamily="MonteSerrat"
-                FontWeight="SemiBold"
-                Cursor="Hand"
-                Margin="-2,481,490,0"
-                Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Background" Value="#FF7AB3EF"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF1C6DD0"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
+                    BorderThickness="0"
+                    Content="Insert"
+                    Foreground="Black"
+                    FontSize="12"
+                    FontFamily="MonteSerrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Margin="-2,481,490,0"
+                    Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#FF7AB3EF"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF1C6DD0"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
 
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Width="150" Height="40"
-                            CornerRadius="20"
-                            Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="btnUpdate1"
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="btnUpdate1"
                              
-                BorderThickness="0"
-                Content="Update"
-                Foreground="Black"
-                FontSize="12"
-                FontFamily="MonteSerrat"
-                FontWeight="SemiBold"
-                Cursor="Hand"
-                Margin="160,481,330,0"
-                Click="btnUpdate_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Background" Value="Turquoise"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="Gold"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
+                    BorderThickness="0"
+                    Content="Update"
+                    Foreground="Black"
+                    FontSize="12"
+                    FontFamily="MonteSerrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Margin="160,481,330,0"
+                    Click="btnUpdate_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Turquoise"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="Gold"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
 
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Width="150" Height="40"
-                            CornerRadius="20"
-                            Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="btnDelete1"
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="btnDelete1"
                              
-                BorderThickness="0"
-                Content="Delete"
-                Foreground="White"
-                FontSize="12"
-                FontFamily="MonteSerrat"
-                FontWeight="SemiBold"
-                Cursor="Hand"
-                Margin="304,480,154,6"
-                Click="btnClear_Click">
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Background" Value="Red"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="Orange"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
+                    BorderThickness="0"
+                    Content="Delete"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="MonteSerrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Margin="304,480,154,6"
+                    Click="btnClear_Click">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Red"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="Orange"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
 
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Width="150" Height="40"
-                            CornerRadius="20"
-                            Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            <Button x:Name="Load1"
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button x:Name="Load1"
                              
-                BorderThickness="0"
-                Content="Load"
-                Foreground="White"
-                FontSize="12"
-                FontFamily="MonteSerrat"
-                FontWeight="SemiBold"
-                Cursor="Hand"
-                Margin="482,481,8,0"
-                Click="btnLoad_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Background" Value="#FF1C6DD0"/>
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF7AB3EF"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
+                    BorderThickness="0"
+                    Content="Load"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="MonteSerrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Margin="482,481,8,0"
+                    Click="btnLoad_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#FF1C6DD0"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF7AB3EF"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
 
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Width="150" Height="40"
-                            CornerRadius="20"
-                            Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
 
-        </Grid>
-    </Border>
+            </Grid>
+        </Border>
+    </ScrollViewer>
 </Window>
