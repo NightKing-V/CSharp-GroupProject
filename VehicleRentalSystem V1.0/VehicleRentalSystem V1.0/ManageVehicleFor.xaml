@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="ManageVehicleFor" Height="754" Width="900" WindowStartupLocation="CenterScreen">
-    <ScrollViewer Height="785" Margin="0,0,0,1" VerticalAlignment="Bottom">
+        Title="ManageVehicleFor" Height="547" Width="900" WindowStartupLocation="CenterScreen">
+    <ScrollViewer Height="737" VerticalAlignment="Top">
         <Border  CornerRadius="15"  BorderBrush="#FF1C6DD0" BorderThickness="3" Height="618" Grid.Row="1" Width="700" Margin="0,57,0,0" Background="#FFEEF6FF">
             <Grid
                 Margin="97,17,65,0"

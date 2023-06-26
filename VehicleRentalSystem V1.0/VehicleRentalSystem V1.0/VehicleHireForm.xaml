@@ -5,13 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="VehicleHireForm" Height="750" Width="950"  WindowStartupLocation="CenterScreen">
+        Title="VehicleHireForm" Height="717" Width="950"  WindowStartupLocation="CenterScreen">
     <ScrollViewer>
         <Border Height="684"
             Width="811" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" BorderBrush="#FF1C6DD0" Background="#FFEEF6FF"
                     >
             <Grid HorizontalAlignment="Left" Width="925" Margin="-70,-27,0,0" Height="745" VerticalAlignment="Top"
                     >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="407*"/>
+                    <ColumnDefinition Width="34*"/>
+                    <ColumnDefinition Width="484*"/>
+                </Grid.ColumnDefinitions>
 
                 <TextBlock Text="Vehicle Hire Form"
                     TextAlignment="Center"
@@ -19,21 +24,21 @@
                     Foreground="Black"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="322,42,284,0" Height="26" VerticalAlignment="Top"/>
+                    Margin="322,42,284,0" Height="26" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
 
                 <TextBlock Text="Customer Name"
                     FontSize="12"
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="128,80,590,0" Height="15" VerticalAlignment="Top"/>
+                    Margin="128,80,72,0" Height="15" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="350"
-                    Margin="118,94,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    Margin="118,94,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.ColumnSpan="3"
                     >
                     <TextBox x:Name="txtUser"
                         FontSize="15"
@@ -61,14 +66,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="581,80,142,0" Height="19" VerticalAlignment="Top"/>
+                    Margin="140,80,142,0" Height="19" VerticalAlignment="Top" Grid.Column="2"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="568,94,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    Margin="127,94,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.Column="2"
                     >
                     <TextBox x:Name="txtC_NIC"
                         FontSize="15"
@@ -94,7 +99,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="128,158,566,0" Height="16" VerticalAlignment="Top"/>
+                    Margin="128,158,48,0" Height="16" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -127,14 +132,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="581,160,139,0" Height="14" VerticalAlignment="Top"/>
+                    Margin="140,160,139,0" Height="14" VerticalAlignment="Top" Grid.Column="2"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="568,174,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    Margin="127,174,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.Column="2"
                     >
                     <TextBox x:Name="txtC_Email"
                         FontSize="15"
@@ -158,14 +163,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="128,238,578,0" Height="15" VerticalAlignment="Top"/>
+                    Margin="128,238,60,0" Height="15" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="350"
-                    Margin="114,252,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    Margin="114,252,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.ColumnSpan="3"
                     >
                     <TextBox x:Name="C_Address"
                         FontSize="15"
@@ -194,14 +199,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="581,238,97,0" Height="14" VerticalAlignment="Top"/>
+                    Margin="140,238,97,0" Height="14" VerticalAlignment="Top" Grid.Column="2"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="568,252,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    Margin="127,252,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.Column="2"
                     >
                     <TextBox x:Name="V_Chassis"
                         FontSize="15"
@@ -227,7 +232,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="581,320,159,0" Height="18" VerticalAlignment="Top"/>
+                    Margin="140,320,159,0" Height="18" VerticalAlignment="Top" Grid.Column="2"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -260,14 +265,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="128,320,620,0" Height="17" VerticalAlignment="Top"/>
+                    Margin="128,320,102,0" Height="17" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="568,338,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    Margin="127,338,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.Column="2"
                     >
                     <TextBox x:Name="txtO_Price"
                         FontSize="15"
@@ -294,7 +299,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="128,400,612,0" Height="18" VerticalAlignment="Top"/>
+                    Margin="128,400,94,0" Height="18" VerticalAlignment="Top"/>
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
@@ -325,13 +330,13 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="581,400,167,0" Height="17" VerticalAlignment="Top"/>
+                    Margin="140,400,167,0" Height="17" VerticalAlignment="Top" Grid.Column="2"/>
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="568,416,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    Margin="127,416,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.Column="2"
                     >
                     <TextBox x:Name="E_Mileage"
                         FontSize="15"
@@ -359,7 +364,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="128,474,622,0" Height="19" VerticalAlignment="Top"/>
+                    Margin="128,474,104,0" Height="19" VerticalAlignment="Top"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
@@ -384,14 +389,14 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="581,476,169,0" Height="17" VerticalAlignment="Top"/>
+                    Margin="140,476,169,0" Height="17" VerticalAlignment="Top" Grid.Column="2"/>
 
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="568,492,0,0" Height="44" VerticalAlignment="Top" Background="White"
+                    Margin="127,492,0,0" Height="44" VerticalAlignment="Top" Background="White" Grid.Column="2"
                     >
                     <DatePicker x:Name="EndDate" HorizontalAlignment="Left" 
                         Height="25"
@@ -410,7 +415,7 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="128,558,612,0" Height="18" VerticalAlignment="Top"/>
+                    Margin="128,558,94,0" Height="18" VerticalAlignment="Top"/>
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
@@ -447,7 +452,7 @@
                     FontWeight="SemiBold"
                     Cursor="Hand"
                     Margin="190,640,426,0"
-                    Click="btnSubmitVH_Click" Height="48" VerticalAlignment="Top">
+                    Click="btnSubmitVH_Click" Height="48" VerticalAlignment="Top" Grid.ColumnSpan="3">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="#FF7AB3EF"/>
@@ -483,8 +488,8 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="430,634,190,0"
-                    Click="btnClearVH_Click" Height="60" VerticalAlignment="Top">
+                    Margin="23,634,190,0"
+                    Click="btnClearVH_Click" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="Red"/>
@@ -511,13 +516,13 @@
                     Foreground="#FF1C6DD0"
                     FontWeight="Bold"
                     FontFamily="Montserrat"
-                    Margin="578,550,0,0" HorizontalAlignment="Left" Width="84" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.222"/>
+                    Margin="137,550,0,0" HorizontalAlignment="Left" Width="84" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.222" Grid.Column="2"/>
                 <Border CornerRadius="15"  
                     BorderBrush="Black" 
                     BorderThickness="2" 
                     HorizontalAlignment="Left" 
                     Width="250"
-                    Margin="568,566,0,0" Height="48" VerticalAlignment="Top" Background="White"
+                    Margin="127,566,0,0" Height="48" VerticalAlignment="Top" Background="White" Grid.Column="2"
                     >
                     <ComboBox x:Name="CMBP" 
                     

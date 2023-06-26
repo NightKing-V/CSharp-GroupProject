@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="ManageDriverForm" Width="900" WindowStartupLocation="CenterScreen" Height="810" VerticalAlignment="Center" HorizontalAlignment="Center">
+        Title="ManageDriverForm" Width="900" WindowStartupLocation="CenterScreen" Height="497" VerticalAlignment="Center" HorizontalAlignment="Center">
     <ScrollViewer>
         <Border Height="698"
             Width="658" BorderThickness="3,3,3,3" BorderBrush="#FF1C6DD0" CornerRadius="15,15,15,15" Background="#FFEEF6FF" >
