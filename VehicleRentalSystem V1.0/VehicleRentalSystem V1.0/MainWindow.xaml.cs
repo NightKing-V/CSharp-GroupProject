@@ -29,46 +29,54 @@ namespace VehicleRentalSystem_V1._0
             DataBaseFunctions DBF = new DataBaseFunctions();
             DBF.conopen();
 
-            List<string> emp1 = new List<string>();
-            using(SqlCommand cmd = new SqlCommand("SELECT E_Name From Employee WHERE E_NIC = @E_NIC", DBF.GetSqlCon()))
+            try
             {
-                cmd.Parameters.AddWithValue("@E_NIC", E_NIC);
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                List<string> emp1 = new List<string>();
+                using (SqlCommand cmd = new SqlCommand("SELECT E_Name From Employee WHERE E_NIC = @E_NIC", DBF.GetSqlCon()))
                 {
-                    while (reader.Read())
+                    cmd.Parameters.AddWithValue("@E_NIC", E_NIC);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        emp1.Add(reader[0].ToString());
+                        while (reader.Read())
+                        {
+                            emp1.Add(reader[0].ToString());
+                        }
+                    }
+
+                }
+                E_Name = emp1[0];
+
+                List<string> emp2 = new List<string>();
+                using (SqlCommand cmd = new SqlCommand("SELECT Department From Employee WHERE E_NIC = @E_NIC", DBF.GetSqlCon()))
+                {
+                    cmd.Parameters.AddWithValue("@E_NIC", E_NIC);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            emp2.Add(reader[0].ToString());
+                        }
                     }
                 }
-                   
-            }
-            E_Name = emp1[0];
+                Department = emp2[0];
 
-            List<string> emp2 = new List<string>();
-            using (SqlCommand cmd = new SqlCommand("SELECT Department From Employee WHERE E_NIC = @E_NIC", DBF.GetSqlCon()))
-            {
-                cmd.Parameters.AddWithValue("@E_NIC", E_NIC);
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                EMPName.Content = E_Name;
+                EMPID.Content = E_NIC;
+
+                if (Department != "IT")
                 {
-                    while (reader.Read())
-                    {
-                        emp2.Add(reader[0].ToString());
-                    }
+                    AdminBtn.Visibility = Visibility.Hidden;
                 }
+                else
+                {
+                    AdminBtn.Visibility = Visibility.Visible;
+                }
+
+
             }
-            Department = emp2[0];
-
-
-            EMPName.Content = E_Name;
-            EMPID.Content = E_NIC;
-
-            if (Department  != "IT") 
+            catch (Exception ex)
             {
-                AdminBtn.Visibility = Visibility.Hidden;
-            }
-            else
-            {
-                AdminBtn.Visibility = Visibility.Visible;
+                MessageBox.Show(ex.Message);
             }
 
         }
