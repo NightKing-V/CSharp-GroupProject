@@ -28,7 +28,7 @@ namespace VehicleRentalSystem_V1._0
             {
                 DataBaseFunctions db = new DataBaseFunctions();
                 db.conopen();
-                string query = "SELECT * FROM Rider WHERE R_State = 0";
+                string query = "SELECT * FROM Rider WHERE R_State = 1";
                 SqlDataAdapter da = new SqlDataAdapter(query, db.GetSqlCon());
                 DataTable dt = new DataTable();
                 da.Fill(dt);
