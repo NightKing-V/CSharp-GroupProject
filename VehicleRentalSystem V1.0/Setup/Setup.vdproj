@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:Setup"
+"ProjectName" = "8:VehicleRentalSystem V1.0 - Setup"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -33,7 +33,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6981599BAF934BC7ADCD737B969F304C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F481C86DDD604606891C6C090EAE327A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F5FE5F07501E4330B3C8E4C6C4525124"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -51,7 +63,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Setup.msi"
+        "OutputFilename" = "8:Debug\\VehicleRentalSystem V1.0 - Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -61,6 +73,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -77,6 +105,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -142,7 +178,7 @@
             "SourcePath" = "8:..\\VehicleRentalSystem V1.0\\bin\\Debug\\VehicleRentalDB_log.ldf"
             "TargetName" = "8:VehicleRentalDB_log.ldf"
             "Tag" = "8:"
-            "Folder" = "8:_BBCB5433462A4069B431AE689392CD59"
+            "Folder" = "8:_5B745236C437476AAE488CF2D8C3D506"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -161,6 +197,26 @@
             {
             "SourcePath" = "8:..\\VehicleRentalSystem V1.0\\bin\\Debug\\VehicleRentalDB.mdf"
             "TargetName" = "8:VehicleRentalDB.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_5B745236C437476AAE488CF2D8C3D506"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6981599BAF934BC7ADCD737B969F304C"
+            {
+            "SourcePath" = "8:..\\VehicleRentalSystem V1.0\\Icon.ico"
+            "TargetName" = "8:Icon.ico"
             "Tag" = "8:"
             "Folder" = "8:_BBCB5433462A4069B431AE689392CD59"
             "Condition" = "8:"
@@ -197,6 +253,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5FE5F07501E4330B3C8E4C6C4525124"
+            {
+            "SourcePath" = "8:..\\VehicleRentalSystem V1.0\\Icon.png"
+            "TargetName" = "8:Icon.png"
+            "Tag" = "8:"
+            "Folder" = "8:_BBCB5433462A4069B431AE689392CD59"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -212,6 +288,29 @@
             "Property" = "8:DesktopFolder"
                 "Folders"
                 {
+                }
+            }
+            "{994432C3-9487-495D-8656-3E829A8DBDDE}:_532D0EC5D6FC4F168BDE2C23583E2E8B"
+            {
+            "DefaultLocation" = "8:[TARGETDIR]"
+            "Name" = "8:C:\\ProgramData"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:NEWPROPERTY1"
+                "Folders"
+                {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5B745236C437476AAE488CF2D8C3D506"
+                    {
+                    "Name" = "8:VehicleRentalSystem V1.0"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_A081DDBEAC4749E79C802EDDED1050F3"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_90375AE1225440FEB6B56B2E0D8E9002"
@@ -254,7 +353,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{76E11168-95EE-442D-BB48-E6184D5A9F44}"
-        "PackageCode" = "8:{8239BAA5-C65A-4CD7-9718-277524A9C4EA}"
+        "PackageCode" = "8:{BA42F9E6-95B7-4FB2-8253-D6694AA6EE8F}"
         "UpgradeCode" = "8:{2C45336F-6CA4-49E9-ABD6-4430F53D4DAC}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -376,7 +475,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7E58B6AF7D7E4270AD5CADCFBA240F3C"
             {
-            "Name" = "8:Shortcut to VehicleRentalSystem V1.0.exe"
+            "Name" = "8:VehicleRentalSystem V1.0"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -385,7 +484,7 @@
             "Target" = "8:_0EEAF6C0370B42A281DC71D410614AD2"
             "Folder" = "8:_121827D2800C444D98E18A2AE34CF363"
             "WorkingFolder" = "8:_BBCB5433462A4069B431AE689392CD59"
-            "Icon" = "8:"
+            "Icon" = "8:_6981599BAF934BC7ADCD737B969F304C"
             "Feature" = "8:"
             }
         }
