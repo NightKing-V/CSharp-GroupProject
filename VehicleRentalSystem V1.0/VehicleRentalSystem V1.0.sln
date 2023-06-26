@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleRentalSystem V1.0", "VehicleRentalSystem V1.0\VehicleRentalSystem V1.0.csproj", "{76B72CA6-DB41-4413-B441-D5E72DD0D16F}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{85D04D73-F252-4D04-A540-A40E9931409E}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "VehicleRentalSystem V1.0 - Setup", "VehicleRentalSystem V1.0 - Setup\VehicleRentalSystem V1.0 - Setup.vdproj", "{BD74BC71-2E52-4BF5-9C15-6712F6E5DB41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{76B72CA6-DB41-4413-B441-D5E72DD0D16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76B72CA6-DB41-4413-B441-D5E72DD0D16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76B72CA6-DB41-4413-B441-D5E72DD0D16F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{85D04D73-F252-4D04-A540-A40E9931409E}.Debug|Any CPU.ActiveCfg = Debug
-		{85D04D73-F252-4D04-A540-A40E9931409E}.Release|Any CPU.ActiveCfg = Release
+		{BD74BC71-2E52-4BF5-9C15-6712F6E5DB41}.Debug|Any CPU.ActiveCfg = Debug
+		{BD74BC71-2E52-4BF5-9C15-6712F6E5DB41}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
