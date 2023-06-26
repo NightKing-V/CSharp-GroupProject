@@ -28,11 +28,11 @@ namespace VehicleRentalSystem_V1._0
         {
             InitializeComponent();
 
-            DirectorySecurity sec = Directory.GetAccessControl(System.IO.Directory.GetCurrentDirectory());
-            // Using this instead of the "Everyone" string means we work on non-English systems.
-            SecurityIdentifier everyone = new SecurityIdentifier(WellKnownSidType.WorldSid, null);
-            sec.AddAccessRule(new FileSystemAccessRule(everyone, FileSystemRights.Modify | FileSystemRights.Synchronize, InheritanceFlags.ContainerInherit | InheritanceFlags.ObjectInherit, PropagationFlags.None, AccessControlType.Allow));
-            Directory.SetAccessControl(System.IO.Directory.GetCurrentDirectory(), sec);
+            //DirectorySecurity sec = Directory.GetAccessControl(System.IO.Directory.GetCurrentDirectory());
+            //// Using this instead of the "Everyone" string means we work on non-English systems.
+            //SecurityIdentifier everyone = new SecurityIdentifier(WellKnownSidType.WorldSid, null);
+            //sec.AddAccessRule(new FileSystemAccessRule(everyone, FileSystemRights.Modify | FileSystemRights.Synchronize, InheritanceFlags.ContainerInherit | InheritanceFlags.ObjectInherit, PropagationFlags.None, AccessControlType.Allow));
+            //Directory.SetAccessControl(System.IO.Directory.GetCurrentDirectory(), sec);
 
             string E_Name, Department;
             DataBaseFunctions DBF = new DataBaseFunctions();
