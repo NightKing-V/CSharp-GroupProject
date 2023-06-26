@@ -94,7 +94,7 @@ namespace VehicleRentalSystem_V1._0
                     updatecmd.Parameters.AddWithValue("@E_Name", txtE_Name.Text);
                     updatecmd.Parameters.AddWithValue("@E_Tel", txtE_Telephone.Text);
                     updatecmd.Parameters.AddWithValue("@Department", department.Text);
-                    updatecmd.Parameters.AddWithValue("@E_Address", E_address.Text);
+                    updatecmd.Parameters.AddWithValue("@E_Add", E_address.Text);
                     updatecmd.Parameters.AddWithValue("@E_Email", txtE_Email.Text);
                     
 
