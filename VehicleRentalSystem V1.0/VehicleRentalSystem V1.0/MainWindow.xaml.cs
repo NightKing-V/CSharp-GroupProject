@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,6 +27,12 @@ namespace VehicleRentalSystem_V1._0
         public MainWindow(string E_NIC)
         {
             InitializeComponent();
+
+            DirectorySecurity sec = Directory.GetAccessControl(System.IO.Directory.GetCurrentDirectory());
+            // Using this instead of the "Everyone" string means we work on non-English systems.
+            SecurityIdentifier everyone = new SecurityIdentifier(WellKnownSidType.WorldSid, null);
+            sec.AddAccessRule(new FileSystemAccessRule(everyone, FileSystemRights.Modify | FileSystemRights.Synchronize, InheritanceFlags.ContainerInherit | InheritanceFlags.ObjectInherit, PropagationFlags.None, AccessControlType.Allow));
+            Directory.SetAccessControl(System.IO.Directory.GetCurrentDirectory(), sec);
 
             string E_Name, Department;
             DataBaseFunctions DBF = new DataBaseFunctions();
