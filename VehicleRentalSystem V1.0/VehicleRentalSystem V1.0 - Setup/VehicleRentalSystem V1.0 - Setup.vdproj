@@ -274,7 +274,7 @@
             "SourcePath" = "8:..\\VehicleRentalSystem V1.0\\bin\\Debug\\VehicleRentalDB.mdf"
             "TargetName" = "8:VehicleRentalDB.mdf"
             "Tag" = "8:"
-            "Folder" = "8:_E71FE6DAD89C474AAC5B35E87C4B5E33"
+            "Folder" = "8:_2EF3DE8A300146D2B4F7996A7F1CA183"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -438,7 +438,7 @@
             "SourcePath" = "8:..\\VehicleRentalSystem V1.0\\bin\\Debug\\VehicleRentalDB_log.ldf"
             "TargetName" = "8:VehicleRentalDB_log.ldf"
             "Tag" = "8:"
-            "Folder" = "8:_E71FE6DAD89C474AAC5B35E87C4B5E33"
+            "Folder" = "8:_2EF3DE8A300146D2B4F7996A7F1CA183"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -603,17 +603,17 @@
             "Property" = "8:CommonFilesFolder"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_E71FE6DAD89C474AAC5B35E87C4B5E33"
-                    {
-                    "Name" = "8:VehicleRentalSystem V1.0"
-                    "AlwaysCreate" = "11:TRUE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_DD3E195EB0A4477E8BCCC532FDD2B3F4"
-                        "Folders"
-                        {
-                        }
-                    }
+                }
+            }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_766D589DC6B44AB69D8847F4C992905F"
+            {
+            "Name" = "8:#1918"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:PersonalFolder"
+                "Folders"
+                {
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_7F037DF95A3A4CB8B9C8A4541F058372"
@@ -637,6 +637,28 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                }
+            }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_F8DA6559F1C6459682AEF8797DCACAB3"
+            {
+            "Name" = "8:#1915"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:AppDataFolder"
+                "Folders"
+                {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_2EF3DE8A300146D2B4F7996A7F1CA183"
+                    {
+                    "Name" = "8:VehicleRentalSystem V1.0"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_DD3E195EB0A4477E8BCCC532FDD2B3F4"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
