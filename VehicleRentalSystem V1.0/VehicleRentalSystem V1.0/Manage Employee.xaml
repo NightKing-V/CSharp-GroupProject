@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="Manage_Employee" Height="700" Width="950"  WindowStartupLocation="CenterScreen">
+        Title="Manage_Employee" Height="721" Width="950"  WindowStartupLocation="CenterScreen">
 
-    <ScrollViewer Margin="0,0,0,-6">
-        <Border Height="627" Width="808" Background="#FFEEF6FF" BorderBrush="#FF1C6DD0" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15">
-            <Grid Height="587" VerticalAlignment="Top" Margin="0,26,0,0">
+    <ScrollViewer Margin="0,0,0,8">
+        <Border Height="707" Width="808" Background="#FFEEF6FF" BorderBrush="#FF1C6DD0" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15">
+            <Grid Height="665" VerticalAlignment="Top" Margin="0,26,0,0">
 
 
                 <TextBlock Text="Manage Employee Form"
@@ -204,7 +204,7 @@
                 </Border>
 
                 <!--Next-->
-                <DataGrid x:Name="dgv1" Margin="102,356,102,108" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF7AB3EF" SelectionChanged="DataGrid_SelectionChanged" Background="White"/>
+                <DataGrid x:Name="dgv1" Margin="54,428,37,108" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF7AB3EF" SelectionChanged="DataGrid_SelectionChanged" Background="White" CanUserAddRows="False" CanUserDeleteRows="False"/>
 
                 <!--Next-->
                 <Button x:Name="btnUpdate"
@@ -216,7 +216,7 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="230,524,408,0"
+                    Margin="230,584,408,0"
                     Click="btnUpdate_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -251,7 +251,7 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="390,522,216,0"
+                    Margin="390,582,216,0"
                     Click="btnClear_Click" Height="50" VerticalAlignment="Top">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -287,7 +287,7 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="586,524,52,0"
+                    Margin="586,584,52,0"
                     Click="btnLoad_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -322,7 +322,7 @@
                     FontFamily="MonteSerrat"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Margin="54,524,582,0"
+                    Margin="54,584,582,0"
                     Click="btnSubmit_Click" RenderTransformOrigin="0.213,0.531" Height="47" VerticalAlignment="Top" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
@@ -346,6 +346,34 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
+                <TextBlock
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="51,342,0,0" HorizontalAlignment="Left" Width="140" Height="16" VerticalAlignment="Top"><Run Text="Employee "/><Run Language="en-gb" Text="Password"/></TextBlock>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="41,358,0,0" Height="44" VerticalAlignment="Top" Background="White"
+                    >
+                    <TextBox x:Name="txtE_PWD"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
 
 
 

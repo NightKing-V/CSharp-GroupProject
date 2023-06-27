@@ -33,9 +33,21 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            ReceiptGenarator RG = new ReceiptGenarator();
-            RG.HireFee(HireIDtxt.Text, ReturnDate.Text,DFeeTxt.Text, EndMilatxt.Text);
-            this.Hide();
+            string H = HireIDtxt.Text;
+            string RD = ReturnDate.Text;
+            string Df = DFeeTxt.Text;
+            string EM = EndMilatxt.Text;
+            if(H == "" || RD == "" || Df == "" || EM == "")
+            {
+                MessageBox.Show("Enter All Details");
+            }
+            else
+            {
+                ReceiptGenarator RG = new ReceiptGenarator();
+                RG.HireFee(HireIDtxt.Text, ReturnDate.Text, DFeeTxt.Text, EndMilatxt.Text);
+                this.Hide();
+            }
+            
         }
     }
 }

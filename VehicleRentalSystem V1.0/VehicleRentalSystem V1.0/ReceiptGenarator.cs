@@ -22,7 +22,7 @@ namespace VehicleRentalSystem_V1._0
         {
             try
             {
-                this.Date = ReturnD;
+                Date = ReturnD;
                 ReceiptNO = Rent_ID;
                 this.returndate = ReturnD;
                 this.damagefee = double.Parse(damagefee);
@@ -319,7 +319,7 @@ namespace VehicleRentalSystem_V1._0
                 V_CN = hirevrecord[0];
 
                 List<string> hirerecordr = new List<string>();
-                using (SqlCommand hirerecordcmd = new SqlCommand("select C_NIC from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
+                using (SqlCommand hirerecordcmd = new SqlCommand("select R_NIC from VehicleHire where Hire_ID = @Hire_ID", DBF.GetSqlCon()))
                 {
                     hirerecordcmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
                     using (SqlDataReader reader = hirerecordcmd.ExecuteReader())
@@ -564,7 +564,7 @@ namespace VehicleRentalSystem_V1._0
                 penaltyfee = invaliddays * Rental * penaltyrate / 100;
                 totalfee = fee + penaltyfee + oilfee + this.damagefee - advance;
 
-                using (SqlCommand newcuscmd = new SqlCommand("UPDATE VehicleHire SET ReturnDate = @RD, EndMileage = @EM, Active = 0, Rentalfee = @RF, Oilfee = @OF, Penaltyfee = @PF, Damagefee = @DF, Totalfee = @TF WHERE Rent_ID = @Rent_ID", DBF.GetSqlCon()))
+                using (SqlCommand newcuscmd = new SqlCommand("UPDATE VehicleHire SET ReturnDate = @RD, EndMileage = @EM, Active = 0, Rentalfee = @RF, Oilfee = @OF, Penaltyfee = @PF, Damagefee = @DF, Totalfee = @TF WHERE Hire_ID = @Hire_ID", DBF.GetSqlCon()))
                 {
                     newcuscmd.Parameters.AddWithValue("@RD", this.returndate);
                     newcuscmd.Parameters.AddWithValue("@RF", fee);
@@ -573,12 +573,10 @@ namespace VehicleRentalSystem_V1._0
                     newcuscmd.Parameters.AddWithValue("@PF", penaltyfee);
                     newcuscmd.Parameters.AddWithValue("@DF", this.damagefee);
                     newcuscmd.Parameters.AddWithValue("@TF", totalfee);
-                    newcuscmd.Parameters.AddWithValue("@Rent_ID", Hire_ID);
+                    newcuscmd.Parameters.AddWithValue("@Hire_ID", Hire_ID);
                     newcuscmd.ExecuteNonQuery();
                 }
-
-
-
+                
                 HireReceipt();
 
             }

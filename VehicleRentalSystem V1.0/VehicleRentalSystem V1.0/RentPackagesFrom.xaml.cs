@@ -25,6 +25,22 @@ namespace VehicleRentalSystem_V1._0
         public Rent_packages()
         {
             InitializeComponent();
+            try
+            {
+                //DataGridView
+                DataBaseFunctions DBF = new DataBaseFunctions();
+                DBF.conopen();
+
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM RentPackages", DBF.GetSqlCon());
+                DataTable dbv = new DataTable();
+                da.Fill(dbv);
+                RentPackagesTable1.ItemsSource = dbv.DefaultView;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -111,16 +127,14 @@ namespace VehicleRentalSystem_V1._0
             try
             {
                 //DataGridView
-                string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleRentalDB.mdf"";Integrated Security=True";
-
-                using (SqlConnection con = new SqlConnection(constring))
-                {
-                    con.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM RentPackages", con);
+                DataBaseFunctions DBF = new DataBaseFunctions();
+                DBF.conopen();
+                
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM RentPackages", DBF.GetSqlCon());
                     DataTable dbv = new DataTable();
                     da.Fill(dbv);
                     RentPackagesTable1.ItemsSource = dbv.DefaultView;
-                }
+                
             }
             catch (Exception ex)
             {

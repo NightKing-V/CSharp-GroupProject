@@ -12,7 +12,7 @@
             <TextBlock HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" FontFamily="Montserrat" Text="Drivers In Service" VerticalAlignment="Center" Width="220" Margin="97,0,0,0" FontWeight="SemiBold" FontSize="20" Foreground="White"/>
 
         </Grid>
-        <DataGrid x:Name="DriversInServiceTable1" Margin="84,150,84,124" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF1C6DD0" BorderThickness="2,2,2,2" SelectionChanged="DriversInServiceTable1_SelectionChanged"/>
+        <DataGrid x:Name="DriversInServiceTable1" Margin="30,150,30,29" d:ItemsSource="{d:SampleData ItemCount=5}" BorderBrush="#FF1C6DD0" BorderThickness="2,2,2,2" SelectionChanged="DriversInServiceTable1_SelectionChanged" CanUserAddRows="False" CanUserDeleteRows="False"/>
 
     </Grid>
 </Window>

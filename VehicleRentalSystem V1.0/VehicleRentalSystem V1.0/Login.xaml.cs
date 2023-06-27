@@ -71,9 +71,6 @@ namespace VehicleRentalSystem_V1._0
             {
                 System.Windows.MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
-
-
         }   
     }
 }

@@ -49,7 +49,6 @@ namespace VehicleRentalSystem_V1._0
                 MessageBox.Show(ex.Message);
             }
         }
-        ManageVehicleFor mdv= new ManageVehicleFor();
 
         private void VehicleAvailableTable1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

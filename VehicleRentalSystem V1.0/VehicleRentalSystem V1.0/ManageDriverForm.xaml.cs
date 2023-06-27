@@ -33,7 +33,7 @@ namespace VehicleRentalSystem_V1._0
                 DataBaseFunctions db = new DataBaseFunctions();
                 db.conopen();
 
-                using (SqlCommand updatecmd = new SqlCommand("UPDATE Rider SET R_Name = @R_Name, R_LN = @R_LN, R_Email = @R_Email,R_Address=@R_Add,Car=@Car,Bike=@Bike,Van=@Van,ThreeWheel=@ThreeWheel,Bus=@Bus,Lorry=@Lorry,R_State=@R_State WHERE R_NIC = @R_NIC"))
+                using (SqlCommand updatecmd = new SqlCommand("UPDATE Rider SET R_Name = @R_Name, R_LN = @R_LN, R_Email = @R_Email,R_Address=@R_Add,Car=@Car,Bike=@Bike,Van=@Van,ThreeWheel=@ThreeWheel,Bus=@Bus,Lorry=@Lorry WHERE R_NIC = @R_NIC"))
                 {
                     updatecmd.Connection = db.GetSqlCon(); // Assign the connection
 
@@ -74,7 +74,7 @@ namespace VehicleRentalSystem_V1._0
                 string DriverEmail = txtD_Email.Text;
                 string DriverAdd = txtD_Name1.Text;
                 string DriverPhone = DriversPhone.Text;
-                string DState = DriverState.Text;
+                bool DState = false;
                 bool Car = CarCheckBox.IsChecked??false;
                 bool bike = BikeCheckBox.IsChecked ?? false;
                 bool van = VanCheckBox.IsChecked ?? false;
@@ -86,9 +86,8 @@ namespace VehicleRentalSystem_V1._0
 
                 dbFunctions.setdata("INSERT INTO Rider (R_NIC, R_LN, R_Name, R_Email, R_Tel, R_Address, Car, Bike, Van, ThreeWheel, Bus, Lorry, R_State) VALUES ('" + DriverNIC + "','" + DriverLicense + "','" + DriverName + "','" + DriverEmail + "','" + DriverPhone + "','" + DriverAdd + "','" + Car + "','" + bike + "','" + van + "','" + threewheel + "','" + bus + "','" + lorry + "','" + DState + "')");
 
-
+                dbFunctions.conclose();
                 MessageBox.Show("Inserted Successfully");
-                this.Close();
             }
             catch(Exception ex)
             {
@@ -103,16 +102,12 @@ namespace VehicleRentalSystem_V1._0
                 DataBaseFunctions db = new DataBaseFunctions();
                 db.conopen();
 
-                MessageBox.Show("Enter the Driver's NIC to delete the record");
-
                 string  R_NIC= txtD_NIC.Text;
 
                 using (SqlCommand deletecmd = new SqlCommand("DELETE FROM Rider WHERE R_NIC = @R_NIC"))
                 {
                     deletecmd.Connection = db.GetSqlCon(); // Assign the connection
-
                     deletecmd.Parameters.AddWithValue("@R_NIC", R_NIC);
-
                     deletecmd.ExecuteNonQuery();
 
                     MessageBox.Show("Record deleted successfully");

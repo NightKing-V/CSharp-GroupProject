@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
         mc:Ignorable="d"
-        Title="ManageVehicleFor" Height="553" Width="900" WindowStartupLocation="CenterScreen">
+        Title="ManageVehicleFor" Height="713" Width="900" WindowStartupLocation="CenterScreen">
     <ScrollViewer Margin="0,0,0,3">
         <Border  CornerRadius="15"  BorderBrush="#FF1C6DD0" BorderThickness="3" Height="618" Grid.Row="1" Width="700" Margin="0,57,0,0" Background="#FFEEF6FF">
             <Grid
@@ -364,6 +364,35 @@
 
 
                     </Grid>
+                </Border>
+                <TextBlock
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="284,340,86,0" Height="13" VerticalAlignment="Top" Grid.ColumnSpan="2"><Run Language="en-gb" Text="Distance Per Liter"/></TextBlock>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="252"
+                    Margin="273,356,0,0" Height="41" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="White"
+                    >
+                    <TextBox x:Name="DPLtxt"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
                 </Border>
 
 

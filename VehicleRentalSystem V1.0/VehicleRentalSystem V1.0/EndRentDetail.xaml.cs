@@ -26,9 +26,20 @@ namespace VehicleRentalSystem_V1._0
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            ReceiptGenarator RG = new ReceiptGenarator();
-            RG.RentFee(RentIDtxt.Text, ReturnDate.Text, DFeeTxt.Text);
-            this.Hide();
+            string H = RentIDtxt.Text;
+            string RD = ReturnDate.Text;
+            string Df = DFeeTxt.Text;
+
+            if (H == "" || RD == "" || Df == "")
+            {
+                MessageBox.Show("Enter All Details");
+            }
+            else
+            {
+                ReceiptGenarator RG = new ReceiptGenarator();
+                RG.RentFee(RentIDtxt.Text, ReturnDate.Text, DFeeTxt.Text);
+                this.Hide();
+            }
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)

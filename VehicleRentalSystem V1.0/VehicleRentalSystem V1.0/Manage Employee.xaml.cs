@@ -26,23 +26,45 @@ namespace VehicleRentalSystem_V1._0
         public Manage_Employee()
         {
             InitializeComponent();
+            try
+            {
+                DataBaseFunctions DBF = new DataBaseFunctions();
+
+                DBF.conopen();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employee", DBF.GetSqlCon());
+                DataTable dbv = new DataTable();
+                da.Fill(dbv);
+                dgv1.ItemsSource = dbv.DefaultView;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-              DataBaseFunctions db = new DataBaseFunctions();
-              db.setdata("INSERT INTO Employee (E_NIC,E_Name,E_Tel,E_Email,E_Address,Department) VALUES ('" + txtE_NIC.Text + "','" + txtE_Name.Text + "','" + txtE_Telephone.Text + "','" + txtE_Email.Text + "','" + E_address.Text + "','" + department.Text + "')");
+              if(txtE_Email == null || txtE_Name== null || txtE_NIC == null || txtE_Telephone == null || E_address == null) 
+                {
+                    MessageBox.Show("Enter all Details");
+                }
+                else
+                {
+                    string name = txtE_Name.Text;
+                    string pwd = txtE_PWD.Text;
+                    DataBaseFunctions db = new DataBaseFunctions();
+                    db.setdata("INSERT INTO Employee (E_NIC,E_Name,E_UName,E_Password,E_Tel,E_Email,E_Address,Department) VALUES ('" + txtE_NIC.Text + "','" + name + "','" + name + "','" + pwd + "','" + txtE_Telephone.Text + "','" + txtE_Email.Text + "','" + E_address.Text + "','" + department.Text + "');");
 
-                MessageBox.Show("Inserted Successfully");
-                this.Close();
+                    MessageBox.Show("Inserted Successfully");
+
+                }
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                this.Close();
             }
         }
 
@@ -52,17 +74,12 @@ namespace VehicleRentalSystem_V1._0
             {
                 DataBaseFunctions db = new DataBaseFunctions();
                 db.conopen();
-
-                MessageBox.Show("Enter the Employee NIC to delete the record");
-
                 string E_NIC = txtE_NIC.Text;
 
                 using (SqlCommand deletecmd = new SqlCommand("DELETE FROM Employee WHERE E_NIC = @E_NIC"))
                 {
                     deletecmd.Connection = db.GetSqlCon(); // Assign the connection
-
                     deletecmd.Parameters.AddWithValue("@E_NIC", E_NIC);
-
                     deletecmd.ExecuteNonQuery();
 
                     MessageBox.Show("Record deleted successfully");
@@ -115,16 +132,13 @@ namespace VehicleRentalSystem_V1._0
             try
             {
                 //DataGridView
-                string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\lenovo\Documents\GitHub\CSharp-GroupProject\VehicleRentalSystem V1.0\VehicleRentalSystem V1.0\VehicleRentalDB.mdf"";Integrated Security=True";
-
-                using (SqlConnection con = new SqlConnection(constring))
-                {
-                    con.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employee", con);
+                DataBaseFunctions DBF = new DataBaseFunctions();
+               
+                    DBF.conopen();
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employee", DBF.GetSqlCon());
                     DataTable dbv = new DataTable();
                     da.Fill(dbv);
                     dgv1.ItemsSource = dbv.DefaultView;
-                }
             }
             catch(Exception ex)
             {
