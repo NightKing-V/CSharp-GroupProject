@@ -1,0 +1,406 @@
+﻿<Window x:Name="ManageVehicleForm" x:Class="VehicleRentalSystem_V1._0.ManageVehicleFor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
+        mc:Ignorable="d"
+        Title="ManageVehicleFor" Height="713" Width="900" WindowStartupLocation="CenterScreen">
+    <ScrollViewer Margin="0,0,0,3">
+        <Border  CornerRadius="15"  BorderBrush="#FF1C6DD0" BorderThickness="3" Height="618" Grid.Row="1" Width="700" Margin="0,57,0,0" Background="#FFEEF6FF">
+            <Grid
+                Margin="97,17,65,0"
+                Grid.Row="2"
+                    >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="413*"/>
+                    <ColumnDefinition Width="120*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Manage Vehicle Form"
+                    TextAlignment="Center"
+                    FontSize="20"
+                    Foreground="Black"
+                    FontWeight="ExtraBold"
+                    FontFamily="Century Gothic"
+                    Margin="127,20,8,0" Height="25" VerticalAlignment="Top"/>
+
+                <TextBlock Text="Vehicle Plate Number"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="-32,86,166,0" Height="13" VerticalAlignment="Top"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="272"
+                    Margin="-44,101,0,0" Height="41" VerticalAlignment="Top" Background="White"
+                    >
+                    <TextBox x:Name="txtV_No"
+                        FontSize="15"
+                        TextAlignment="Left"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                             
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                            />
+
+
+                </Border>
+
+
+                <!--Next-->
+
+                <TextBlock Text="Vehicle Chassis Number"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="-32,167,202,0" Height="13" VerticalAlignment="Top"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="272"
+                    Margin="-44,183,0,0" Height="41" VerticalAlignment="Top" Background="White"
+                    >
+                    <TextBox x:Name="txtV_ChassisNo"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <!--Next-->
+
+                <TextBlock Text="Vehicle Brand"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="286,86,74,0" Grid.ColumnSpan="2" Height="15" VerticalAlignment="Top"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="274,102,0,0" Grid.ColumnSpan="2" Height="41" VerticalAlignment="Top" Background="White"
+                    >
+                    <TextBox x:Name="txtV_Brand"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <!--Next-->
+
+                <TextBlock Text="Vehicle Model"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="-33,250,300,0" Height="13" VerticalAlignment="Top"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="271"
+                    Margin="-43,266,0,0" Height="41" VerticalAlignment="Top" Background="White"
+                    >
+                    <TextBox x:Name="txtV_Model"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <TextBlock Text="Vehicle Type"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="-33,330,168,0" Height="15" VerticalAlignment="Top"/>
+
+
+
+
+                <!--Next-->
+
+                <TextBlock Text="Number of Passengers"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="286,167,37,0" Grid.ColumnSpan="2" Height="16" VerticalAlignment="Top"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="274,183,0,0" Grid.ColumnSpan="2" Height="41" VerticalAlignment="Top" Background="White"
+                    >
+                    <TextBox x:Name="No_of_Passengers"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <!--Next-->
+
+                <TextBlock Text="Vehicle Condition"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="285,250,85,0" Height="13" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="252"
+                    Margin="274,266,0,0" Height="41" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="White"
+                    >
+                    <TextBox x:Name="Vehicle_Condition"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <!--Next-->
+
+
+
+
+
+
+
+
+                <Grid Margin="0,513,4,0" Grid.ColumnSpan="2" Height="73" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="102.667"/>
+                        <ColumnDefinition Width="53.333"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <Button x:Name="btnUpdate"
+                             
+                        BorderThickness="0"
+                        Content="Update"
+                        Foreground="Black"
+                        FontSize="12"
+                        FontFamily="MonteSerrat"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Grid.Column="1"
+                        Margin="170,11,-26,0"
+                        Click="btnUpdate_Click" Height="47" Width="156" VerticalAlignment="Top" Grid.ColumnSpan="3">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="#FF40E0D0"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Gold"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Width="150" Height="40"
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="btnInsert_"
+                             
+                        BorderThickness="0"
+                        Content="Insert"
+                        Foreground="Black"
+                        FontSize="12"
+                        FontFamily="MonteSerrat"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Click="btnInsert__Click" Height="47" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,11,97,0">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="#FF7AB3EF"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF1C6DD0"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Width="150" Height="40"
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="btnDelete"
+                             
+                        BorderThickness="0"
+                        Content="Delete"
+                        Foreground="White"
+                        FontSize="12"
+                        FontFamily="MonteSerrat"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Click="btnDelete_Click" Height="47" VerticalAlignment="Top" Grid.Column="3" Margin="40,11,-190,0">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Background" Value="Red"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Orange"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Width="150" Height="40"
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+
+
+                </Grid>
+                <Border Width="138" Margin="5,356,270,98" Padding="2,2,2,2" BorderBrush="Black" BorderThickness="2,2,2,2" CornerRadius="15,15,15,15">
+                    <Grid Margin="22,6,18,1">
+                        <RadioButton x:Name="CarCheckBox" Content="Car" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="CarCheckBox1_Checked"/>
+                        <RadioButton x:Name="BikeCheckBox" Content="Bike" HorizontalAlignment="Left" Margin="0,21,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+                        <RadioButton x:Name="VanCheckBox" Content="Van" HorizontalAlignment="Left" Margin="0,42,0,0" VerticalAlignment="Top" Checked="VanCheckBox1_Checked"/>
+                        <RadioButton x:Name="_3wheelCheckBox" Content="ThreeWheel" Margin="0,63,0,46" Checked="_3wheelCheckBox1_Checked"/>
+                        <RadioButton x:Name="BusCheckBox" Content="Bus" HorizontalAlignment="Left" Margin="0,84,0,0" VerticalAlignment="Top" Checked="BusCheckBox1_Checked"/>
+                        <RadioButton x:Name="LorryCheckBox" Content="Lorry" HorizontalAlignment="Left" Margin="0,105,0,0" VerticalAlignment="Top" Checked="LorryCheckBox1_Checked"/>
+
+
+                    </Grid>
+                </Border>
+                <TextBlock
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="284,340,86,0" Height="13" VerticalAlignment="Top" Grid.ColumnSpan="2"><Run Language="en-gb" Text="Distance Per Liter"/></TextBlock>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="252"
+                    Margin="273,356,0,0" Height="41" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="White"
+                    >
+                    <TextBox x:Name="DPLtxt"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+
+            </Grid>
+
+
+
+        </Border>
+
+    </ScrollViewer>
+</Window>

@@ -1,0 +1,163 @@
+﻿<Window x:Name="EndRentDetail1" x:Class="VehicleRentalSystem_V1._0.EndRentDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
+        mc:Ignorable="d"
+        Title="End Rent" Height="487" Width="657" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Border Margin="62,43,57,43" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" BorderBrush="#FF1C6DD0" Background="#FFEEF6FF">
+        <Grid Margin="8,18,24,26" Width="500">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="209*"/>
+                <ColumnDefinition Width="54*"/>
+                <ColumnDefinition Width="26*"/>
+                <ColumnDefinition Width="211*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnNext"
+                             
+                BorderThickness="0"
+                Content="Finish"
+                Foreground="Black"
+                FontSize="12"
+                FontFamily="MonteSerrat"
+                FontWeight="SemiBold"
+                Cursor="Hand"
+                Click="btnSubmit_Click" Margin="60,269,12,21" Grid.ColumnSpan="2">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF7AB3EF"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF1C6DD0"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="150" Height="40"
+                            CornerRadius="20"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="btnClear"
+                             
+                BorderThickness="0"
+                Content="Clear"
+                Foreground="White"
+                FontSize="12"
+                FontFamily="MonteSerrat"
+                FontWeight="SemiBold"
+                Cursor="Hand"
+                Click="btnClear_Click" Margin="42,269,60,21" Grid.ColumnSpan="3" Grid.Column="1">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="Red"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Orange"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="150" Height="40"
+                            CornerRadius="20"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <TextBlock
+                FontSize="12"
+                Foreground="#FF1C6DD0"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="99,61,155,261" Grid.ColumnSpan="4"><Run Language="en-gb" Text="Rent"/><Run Text=" ID"/></TextBlock>
+            <Border CornerRadius="15"  
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                Margin="85,76,87,227" Grid.ColumnSpan="4" Background="White"
+                    >
+                <TextBox x:Name="RentIDtxt"
+                    FontSize="15"
+                    FontWeight="Medium"
+                    FontFamily="Century Gothic"
+                    Foreground="Black"
+                    CaretBrush="Gray"
+                    BorderBrush="{x:Null}"
+                    BorderThickness="0,0,0,1"
+                    Margin="8,3,8,5" Background="{x:Null}" SelectionBrush="{x:Null}" VerticalContentAlignment="Center"
+                             />
+
+
+
+
+            </Border>
+            <TextBlock
+                FontSize="12"
+                Foreground="#FF1C6DD0"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="98,124,156,198" Grid.ColumnSpan="4"><Run Language="en-gb" Text="Return Date"/></TextBlock>
+            <Border CornerRadius="15"  
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                Margin="84,140,88,164" Grid.ColumnSpan="4" Background="White"
+                    >
+                <DatePicker x:Name="ReturnDate" Width="308" Background="{x:Null}" BorderBrush="{x:Null}" SelectedDateFormat="Short" FirstDayOfWeek="Monday" Foreground="Black" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="8,3,1,0"/>
+            </Border>
+            <TextBlock
+                TextAlignment="Center"
+                FontSize="17"
+                Foreground="Black"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="128,2,126,314" Grid.ColumnSpan="4" Text="End Rent Form"/>
+            <TextBlock
+                FontSize="12"
+                Foreground="#FF1C6DD0"
+                FontWeight="Bold"
+                FontFamily="Montserrat"
+                Margin="99,187,155,133" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="4">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform><Run Language="en-gb" Text="Damage Fee"/></TextBlock>
+            <Border CornerRadius="15"  
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                Margin="85,204,87,97" Grid.ColumnSpan="4" Background="White"
+                    >
+                <TextBox x:Name="DFeeTxt"
+                    FontSize="15"
+                    FontWeight="Medium"
+                    FontFamily="Century Gothic"
+                    Foreground="Black"
+                    CaretBrush="Gray"
+                    BorderBrush="{x:Null}"
+                    BorderThickness="0,0,0,1" Height="24" Background="{x:Null}" SelectionBrush="{x:Null}" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Width="308" Margin="0,1,0,0"
+                             />
+
+
+
+
+            </Border>
+
+        </Grid>
+    </Border>
+</Window>

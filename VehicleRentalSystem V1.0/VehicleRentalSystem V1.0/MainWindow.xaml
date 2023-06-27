@@ -1,0 +1,76 @@
+﻿<Window x:Name="MainWindow1" x:Class="VehicleRentalSystem_V1._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
+        mc:Ignorable="d"
+        Title="Vehicle Rental System V1.0" Height="580" Width="1000" Icon="/Icon.png" WindowStartupLocation="CenterScreen" Activated="MainWindow_Activated" Background="#FFEEF6FF">
+
+    <Window.Resources>
+        <Style TargetType="ToggleButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border Name="border" Background="{TemplateBinding Background}" CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF00A9FF" />
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter TargetName="border" Property="Background" Value="#FF40E0D0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,0,0,-6">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Background.png" Stretch="Uniform"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="110*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="309*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel x:Name="CategoryPanel" LastChildFill="False" Width="200" Background="#FFBEDAF7" Grid.RowSpan="2" HorizontalAlignment="Left" Margin="0,0,0,7">
+            <Rectangle x:Name="IMG" DockPanel.Dock="Top" Height="130" MouseRightButtonDown="ABT">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/Asset 1.png" Stretch="UniformToFill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <RadioButton x:Name="BookingsBtn" Content="BOOKINGS&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF368CE7" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Montserrat" FontWeight="DemiBold" Checked="BookingsBtn_Checked" Click="Button_Click" Height="50" Margin="5,5,5,5"/>
+            <RadioButton x:Name="DetailsBtn" Content="DETAILS  &#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF368CE7" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Montserrat" FontWeight="DemiBold" Checked="DetailsBtn_Checked" Click="Button_Click" Height="50" Margin="5,0,5,5"/>
+            <RadioButton x:Name="VehiclesBtn" Content="VEHICLES&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF368CE7" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Montserrat" FontWeight="DemiBold" Checked="VehiclesBtn_Checked" Click="Button_Click" Height="50" Margin="5,0,5,5"/>
+            <RadioButton x:Name="DriversBtn" Content="DRIVERS             &gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF368CE7" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Montserrat" FontWeight="DemiBold" Checked="DriversBtn_Checked" Click="Button_Click" Height="50" Margin="5,0,5,5"/>
+            <RadioButton x:Name="AdminBtn" Content="ADMIN&#x9;&#x9;&gt;" Style="{StaticResource {x:Type ToggleButton}}" DockPanel.Dock="Top" Background="#FF368CE7" BorderBrush="{x:Null}" GroupName="Category" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,0,0,0" FontFamily="Montserrat" FontWeight="DemiBold" Checked="AdminBtn_Checked" Click="Button_Click" Height="50" Margin="5,0,5,4"/>
+        </DockPanel>
+        <local:BookingsUC x:Name="BookingUC" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="180,0,0,0" Visibility="Hidden"/>
+        <local:VehicleUC x:Name="VehicleUC" RenderTransformOrigin="0.5,0.5" Margin="180,0,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="Hidden">
+            <local:VehicleUC.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:VehicleUC.RenderTransform>
+        </local:VehicleUC>
+        <local:DriversUC x:Name="DriversUC" Grid.RowSpan="2" Margin="180,0,0,0" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <local:AdminUC x:Name="AdminUC" Grid.RowSpan="2" Margin="180,0,0,0" Grid.ColumnSpan="2" Visibility="Hidden"/>
+        <local:DetailsUC x:Name="DetailsUC" Margin="202,4,-2,3" Grid.RowSpan="2" Grid.ColumnSpan="2" Visibility="Hidden"/>
+
+        <Grid HorizontalAlignment="Left" Height="73" Margin="0,0,0,3" Grid.Row="1" VerticalAlignment="Bottom" Width="209">
+            <Rectangle Height="67" Stroke="#FF368CE7" Width="200" StrokeThickness="3" Fill="#FFEEF6FF" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Label x:Name="EMPName" Content="J.A.K.Jayawardana" Margin="0,10,9,32" Foreground="#FF368CE7" FontWeight="SemiBold" FontFamily="Montserrat" FontSize="13" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Center"/>
+            <Label x:Name="EMPID" Content="ID - 700134" Height="27" Margin="0,36,10,10" Foreground="#FF041562" FontWeight="SemiBold" FontFamily="Montserrat" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+        </Grid>
+    </Grid>
+</Window>

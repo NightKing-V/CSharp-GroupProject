@@ -1,0 +1,544 @@
+﻿<Window x:Name="VehicleHireForm1" x:Class="VehicleRentalSystem_V1._0.VehicleHireForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VehicleRentalSystem_V1._0"
+        mc:Ignorable="d"
+        Title="VehicleHireForm" Height="543" Width="950"  WindowStartupLocation="CenterScreen">
+    <ScrollViewer>
+        <Border Height="684"
+            Width="811" BorderThickness="3,3,3,3" CornerRadius="15,15,15,15" BorderBrush="#FF1C6DD0" Background="#FFEEF6FF"
+                    >
+            <Grid HorizontalAlignment="Left" Width="925" Margin="-70,-27,0,0" Height="745" VerticalAlignment="Top"
+                    >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="407*"/>
+                    <ColumnDefinition Width="34*"/>
+                    <ColumnDefinition Width="484*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Vehicle Hire Form"
+                    TextAlignment="Center"
+                    FontSize="20"
+                    Foreground="Black"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="322,42,284,0" Height="26" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+
+                <TextBlock Text="Customer Name"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="128,80,72,0" Height="15" VerticalAlignment="Top"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="350"
+                    Margin="118,94,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.ColumnSpan="3"
+                    >
+                    <TextBox x:Name="txtUser"
+                        FontSize="15"
+                        TextAlignment="Left"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                             
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8" TextChanged="txtUser_TextChanged" Background="White"
+                            />
+
+
+
+
+                </Border>
+
+
+                <!--Next-->
+
+                <TextBlock Text="Customer NIC"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="140,80,142,0" Height="19" VerticalAlignment="Top" Grid.Column="2"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="127,94,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.Column="2"
+                    >
+                    <TextBox x:Name="txtC_NIC"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <!--Next-->
+
+                <TextBlock Text="Customer Telephone"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="128,158,48,0" Height="16" VerticalAlignment="Top"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="118,174,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    >
+                    <TextBox x:Name="txtC_Telephone"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <!--Next-->
+
+                <TextBlock Text="Customer Email"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="140,160,139,0" Height="14" VerticalAlignment="Top" Grid.Column="2"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="127,174,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.Column="2"
+                    >
+                    <TextBox x:Name="txtC_Email"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <TextBlock Text="Customer Address"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="128,238,60,0" Height="15" VerticalAlignment="Top"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="350"
+                    Margin="114,252,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.ColumnSpan="3"
+                    >
+                    <TextBox x:Name="C_Address"
+                        FontSize="15"
+                        TextAlignment="Left"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                             
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                            />
+
+
+
+
+                </Border>
+
+
+
+                <!--Next-->
+
+                <TextBlock Text="Vehicle Chassis Number"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="140,238,97,0" Height="14" VerticalAlignment="Top" Grid.Column="2"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="127,252,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.Column="2"
+                    >
+                    <TextBox x:Name="V_Chassis"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <!--Next-->
+
+                <TextBlock Text="Oil Price Per Litre"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="140,320,159,0" Height="18" VerticalAlignment="Top" Grid.Column="2"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="114,338,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    >
+                    <TextBox x:Name="txtR_NIC"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <!--Next-->
+
+                <TextBlock Text="Rider NIC"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="128,320,102,0" Height="17" VerticalAlignment="Top"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="127,338,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.Column="2"
+                    >
+                    <TextBox x:Name="txtO_Price"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+
+
+                </Border>
+
+                <!--Next-->
+                <TextBlock Text="Starting Mileage"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="128,400,94,0" Height="18" VerticalAlignment="Top"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="114,416,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    >
+                    <TextBox x:Name="S_Mileage"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+                <!--Next-->
+                <TextBlock Text="Estimated Mileage"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="140,400,167,0" Height="17" VerticalAlignment="Top" Grid.Column="2"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="127,416,0,0" Height="40" VerticalAlignment="Top" Background="White" Grid.Column="2"
+                    >
+                    <TextBox x:Name="E_Mileage"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+
+
+                </Border>
+
+
+                <!--Next-->
+                <TextBlock Text="Start Date"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="128,474,104,0" Height="19" VerticalAlignment="Top"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="114,492,0,0" Height="44" VerticalAlignment="Top" Background="White"
+                    >
+                    <DatePicker x:Name="StartDate" HorizontalAlignment="Left" 
+                        Height="25"
+                        Margin="8,8,8,8"
+                        VerticalAlignment="Top" 
+                        Width="230" BorderBrush="{x:Null}" BorderThickness="1,1,1,2"/>
+
+
+
+
+                </Border>
+                <!--Next-->
+                <TextBlock Text="End Date"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="140,476,169,0" Height="17" VerticalAlignment="Top" Grid.Column="2"/>
+
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="127,492,0,0" Height="44" VerticalAlignment="Top" Background="White" Grid.Column="2"
+                    >
+                    <DatePicker x:Name="EndDate" HorizontalAlignment="Left" 
+                        Height="25"
+                        Margin="8,8,8,8"
+                        VerticalAlignment="Top" 
+                        Width="230" BorderBrush="{x:Null}" BorderThickness="1,1,1,2"/>
+
+
+
+
+                </Border>
+
+                <!--Next-->
+                <TextBlock Text="Advance Payment"
+                    FontSize="12"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="128,558,94,0" Height="18" VerticalAlignment="Top"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="114,574,0,0" Height="40" VerticalAlignment="Top" Background="White"
+                    >
+                    <TextBox x:Name="A_Payment"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        FontFamily="Century Gothic"
+                        TextAlignment="Left"
+                        Foreground="Black"
+                        CaretBrush="Gray"
+                        BorderBrush="White"
+                        BorderThickness="0,0,0,1"
+                        Margin="8,8,8,8"
+                             />
+
+
+
+
+                </Border>
+
+
+
+                <Button x:Name="btnSubmitVH"
+                             
+                    BorderThickness="0"
+                    Content="Submit"
+                    Foreground="Black"
+                    FontSize="12"
+                    FontFamily="MonteSerrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Margin="190,640,426,0"
+                    Click="btnSubmitVH_Click" Height="48" VerticalAlignment="Top" Grid.ColumnSpan="3">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#FF7AB3EF"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FF1C6DD0"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+
+
+
+                <Button x:Name="btnClearVH"
+                             
+                    BorderThickness="0"
+                    Content="Clear"
+                    Foreground="White"
+                    FontSize="12"
+                    FontFamily="MonteSerrat"
+                    FontWeight="SemiBold"
+                    Cursor="Hand"
+                    Margin="23,634,190,0"
+                    Click="btnClearVH_Click" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Red"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="Orange"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                CornerRadius="20"
+                                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock Text="Package"
+                    Foreground="#FF1C6DD0"
+                    FontWeight="Bold"
+                    FontFamily="Montserrat"
+                    Margin="137,550,0,0" HorizontalAlignment="Left" Width="84" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.493,1.222" Grid.Column="2"/>
+                <Border CornerRadius="15"  
+                    BorderBrush="Black" 
+                    BorderThickness="2" 
+                    HorizontalAlignment="Left" 
+                    Width="250"
+                    Margin="127,566,0,0" Height="48" VerticalAlignment="Top" Background="White" Grid.Column="2"
+                    >
+                    <ComboBox x:Name="CMBP" 
+                    
+                        Margin="0,8,0,8" BorderBrush="#FF7AB3EF" BorderThickness="1,1,1,1" IsReadOnly="True"  HorizontalAlignment="Center" Width="230" VerticalContentAlignment="Center" Background="#FFEEF6FF">
+                        <ComboBoxItem x:Name="DailyCar" Content="Car - 1 Day" IsSelected="True" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Cursor="" Tag="DailyCar"/>
+                        <ComboBoxItem x:Name="DailyVan" Content="Van - 1 Day" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="DailyVan"/>
+                        <ComboBoxItem x:Name="DailySUV" Content="SUV - 1 Day" Background="#FFEEF6FF" BorderBrush="#FF7AB3EF" Tag="DailySUV"/>
+
+                    </ComboBox>
+                </Border>
+
+
+
+            </Grid>
+
+        </Border>
+
+    </ScrollViewer>
+</Window>
