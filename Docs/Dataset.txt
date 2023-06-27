@@ -1,0 +1,49 @@
+Employees
+
+2002340000855	Hafsa	VH#124	Hafsa	773408776	 Paul@gmail.com 	Legal	Piliyandala
+2002340000870	Hafsa	VH#127	Hafsa	773408809	 Paul@gmail.com 	IT	Piliyandala
+2002340000880	Paul	VH#129	Paul	773408831	 Paul@gmail.com 	Reception	Piliyandala
+2002340000885	Hafsa	VH#130	Hafsa	773408842	 Paul@gmail.com 	Maintainance	Piliyandala
+
+Customer
+
+ 2002340000404 	 Chamara 	 773407578 	 Chamara@gmai.com 	 null 
+ 2002340000430 	 Nisheda 	 773407580 	 Nisheda@gmail.com 	 null 
+ 2002340000456 	 Laknidu 	 773407582 	 Laknidu@gmail.com 	 null 
+ 2002340000482 	 Dasith 	 773407584 	 Dasith@gmai.com 	 	 null 
+ 2002340000508 	 Chamara 	 773407586 	 Chamara@gmai.com 	 null 
+ 2002340000534 	 Nisheda 	 773407588 	 Nisheda@gmail.com 	 null 
+
+Rider
+
+2002340000326	340000500	Peter	Peter@gmai.com	773747475 	Piliyandala	True	False	True	True	False	False	False
+2002340000327	340000545	Kamal	Kamal@gmai.com	773807475	Piliyandala	True	False	True	False	True	False	False
+2002340000328	340000590	Tim	Tim@gmail.com	773867475	Piliyandala	True	True	True	True	False	False	False
+2002340000329	340000635	Peter	Peter@gmai.com	773927475	Piliyandala	True	True	True	False	True	False	False
+2002340000365	340000365	Peter	Peter@gmai.com	773567475	Piliyandala	False	False	True	False	True	True	False
+
+Vehicles
+250465002	QN-2566	Benz	SP3458	Car	4	Good	 null	False	10
+250465003	PN-2566	Audi	SR3457	SUV	6	Good	null	False	10
+250465004	QN-2567	Toyota	SP3459	Van	8	Good	null	False	10
+250465005	PN-2567	Benz	SR3458	Car	4	Good	null	False	10
+250465006	QN-2568	Audi	SP3460	SUV	6	Good	 null 	False	10
+250465007	PN-2568	Toyota	SR3459	Van	8	Good	 null 	False	10
+250465008	QN-2569	Benz	SP3461	Car	4	Good	 null 	False	10
+250465009	PN-2569	Audi	SR3460	SUV	6	Good	 null 	False	10
+250465010	QN-2570	Toyota	SP3462	Van	8	Good	 null 	False	10
+
+RentPacks
+
+560000001	DailyCar	1Day	1500.00	10
+560000002	WeeklyCar	7Dys	7000.00	8
+560000003	MonthlyCar	30Dys	28000.00	5
+560000004	AnnualyCar	12Mnths	300000.00	2
+560000005	DailyVan	1Dy	2000.00	10
+560000006	WeeklyVan	7Dys	9000.00	8
+560000007	MonthlyVan	30Dys	34000.00	5
+560000008	AnnualyVan	12Mnths	340000.00	2
+560000009	DailySUV	1Dy	2500.00	10
+560000010	WeeklySUV	7Dys	12000.00	8
+560000011	MonthlySUV	30Dys	40000.00	5
+560000012	AnnualySUV	12Mnths	450000.00	2
